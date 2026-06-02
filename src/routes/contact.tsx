@@ -1,0 +1,94 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { PageHero } from "../components/PageHero";
+import { Reveal } from "../components/Section";
+
+export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "தொடர்புக்கு — கோரக்கர் சித்தர் கோவில்" },
+      { name: "description", content: "கோவில் முகவரி, தொலைபேசி, மின்னஞ்சல், தரிசன நேரம், கூகிள் வரைபடம்." },
+    ],
+  }),
+  component: Contact,
+});
+
+function Contact() {
+  const [sent, setSent] = useState(false);
+  return (
+    <>
+      <PageHero eyebrow="தொடர்புக்கு" title="எங்களைத் தொடர்புகொள்ள" subtitle="உங்கள் வேண்டுகோள், சந்தேகம், தரிசன ஏற்பாடு — அனைத்துக்கும் வரவேற்கிறோம்." />
+
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-3 gap-8">
+          {[
+            { icon: MapPin, title: "முகவரி", text: "அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம், வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம் – 611 002" },
+            { icon: Phone, title: "தொலைபேசி", text: "+91 98765 43210\n+91 4365 123 456" },
+            { icon: Mail, title: "மின்னஞ்சல்", text: "info@korakkarpeedam.org\ndarshan@korakkarpeedam.org" },
+            { icon: Clock, title: "தரிசன நேரம்", text: "காலை: 6:00 – 12:30\nமாலை: 4:00 – 9:00" },
+          ].map((c, i) => (
+            <Reveal key={c.title} delay={i * 0.06} className={i === 0 ? "lg:col-span-1" : ""}>
+              <div className="glass rounded-2xl p-7 h-full">
+                <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-4">
+                  <c.icon className="w-6 h-6 text-primary-foreground" />
+                </div>
+                <h3 className="text-lg font-semibold text-gold">{c.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{c.text}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="pb-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
+          <Reveal>
+            <div className="rounded-3xl overflow-hidden shadow-luxury aspect-[4/3] glass">
+              <iframe
+                title="கோவில் வரைபடம்"
+                src="https://www.google.com/maps?q=Nagapattinam&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg) saturate(0.6)" }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <form
+              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              className="glass rounded-3xl p-8 md:p-10 space-y-5"
+            >
+              <h3 className="text-2xl font-semibold text-gradient-gold">செய்தி அனுப்ப</h3>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <Field label="பெயர்" type="text" />
+                <Field label="தொலைபேசி" type="tel" />
+              </div>
+              <Field label="மின்னஞ்சல்" type="email" />
+              <Field label="தலைப்பு" type="text" />
+              <div>
+                <label className="block text-xs uppercase tracking-widest text-gold mb-2">செய்தி</label>
+                <textarea rows={5} className="w-full bg-input/40 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30 transition-luxury" />
+              </div>
+              <button type="submit" className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-gradient-gold text-primary-foreground font-medium gold-glow transition-luxury">
+                {sent ? "நன்றி — விரைவில் தொடர்புகொள்வோம்" : <>செய்தி அனுப்ப <Send className="w-4 h-4" /></>}
+              </button>
+            </form>
+          </Reveal>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function Field({ label, type }: { label: string; type: string }) {
+  return (
+    <div>
+      <label className="block text-xs uppercase tracking-widest text-gold mb-2">{label}</label>
+      <input type={type} className="w-full bg-input/40 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30 transition-luxury" />
+    </div>
+  );
+}
