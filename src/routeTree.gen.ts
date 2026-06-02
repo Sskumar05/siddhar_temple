@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VideosRouteImport } from './routes/videos'
+import { Route as PoojasRouteImport } from './routes/poojas'
+import { Route as KorakkarSiddharRouteImport } from './routes/korakkar-siddhar'
+import { Route as HistoryRouteImport } from './routes/history'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FestivalsRouteImport } from './routes/festivals'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutTempleRouteImport } from './routes/about-temple'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VideosRoute = VideosRouteImport.update({
+  id: '/videos',
+  path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoojasRoute = PoojasRouteImport.update({
+  id: '/poojas',
+  path: '/poojas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KorakkarSiddharRoute = KorakkarSiddharRouteImport.update({
+  id: '/korakkar-siddhar',
+  path: '/korakkar-siddhar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoryRoute = HistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FestivalsRoute = FestivalsRouteImport.update({
+  id: '/festivals',
+  path: '/festivals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutTempleRoute = AboutTempleRouteImport.update({
+  id: '/about-temple',
+  path: '/about-temple',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-temple': typeof AboutTempleRoute
+  '/contact': typeof ContactRoute
+  '/festivals': typeof FestivalsRoute
+  '/gallery': typeof GalleryRoute
+  '/history': typeof HistoryRoute
+  '/korakkar-siddhar': typeof KorakkarSiddharRoute
+  '/poojas': typeof PoojasRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-temple': typeof AboutTempleRoute
+  '/contact': typeof ContactRoute
+  '/festivals': typeof FestivalsRoute
+  '/gallery': typeof GalleryRoute
+  '/history': typeof HistoryRoute
+  '/korakkar-siddhar': typeof KorakkarSiddharRoute
+  '/poojas': typeof PoojasRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-temple': typeof AboutTempleRoute
+  '/contact': typeof ContactRoute
+  '/festivals': typeof FestivalsRoute
+  '/gallery': typeof GalleryRoute
+  '/history': typeof HistoryRoute
+  '/korakkar-siddhar': typeof KorakkarSiddharRoute
+  '/poojas': typeof PoojasRoute
+  '/videos': typeof VideosRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about-temple'
+    | '/contact'
+    | '/festivals'
+    | '/gallery'
+    | '/history'
+    | '/korakkar-siddhar'
+    | '/poojas'
+    | '/videos'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about-temple'
+    | '/contact'
+    | '/festivals'
+    | '/gallery'
+    | '/history'
+    | '/korakkar-siddhar'
+    | '/poojas'
+    | '/videos'
+  id:
+    | '__root__'
+    | '/'
+    | '/about-temple'
+    | '/contact'
+    | '/festivals'
+    | '/gallery'
+    | '/history'
+    | '/korakkar-siddhar'
+    | '/poojas'
+    | '/videos'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutTempleRoute: typeof AboutTempleRoute
+  ContactRoute: typeof ContactRoute
+  FestivalsRoute: typeof FestivalsRoute
+  GalleryRoute: typeof GalleryRoute
+  HistoryRoute: typeof HistoryRoute
+  KorakkarSiddharRoute: typeof KorakkarSiddharRoute
+  PoojasRoute: typeof PoojasRoute
+  VideosRoute: typeof VideosRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/videos': {
+      id: '/videos'
+      path: '/videos'
+      fullPath: '/videos'
+      preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/poojas': {
+      id: '/poojas'
+      path: '/poojas'
+      fullPath: '/poojas'
+      preLoaderRoute: typeof PoojasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/korakkar-siddhar': {
+      id: '/korakkar-siddhar'
+      path: '/korakkar-siddhar'
+      fullPath: '/korakkar-siddhar'
+      preLoaderRoute: typeof KorakkarSiddharRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/history': {
+      id: '/history'
+      path: '/history'
+      fullPath: '/history'
+      preLoaderRoute: typeof HistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/festivals': {
+      id: '/festivals'
+      path: '/festivals'
+      fullPath: '/festivals'
+      preLoaderRoute: typeof FestivalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-temple': {
+      id: '/about-temple'
+      path: '/about-temple'
+      fullPath: '/about-temple'
+      preLoaderRoute: typeof AboutTempleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutTempleRoute: AboutTempleRoute,
+  ContactRoute: ContactRoute,
+  FestivalsRoute: FestivalsRoute,
+  GalleryRoute: GalleryRoute,
+  HistoryRoute: HistoryRoute,
+  KorakkarSiddharRoute: KorakkarSiddharRoute,
+  PoojasRoute: PoojasRoute,
+  VideosRoute: VideosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
