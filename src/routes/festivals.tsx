@@ -3,8 +3,9 @@ import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
 import festival from "../assets/Karuvari.png";
 import lamps from "../assets/lamps.jpg";
-import pooja from "../assets/pooja.jpg";
+import pooja from "../assets/koraga jenthi.png";
 import samadhi from "../assets/samadhi.jpg";
+import mahashiva from "../assets/mahashiva.png";
 
 export const Route = createFileRoute("/festivals")({
   head: () => ({
@@ -21,8 +22,8 @@ const festivals = [
   { img: samadhi, title: "பௌர்ணமி திருவிழா", month: "மாதந்தோறும்", desc: "முழு நிலா இரவில் சித்தர் சந்நிதி தீப ஒளியில் ஒளிர்கிறது. சந்திர ஓமம், சிறப்பு அர்ச்சனை." },
   { img: festival, title: "ஐப்பசி பௌர்ணமி, பரணி விழா", month: "ஐப்பசி மாதம்", desc: "கோரக்கர் சித்தருக்கு சிறப்பு பூஜைகள், தீபாராதனைகள் மற்றும் பக்தர்கள் தரிசனத்துடன் சிறப்புற கொண்டாடப்படும் விழா." },
   { img: pooja, title: "கோரக்கர் ஜெயந்தி விழா", month: "கார்த்திகை மாதம்", desc: "சித்தர் பெருமானின் அவதார தினத்தை முன்னிட்டு சிறப்பு பூஜைகள், அபிஷேகங்கள் மற்றும் பக்தர்கள் பங்கேற்புடன் சிறப்பாக நடைபெறும் விழா." },
-  { img: pooja, title: "கார்த்திகை தீபம்", month: "கார்த்திகை மாதம்", desc: "கோவில் முழுவதும் ஆயிரம் தீபங்கள் ஒளிர்கின்றன. ஒளியின் திருவிழா — ஞான ஒளியின் வடிவம்." },
-  { img: lamps, title: "மகா சிவராத்திரி", month: "மாசி மாதம்", desc: "இரவு முழுவதும் சிவ வழிபாடு, பஜனை, தியானம், அபிஷேகம் என அற்புதமான ஆன்மீக சூழல்." }
+  { img: lamps, title: "கார்த்திகை தீபம்", month: "கார்த்திகை மாதம்", desc: "கோவில் முழுவதும் ஆயிரம் தீபங்கள் ஒளிர்கின்றன. ஒளியின் திருவிழா — ஞான ஒளியின் வடிவம்." },
+  { img: mahashiva, title: "மகா சிவராத்திரி", month: "மாசி மாதம்", desc: "இரவு முழுவதும் சிவ வழிபாடு, பஜனை, தியானம், அபிஷேகம் என அற்புதமான ஆன்மீக சூழல்." }
 
 ];
 

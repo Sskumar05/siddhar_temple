@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Flame, Heart, Sparkles, Star } from "lucide-react";
 import heroTemple from "../assets/hero.png";
 import siddhar from "../assets/image.png";
-import lamps from "../assets/Karuvari.png";
+import lamps from "../assets/lamps.jpg";
 import samadhi from "../assets/siddhar-img.png";
 import festival from "../assets/Karuvari.png";
 import pooja from "../assets/pooja.jpg";
 import annadhanam from "../assets/annadhanam.jpg";
+import mahashiva from "../assets/mahashiva.png";
 import { Reveal, SectionHeading } from "../components/Section";
 
 export const Route = createFileRoute("/")({
@@ -23,9 +24,10 @@ export const Route = createFileRoute("/")({
 
 const services = [
   { icon: Flame, title: "தினசரி பூஜை", desc: "காலை மற்றும் மாலை அபிஷேக ஆராதனைகள் சித்தர் சமாதிக்கு வழங்கப்படுகின்றன." },
-  { icon: Heart, title: "அன்னதானம்", desc: "தினமும் அன்னதான சேவை நடைபெறுகிறது. மேலும், ஒவ்வொரு பௌர்ணமி நாளிலும் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னம் வழங்கப்படுகிறது." },
+  { icon: Heart, title: "அன்னதானம்", desc: "தினமும் அன்னதானமும், பௌர்ணமியில் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னமும் வழங்கப்படுகிறது." },
   // { icon: Sparkles, title: "குரு பூஜை", desc: "ஆண்டு தோறும் கோரக்கர் சித்தரின் குரு பூஜை விழா சிறப்பாக நடைபெறுகிறது." },
   { icon: Star, title: "சித்தர் தரிசனம்", desc: "ஜீவசமாதி தரிசனத்தால் பக்தர்களுக்கு ஆன்மீக ஆற்றலும் அமைதியும் கிட்டும்." },
+  { icon: Star, title: "அன்னக்காவடி தர்மம்", desc: "வடக்குப் பொய்கை நல்லூரில் கோரக்கர் ஜீவசமாதி மற்றும் அன்னக்காவடி தர்மம்"}
 ];
 
 const galleryPreview = [samadhi, lamps, festival, pooja, annadhanam, heroTemple];
@@ -162,9 +164,9 @@ function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: lamps, title: "மகா சிவராத்திரி", date: "மாசி மாதம்" },
+              { img: mahashiva, title: "மகா சிவராத்திரி", date: "மாசி மாதம்" },
               { img: festival, title: "ஐப்பசி பௌர்ணமி, பரணி விழா", date: "ஐப்பசி மாதம்" },
-              { img: pooja, title: "கார்த்திகை தீபம்", date: "கார்த்திகை மாதம்" },
+              { img: lamps, title: "கார்த்திகை தீபம்", date: "கார்த்திகை மாதம்" },
             ].map((f, i) => (
               <Reveal key={f.title} delay={i * 0.1}>
                 <div className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">

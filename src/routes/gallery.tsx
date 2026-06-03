@@ -3,14 +3,12 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import hero from "../assets/hero-temple.jpg";
+import hero from "../assets/vinayaga.png";
 import siddhar from "../assets/Foot.png";
 import lamps from "../assets/Karuvari.png";
 import samadhi from "../assets/siddhar-img.png";
-import festival from "../assets/festival.jpg";
-import pooja from "../assets/pooja.jpg";
-import annadhanam from "../assets/annadhanam.jpg";
-import architecture from "../assets/architecture.jpg";
+import festival from "../assets/bless.png";
+import Annadhanam from "../assets/Annathanam.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -28,13 +26,7 @@ const images = [
   { src: lamps, cat: "தீபம்" },
   { src: samadhi, cat: "சமாதி" },
   { src: festival, cat: "திருவிழா" },
-  { src: pooja, cat: "பூஜை" },
-  { src: annadhanam, cat: "அன்னதானம்" },
-  { src: architecture, cat: "கட்டிடக்கலை" },
-  { src: hero, cat: "கோபுரம்" },
-  { src: lamps, cat: "தீபாராதனை" },
-  { src: samadhi, cat: "சந்நிதி" },
-  { src: festival, cat: "நிகழ்வு" },
+  { src: Annadhanam, cat: "அன்னதானம்" },
 ];
 
 function Gallery() {
