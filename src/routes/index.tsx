@@ -5,7 +5,7 @@ import heroTemple from "../assets/hero.png";
 import siddhar from "../assets/image.png";
 import lamps from "../assets/Karuvari.png";
 import samadhi from "../assets/siddhar-img.png";
-import festival from "../assets/festival.jpg";
+import festival from "../assets/Karuvari.png";
 import pooja from "../assets/pooja.jpg";
 import annadhanam from "../assets/annadhanam.jpg";
 import { Reveal, SectionHeading } from "../components/Section";
@@ -23,8 +23,8 @@ export const Route = createFileRoute("/")({
 
 const services = [
   { icon: Flame, title: "தினசரி பூஜை", desc: "காலை மற்றும் மாலை அபிஷேக ஆராதனைகள் சித்தர் சமாதிக்கு வழங்கப்படுகின்றன." },
-  { icon: Heart, title: "அன்னதானம்", desc: "ஒவ்வொரு பௌர்ணமி நாளிலும் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னம் வழங்கப்படுகிறது." },
-  { icon: Sparkles, title: "குரு பூஜை", desc: "ஆண்டு தோறும் கோரக்கர் சித்தரின் குரு பூஜை விழா சிறப்பாக நடைபெறுகிறது." },
+  { icon: Heart, title: "அன்னதானம்", desc: "தினமும் அன்னதான சேவை நடைபெறுகிறது. மேலும், ஒவ்வொரு பௌர்ணமி நாளிலும் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னம் வழங்கப்படுகிறது." },
+  // { icon: Sparkles, title: "குரு பூஜை", desc: "ஆண்டு தோறும் கோரக்கர் சித்தரின் குரு பூஜை விழா சிறப்பாக நடைபெறுகிறது." },
   { icon: Star, title: "சித்தர் தரிசனம்", desc: "ஜீவசமாதி தரிசனத்தால் பக்தர்களுக்கு ஆன்மீக ஆற்றலும் அமைதியும் கிட்டும்." },
 ];
 
@@ -162,8 +162,8 @@ function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { img: festival, title: "ஆண்டு குரு பூஜை", date: "தை மாதம்" },
               { img: lamps, title: "மகா சிவராத்திரி", date: "மாசி மாதம்" },
+              { img: festival, title: "ஐப்பசி பௌர்ணமி, பரணி விழா", date: "ஐப்பசி மாதம்" },
               { img: pooja, title: "கார்த்திகை தீபம்", date: "கார்த்திகை மாதம்" },
             ].map((f, i) => (
               <Reveal key={f.title} delay={i * 0.1}>

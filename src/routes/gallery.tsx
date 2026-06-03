@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
 import hero from "../assets/hero-temple.jpg";
-import siddhar from "../assets/siddhar.jpg";
+import siddhar from "../assets/Foot.png";
 import lamps from "../assets/Karuvari.png";
 import samadhi from "../assets/siddhar-img.png";
 import festival from "../assets/festival.jpg";

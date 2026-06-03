@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import siddhar from "../assets/siddhar.jpg";
+import siddhar from "../assets/siddhar-img.png";
 import lamps from "../assets/lamps.jpg";
-import samadhi from "../assets/samadhi.jpg";
+import samadhi from "../assets/Arul_beedam.png";
+
 
 export const Route = createFileRoute("/korakkar-siddhar")({
   head: () => ({
