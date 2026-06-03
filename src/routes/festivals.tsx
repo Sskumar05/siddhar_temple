@@ -32,15 +32,16 @@ function Festivals() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-2 gap-8">
           {festivals.map((f, i) => (
             <Reveal key={f.title} delay={i * 0.1}>
-              <article className="group relative overflow-hidden rounded-3xl aspect-[4/5] shadow-card hover-lift">
-                <img src={f.img} alt={f.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-luxury duration-1000" />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-                <div className="absolute top-6 left-6">
-                  <span className="px-3 py-1.5 rounded-full glass text-xs tracking-widest uppercase text-gold">{f.month}</span>
+              <article className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img src={f.img} alt={f.title} loading="lazy" className="w-full h-full object-cover brightness-100 contrast-105 saturate-[1.05] group-hover:scale-105 transition-luxury duration-700" />
+                  <div className="absolute top-6 left-6">
+                    <span className="px-3 py-1.5 rounded-full bg-white/90 shadow-sm border border-[#D4AF37]/30 text-xs font-bold tracking-widest uppercase text-[#D9381E]">{f.month}</span>
+                  </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10">
-                  <h3 className="text-3xl md:text-4xl font-serif-tamil font-semibold text-gradient-gold">{f.title}</h3>
-                  <p className="mt-3 text-muted-foreground max-w-md leading-relaxed">{f.desc}</p>
+                <div className="p-8 md:p-10 flex-1 flex flex-col justify-start">
+                  <h3 className="text-3xl md:text-4xl font-serif-tamil font-bold text-[#D9381E] mb-3">{f.title}</h3>
+                  <p className="text-[#2C2C2C] leading-relaxed font-medium">{f.desc}</p>
                 </div>
               </article>
             </Reveal>

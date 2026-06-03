@@ -9,7 +9,7 @@ export function Footer() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 mb-4">
             <Flame className="w-6 h-6 text-gold" />
-            <div className="text-gradient-gold font-serif-tamil text-lg font-semibold">
+            <div className="text-primary font-serif-tamil text-lg font-semibold">
               கோரக்கர் சித்தர் ஜீவசமாதி பீடம்
             </div>
           </div>

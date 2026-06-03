@@ -62,7 +62,7 @@ function Contact() {
               onSubmit={(e) => { e.preventDefault(); setSent(true); }}
               className="glass rounded-3xl p-8 md:p-10 space-y-5"
             >
-              <h3 className="text-2xl font-semibold text-gradient-gold">செய்தி அனுப்ப</h3>
+              <h3 className="text-2xl font-semibold text-primary">செய்தி அனுப்ப</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <Field label="பெயர்" type="text" />
                 <Field label="தொலைபேசி" type="tel" />
@@ -86,7 +86,7 @@ function Contact() {
 
 function Field({ label, type }: { label: string; type: string }) {
   return (
-    <div>
+    <div className="w-full">
       <label className="block text-xs uppercase tracking-widest text-gold mb-2">{label}</label>
       <input type={type} className="w-full bg-input/40 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30 transition-luxury" />
     </div>

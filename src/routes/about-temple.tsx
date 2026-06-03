@@ -39,7 +39,7 @@ function AboutTemple() {
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">{String(i + 1).padStart(2, "0")} / 05</div>
-                  <h2 className="text-3xl md:text-5xl font-semibold text-gradient-gold leading-tight">{s.title}</h2>
+                  <h2 className="text-3xl md:text-5xl font-semibold text-primary leading-tight">{s.title}</h2>
                   <p className="mt-6 text-muted-foreground leading-loose">{s.content}</p>
                 </div>
               </div>

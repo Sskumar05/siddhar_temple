@@ -38,7 +38,7 @@ function History() {
                   <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-gold shadow-gold ring-4 ring-background" />
                   <div className={`pl-12 md:pl-0 ${i % 2 ? "md:text-left md:pl-12" : "md:text-right md:pr-12"}`}>
                     <div className="text-xs uppercase tracking-[0.3em] text-gold mb-2">{t.year}</div>
-                    <h3 className="text-2xl md:text-3xl font-semibold text-gradient-gold">{t.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-primary">{t.title}</h3>
                     <p className="mt-3 text-muted-foreground leading-relaxed">{t.text}</p>
                   </div>
                   <div className="hidden md:block" />
@@ -53,7 +53,7 @@ function History() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6">
           <Reveal>
             <div className="glass rounded-3xl p-10 md:p-14 text-center">
-              <h3 className="text-3xl md:text-4xl font-semibold text-gradient-gold">ஜீவசமாதியின் முக்கியத்துவம்</h3>
+              <h3 className="text-3xl md:text-4xl font-semibold text-primary">ஜீவசமாதியின் முக்கியத்துவம்</h3>
               <p className="mt-5 text-muted-foreground leading-loose max-w-2xl mx-auto">
                 ஜீவசமாதி என்பது சாதாரண சமாதி அல்ல — உயிரோடு ஆழ்நிலை தியானத்தில் அமர்ந்து உடலை இணையச் செய்த நிலை. சித்தரின் ஆற்றல் என்றும் அப்பீடத்தில் தங்கியிருக்கும். அதனால்தான் இது அபூர்வ சக்தி வாய்ந்த தலம்.
               </p>

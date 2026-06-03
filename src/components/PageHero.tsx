@@ -15,7 +15,7 @@ export function PageHero({ eyebrow, title, subtitle, children }: { eyebrow?: str
           </motion.div>
         )}
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.1 }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
-          <span className="text-gradient-gold">{title}</span>
+          <span className="text-primary">{title}</span>
         </motion.h1>
         {subtitle && (
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, delay: 0.25 }} className="mt-6 text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">

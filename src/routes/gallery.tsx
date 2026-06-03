@@ -5,8 +5,8 @@ import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
 import hero from "../assets/hero-temple.jpg";
 import siddhar from "../assets/siddhar.jpg";
-import lamps from "../assets/lamps.jpg";
-import samadhi from "../assets/samadhi.jpg";
+import lamps from "../assets/Karuvari.png";
+import samadhi from "../assets/siddhar-img.png";
 import festival from "../assets/festival.jpg";
 import pooja from "../assets/pooja.jpg";
 import annadhanam from "../assets/annadhanam.jpg";
@@ -44,16 +44,13 @@ function Gallery() {
       <PageHero eyebrow="புகைப்படத் தொகுப்பு" title="கோவில் காட்சிகள்" subtitle="ஒவ்வொரு படமும் ஓர் ஆன்மீக கதை சொல்கிறது." />
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {images.map((img, i) => (
-              <Reveal key={i} delay={(i % 4) * 0.05}>
-                <button onClick={() => setOpen(img.src)} className="group relative block w-full overflow-hidden rounded-2xl break-inside-avoid mb-4">
-                  <img src={img.src} alt={img.cat} loading="lazy" className="w-full h-auto object-cover group-hover:scale-110 transition-luxury duration-700" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-luxury flex items-end p-5">
-                    <span className="text-xs uppercase tracking-widest text-gold">{img.cat}</span>
+                <button onClick={() => setOpen(img.src)} className="group flex flex-col w-full bg-[#FFF8E7] border border-[#D4AF37]/50 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.2)] transition-luxury text-left">
+                  <div className="overflow-hidden aspect-[4/3] w-full">
+                    <img src={img.src} alt={img.cat} loading="lazy" className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700" />
                   </div>
                 </button>
-              </Reveal>
             ))}
           </div>
         </div>

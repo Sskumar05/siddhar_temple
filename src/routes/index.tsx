@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, Flame, Heart, Sparkles, Star } from "lucide-react";
-import heroTemple from "../assets/hero-temple.jpg";
-import siddhar from "../assets/siddhar.jpg";
-import lamps from "../assets/lamps.jpg";
-import samadhi from "../assets/samadhi.jpg";
+import heroTemple from "../assets/hero.png";
+import siddhar from "../assets/image.png";
+import lamps from "../assets/Karuvari.png";
+import samadhi from "../assets/siddhar-img.png";
 import festival from "../assets/festival.jpg";
 import pooja from "../assets/pooja.jpg";
 import annadhanam from "../assets/annadhanam.jpg";
@@ -34,53 +34,67 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center overflow-hidden grain">
-        <div className="absolute inset-0">
-          <img src={heroTemple} alt="கோவில் கோபுரம்" width={1920} height={1280} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/20 to-transparent" />
-        </div>
+      <section className="relative w-full h-screen min-h-screen max-w-[100vw] flex flex-col items-center justify-center overflow-hidden">
+        <img src={heroTemple} alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" />
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 pt-32 pb-20 w-full">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs tracking-widest uppercase text-gold mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+        <div className="relative z-10 mx-auto max-w-[900px] px-4 w-full flex flex-col items-center justify-center text-center">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="inline-flex items-center justify-center gap-2 px-4 py-1.5 text-xs tracking-widest uppercase text-[#D4AF37] mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
             வடக்கு பொய்கைநல்லூர் · நாகப்பட்டினம்
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.1 }} className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-[1.05] max-w-4xl">
-            <span className="text-gradient-gold">அருள்மிகு</span>
-            <br />
-            கோரக்கர் சித்தர்
-            <br />
-            <span className="italic font-light text-foreground/80">ஜீவசமாதி பீடம்</span>
+          <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.1 }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif-tamil font-bold leading-tight text-white drop-shadow-xl flex flex-col items-center justify-center w-full">
+            அருள்மிகு கோரக்கர் சித்தர்
+            <span className="italic font-light text-white/90 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 block">ஜீவசமாதி பீடம்</span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }} className="mt-8 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-[#F5F5F5] leading-relaxed drop-shadow-md">
             பதினெண் சித்தர்களுள் ஒருவராம் கோரக்கர் சித்தரின் புனித ஜீவசமாதி தலம். அருள், அமைதி, ஆன்மீகத்தின் இல்லம்.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.45 }} className="mt-10 flex flex-wrap gap-4">
-            <Link to="/about-temple" className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-gold text-primary-foreground font-medium gold-glow transition-luxury">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.45 }} className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full">
+            <Link to="/about-temple" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#D9381E] text-white font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto">
               கோவில் பற்றி அறிய
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full glass text-foreground font-medium hover:border-gold transition-luxury">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] font-medium hover:bg-[#D4AF37]/10 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 w-full sm:w-auto">
               தரிசனத்துக்கு வருக
             </Link>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.7 }} className="mt-20 grid grid-cols-3 gap-6 max-w-2xl border-t border-gold/20 pt-8">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.7 }} className="w-full mt-12 hidden lg:block">
+            <div className="grid lg:grid-cols-3 gap-6 place-items-center">
+              {[
+                { n: "300+", l: "ஆண்டுகள் வரலாறு" },
+                { n: "10K+", l: "மாத பக்தர்கள்" },
+                { n: "12", l: "முக்கிய திருவிழா" },
+              ].map((s) => (
+                <div key={s.l} className="bg-white border border-[#D4AF37]/30 rounded-2xl p-6 text-center hover:shadow-lg transition-all shadow-card w-full max-w-[280px]">
+                  <div className="text-4xl md:text-5xl font-serif-tamil font-bold text-[#D9381E] mb-2">{s.n}</div>
+                  <div className="text-sm md:text-base font-bold text-[#2C2C2C]">{s.l}</div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* MOBILE STATS SECTION */}
+      <section className="py-12 block lg:hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
             {[
               { n: "300+", l: "ஆண்டுகள் வரலாறு" },
               { n: "10K+", l: "மாத பக்தர்கள்" },
               { n: "12", l: "முக்கிய திருவிழா" },
             ].map((s) => (
-              <div key={s.l}>
-                <div className="text-3xl md:text-4xl font-serif-tamil font-semibold text-gradient-gold">{s.n}</div>
-                <div className="text-xs text-muted-foreground mt-1">{s.l}</div>
+              <div key={s.l} className="bg-white border border-[#D4AF37]/40 shadow-[0_4px_20px_rgba(0,0,0,0.05)] rounded-2xl p-6 text-center w-full max-w-[320px]">
+                <div className="text-4xl sm:text-5xl font-serif-tamil font-bold text-[#D9381E] mb-2">{s.n}</div>
+                <div className="text-sm sm:text-base font-bold text-[#2C2C2C]">{s.l}</div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -91,15 +105,15 @@ function Home() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-gold opacity-20 blur-2xl rounded-3xl" />
               <img src={siddhar} alt="கோரக்கர் சித்தர்" width={1280} height={1600} loading="lazy" className="relative rounded-3xl shadow-luxury w-full" />
-              <div className="absolute -bottom-6 -right-6 glass rounded-2xl p-5 max-w-[200px]">
+              {/* <div className="absolute -bottom-6 -right-6 glass rounded-2xl p-5 max-w-[200px]">
                 <div className="text-gold text-3xl font-serif-tamil">ௐ</div>
                 <div className="text-xs text-muted-foreground mt-1">பதினெண் சித்தர்களில் முதன்மையானவர்</div>
-              </div>
+              </div> */}
             </div>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">கோவில் பற்றி</div>
-            <h2 className="text-4xl md:text-5xl font-semibold text-gradient-gold leading-tight">
+            <h2 className="text-4xl md:text-5xl font-semibold text-primary leading-tight">
               அருள் பிறக்கும் <br /> புனித பீடம்
             </h2>
             <p className="mt-6 text-muted-foreground leading-loose">
@@ -109,7 +123,7 @@ function Home() {
               பாரம்பரிய சோழ சிற்பக்கலையின் சிறந்த எடுத்துக்காட்டாக விளங்கும் இக்கோவில், ஆன்மீக சாதனைக்கான மையமாகவும் திகழ்கிறது.
             </p>
             <Link to="/about-temple" className="mt-8 inline-flex items-center gap-2 text-gold border-b border-gold/40 pb-1 hover:gap-3 transition-all">
-              மேலும் வாசிக்க <ArrowRight className="w-4 h-4" />
+              மேலும் அறிய <ArrowRight className="w-4 h-4" />
             </Link>
           </Reveal>
         </div>
@@ -124,12 +138,12 @@ function Home() {
           <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.08}>
-                <div className="hover-lift glass rounded-2xl p-7 h-full group">
+                <div className="hover-lift bg-white border border-[#E5E5E5] shadow-card rounded-2xl p-7 h-full group">
                   <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 group-hover:scale-110 transition-luxury">
                     <s.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gold">{s.title}</h3>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  <h3 className="text-lg font-bold text-[#D9381E]">{s.title}</h3>
+                  <p className="mt-3 text-sm font-medium text-[#2C2C2C] leading-relaxed">{s.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -153,12 +167,14 @@ function Home() {
               { img: pooja, title: "கார்த்திகை தீபம்", date: "கார்த்திகை மாதம்" },
             ].map((f, i) => (
               <Reveal key={f.title} delay={i * 0.1}>
-                <div className="group relative overflow-hidden rounded-3xl aspect-[4/5] shadow-card hover-lift">
-                  <img src={f.img} alt={f.title} width={1280} height={960} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-luxury duration-1000" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-7">
-                    <div className="text-xs uppercase tracking-widest text-gold mb-2">{f.date}</div>
-                    <div className="text-2xl font-serif-tamil font-semibold">{f.title}</div>
+                <div className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img src={f.img} alt={f.title} width={1280} height={960} loading="lazy" className="w-full h-full object-cover brightness-100 contrast-105 group-hover:scale-105 transition-luxury duration-700" />
+                    <div className="absolute inset-0 bg-black/10 transition-opacity duration-700 group-hover:opacity-0" />
+                  </div>
+                  <div className="p-7 flex-1 flex flex-col justify-center text-center bg-[#FFF8E7]">
+                    <div className="text-xs uppercase font-bold tracking-widest text-[#2C2C2C] mb-2">{f.date}</div>
+                    <div className="text-2xl font-serif-tamil font-bold text-[#D9381E]">{f.title}</div>
                   </div>
                 </div>
               </Reveal>
@@ -168,18 +184,24 @@ function Home() {
       </section>
 
       {/* GALLERY PREVIEW */}
-      <section className="relative py-24 bg-[oklch(0.09_0.005_60)]">
+      <section className="py-24 bg-[#FAFAFA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal><SectionHeading eyebrow="புகைப்படத் தொகுப்பு" title="கோவில் காட்சிகள்" align="center" /></Reveal>
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-3 gap-4">
-            {galleryPreview.map((src, i) => (
-              <Reveal key={i} delay={i * 0.05}>
-                <div className={`relative overflow-hidden rounded-2xl group ${i === 0 || i === 4 ? "row-span-2 aspect-[3/4]" : "aspect-square"}`}>
-                  <img src={src} alt="கோவில் காட்சி" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-luxury duration-1000" />
-                  <div className="absolute inset-0 bg-background/0 group-hover:bg-background/30 transition-luxury" />
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {galleryPreview.slice(0, 3).map((src, i) => (
+              <Reveal key={i} delay={i * 0.08}>
+                <div className="group flex flex-col bg-[#FFF8E7] border border-[#D4AF37]/50 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.2)] transition-luxury">
+                  <div className="overflow-hidden aspect-[4/3] w-full">
+                    <img src={src} alt="கோவில் காட்சி" loading="lazy" className="w-full h-full object-cover brightness-100 contrast-105 group-hover:scale-[1.03] transition-transform duration-700" />
+                  </div>
                 </div>
               </Reveal>
             ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link to="/gallery" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#D9381E] text-white font-medium hover:bg-[#b02d18] transition-colors duration-300">
+              அனைத்தும் காண
+            </Link>
           </div>
         </div>
       </section>
@@ -195,10 +217,10 @@ function Home() {
               { t: "பௌர்ணமி பூஜையில் கலந்துகொண்ட அனுபவம் என்றும் நினைவில் நிற்கும்.", n: "ராமன், கோயம்புத்தூர்" },
             ].map((q, i) => (
               <Reveal key={i} delay={i * 0.1}>
-                <div className="glass rounded-2xl p-7 h-full">
-                  <div className="flex gap-1 mb-4">{Array.from({ length: 5 }).map((_, j) => <Star key={j} className="w-4 h-4 text-gold fill-gold" />)}</div>
-                  <p className="text-foreground/90 leading-relaxed italic">"{q.t}"</p>
-                  <div className="mt-5 text-sm text-gold">— {q.n}</div>
+                <div className="bg-white border border-[#E5E5E5] shadow-card rounded-2xl p-7 h-full">
+                  <div className="flex gap-1 mb-4">{Array.from({ length: 5 }).map((_, j) => <Star key={j} className="w-4 h-4 text-[#E6B31E] fill-[#E6B31E]" />)}</div>
+                  <p className="text-[#2C2C2C] font-medium leading-relaxed italic">"{q.t}"</p>
+                  <div className="mt-5 text-sm font-bold text-[#D9381E]">— {q.n}</div>
                 </div>
               </Reveal>
             ))}
@@ -207,14 +229,14 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl glass p-12 md:p-16 text-center">
               <div className="absolute inset-0 bg-gradient-gold opacity-10" />
               <div className="relative">
                 <Flame className="w-12 h-12 text-gold mx-auto mb-6" />
-                <h2 className="text-3xl md:text-5xl font-semibold text-gradient-gold">அருளுக்காக வருக</h2>
+                <h2 className="text-3xl md:text-5xl font-semibold text-primary">அருளுக்காக வருக</h2>
                 <p className="mt-5 text-muted-foreground max-w-xl mx-auto">கோரக்கர் சித்தரின் ஜீவசமாதியைத் தரிசித்து உங்கள் ஆன்மீகப் பயணத்தைத் தொடங்குங்கள்.</p>
                 <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-medium gold-glow transition-luxury">
                   தரிசன நேரம் பார்க்க <ArrowRight className="w-4 h-4" />
@@ -223,7 +245,35 @@ function Home() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </section> */}
+
+        <section className="py-24 relative overflow-hidden bg-primary text-white">
+  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-30"></div>
+
+  <div className="mx-auto max-w-5xl px-4 sm:px-6 relative z-10">
+    <Reveal>
+      <div className="text-center">
+        <Flame className="w-12 h-12 mx-auto mb-6 text-white" />
+
+        <h2 className="text-4xl font-serif font-bold mb-6 text-white">
+          உங்கள் வருகையை திட்டமிடுங்கள்
+        </h2>
+
+        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+          கோரக்கர் சித்தரின் அருளைப் பெற உங்களை அன்புடன் வரவேற்கிறோம்.
+        </p>
+
+        <Link to="/contact">
+          <button className="bg-accent text-[#1A1A1A] hover:bg-accent/90 rounded-xl px-10 py-4 text-lg font-bold gold-glow inline-flex items-center gap-2">
+            தொடர்பு கொள்ள
+            <ArrowRight className="w-5 h-5" />
+          </button>
+        </Link>
+      </div>
+    </Reveal>
+  </div>
+</section>
+
     </>
   );
 }

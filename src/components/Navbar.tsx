@@ -26,16 +26,15 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-luxury ${scrolled ? "glass py-3" : "bg-transparent py-5"}`}>
+    <header className={`sticky top-0 inset-x-0 z-50 bg-[#FFFFFF] border-b border-[#E5E5E5] shadow-[0_2px_10px_rgba(0,0,0,0.05)] transition-all duration-300 ${scrolled ? "py-3" : "py-4"}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="relative">
-            <Flame className="w-7 h-7 text-gold" />
-            <div className="absolute inset-0 blur-md bg-gold/40 group-hover:bg-gold/70 transition-luxury" />
+            <Flame className="w-7 h-7 text-[#E6B31E]" />
           </div>
           <div className="leading-tight">
-            <div className="font-serif-tamil text-sm sm:text-base font-semibold text-gradient-gold">கோரக்கர் சித்தர்</div>
-            <div className="text-[10px] sm:text-xs text-muted-foreground tracking-wider uppercase">ஜீவசமாதி பீடம்</div>
+            <div className="font-serif-tamil text-sm sm:text-base font-semibold text-[#D9381E]">கோரக்கர் சித்தர்</div>
+            <div className="text-[10px] sm:text-xs text-[#666666] tracking-wider uppercase">ஜீவசமாதி பீடம்</div>
           </div>
         </Link>
 
@@ -45,9 +44,9 @@ export function Navbar() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              activeProps={{ className: "text-gold" }}
-              inactiveProps={{ className: "text-foreground/80 hover:text-gold" }}
-              className="px-3 py-2 text-sm transition-luxury relative"
+              activeProps={{ className: "text-[#D9381E]" }}
+              inactiveProps={{ className: "text-[#2C2C2C] hover:text-[#D9381E]" }}
+              className="px-3 py-2 text-sm transition-colors duration-300 relative"
             >
               {item.label}
             </Link>
@@ -56,14 +55,14 @@ export function Navbar() {
 
         <Link
           to="/contact"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-gold text-primary-foreground text-sm font-medium gold-glow transition-luxury"
+          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-[#D9381E] text-white hover:bg-[#b02d18] text-sm font-medium transition-colors duration-300"
         >
           தரிசனம்
         </Link>
 
         <button
           onClick={() => setOpen(!open)}
-          className="lg:hidden p-2 text-foreground"
+          className="lg:hidden p-2 text-[#2C2C2C]"
           aria-label="Menu"
         >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -71,7 +70,7 @@ export function Navbar() {
       </div>
 
       {open && (
-        <div className="lg:hidden glass mt-3 mx-4 rounded-2xl p-4 animate-in fade-in slide-in-from-top-2">
+        <div className="lg:hidden bg-white mt-3 mx-4 rounded-2xl p-4 shadow-[0_2px_10px_rgba(0,0,0,0.05)] border border-[#E5E5E5] animate-in fade-in slide-in-from-top-2">
           <nav className="flex flex-col">
             {navItems.map((item) => (
               <Link
@@ -79,8 +78,9 @@ export function Navbar() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 activeOptions={{ exact: item.to === "/" }}
-                activeProps={{ className: "text-gold" }}
-                className="px-4 py-3 text-sm border-b border-border/30 last:border-0"
+                activeProps={{ className: "text-[#D9381E]" }}
+                inactiveProps={{ className: "text-[#2C2C2C]" }}
+                className="px-4 py-3 text-sm border-b border-[#E5E5E5] last:border-0 transition-colors duration-300 hover:text-[#D9381E]"
               >
                 {item.label}
               </Link>

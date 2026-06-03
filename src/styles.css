@@ -1,7 +1,7 @@
+
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+@source "../src";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -38,47 +38,52 @@
 
 :root {
   --radius: 0.5rem;
-  --background: oklch(0.12 0.005 60);
-  --foreground: oklch(0.96 0.01 80);
-  --card: oklch(0.15 0.008 60);
-  --card-foreground: oklch(0.96 0.01 80);
-  --popover: oklch(0.15 0.008 60);
-  --popover-foreground: oklch(0.96 0.01 80);
-  --primary: oklch(0.78 0.14 85);
-  --primary-foreground: oklch(0.12 0.005 60);
-  --secondary: oklch(0.6 0.18 35);
-  --secondary-foreground: oklch(0.98 0.01 80);
-  --muted: oklch(0.2 0.01 60);
-  --muted-foreground: oklch(0.7 0.02 80);
-  --accent: oklch(0.85 0.17 90);
-  --accent-foreground: oklch(0.12 0.005 60);
-  --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(0.98 0.01 80);
-  --border: oklch(0.25 0.02 70 / 0.5);
-  --input: oklch(0.22 0.01 60);
-  --ring: oklch(0.78 0.14 85);
+  --background: #F5F2EB;
+  --foreground: #2C2C2C;
+  --card: #FFFFFF;
+  --card-foreground: #2C2C2C;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C2C2C;
+  --primary: #D9381E;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FFF8E7;
+  --secondary-foreground: #2C2C2C;
+  --muted: #FFF8E7;
+  --muted-foreground: #666666;
+  --accent: #D4AF37;
+  --accent-foreground: #2C2C2C;
+  --destructive: #D9381E;
+  --destructive-foreground: #FFFFFF;
+  --border: #D4AF37;
+  --input: #D4AF37;
+  --ring: #D9381E;
 
-  --gold: oklch(0.78 0.14 85);
-  --gold-bright: oklch(0.88 0.17 95);
-  --gold-deep: oklch(0.55 0.12 75);
-  --ember: oklch(0.6 0.18 35);
+  --gold: #D4AF37;
+  --gold-bright: #FFCC33;
+  --gold-deep: #B38600;
+  --ember: #D9381E;
 
-  --gradient-gold: linear-gradient(135deg, oklch(0.55 0.12 75), oklch(0.78 0.14 85) 50%, oklch(0.88 0.17 95));
-  --gradient-dark: linear-gradient(180deg, oklch(0.12 0.005 60), oklch(0.08 0.005 60));
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.2 0.04 70 / 0.5), transparent 60%), linear-gradient(180deg, oklch(0.1 0.005 60), oklch(0.05 0.005 60));
+  --gradient-gold: linear-gradient(135deg, #B38600, #D4AF37 50%, #FFCC33);
+  --gradient-dark: linear-gradient(180deg, #F5F2EB, #FFFFFF);
+  --gradient-hero: radial-gradient(ellipse at top, rgba(212, 175, 55, 0.15), transparent 60%), linear-gradient(180deg, #F5F2EB, #FFFFFF);
 
-  --shadow-gold: 0 10px 40px -10px oklch(0.78 0.14 85 / 0.4);
-  --shadow-luxury: 0 30px 80px -20px oklch(0 0 0 / 0.7), 0 0 0 1px oklch(0.78 0.14 85 / 0.1);
-  --shadow-card: 0 20px 50px -15px oklch(0 0 0 / 0.5);
+  --shadow-gold: 0 10px 40px -10px rgba(212, 175, 55, 0.3);
+  --shadow-luxury: 0 30px 80px -20px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(212, 175, 55, 0.2);
+  --shadow-card: 0 20px 50px -15px rgba(0, 0, 0, 0.05);
 
   --transition-luxury: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dark { color-scheme: dark; }
+/* Light theme by default, removed .dark { color-scheme: dark; } */
+
 
 @layer base {
   * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+  }
   body {
     background: var(--gradient-dark);
     color: var(--color-foreground);
@@ -107,10 +112,10 @@
   .transition-luxury { transition: var(--transition-luxury); }
 
   .glass {
-    background: oklch(0.1 0.005 60 / 0.6);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px) saturate(160%);
     -webkit-backdrop-filter: blur(20px) saturate(160%);
-    border: 1px solid oklch(0.78 0.14 85 / 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.2);
   }
 
   .grain::after {
@@ -132,7 +137,7 @@
   }
 
   .gold-glow:hover {
-    box-shadow: 0 0 30px oklch(0.78 0.14 85 / 0.5);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
   }
 
   @keyframes float {
@@ -146,8 +151,20 @@
     100% { background-position: 200% 0; }
   }
   .shimmer {
-    background: linear-gradient(90deg, transparent, oklch(0.78 0.14 85 / 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
     background-size: 200% 100%;
     animation: shimmer 3s infinite;
+  }
+
+  @media (max-width: 768px) {
+    .grain::after {
+      display: none;
+    }
+    .hover-lift:hover {
+      transform: none;
+    }
+    .animate-float {
+      animation: none;
+    }
   }
 }

@@ -33,7 +33,7 @@ function KorakkarSiddhar() {
           <div>
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">பதினெண் சித்தர்</div>
             <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05]">
-              <span className="text-gradient-gold">கோரக்கர்</span>
+              <span className="text-primary">கோரக்கர்</span>
               <br />
               <span className="italic font-light">சித்தர்</span>
             </h1>
@@ -63,7 +63,7 @@ function KorakkarSiddhar() {
                 </div>
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">{s.eyebrow}</div>
-                  <h2 className="text-3xl md:text-4xl font-semibold text-gradient-gold">{s.title}</h2>
+                  <h2 className="text-3xl md:text-4xl font-semibold text-primary">{s.title}</h2>
                   <p className="mt-5 text-lg text-muted-foreground leading-loose">{s.text}</p>
                 </div>
               </article>
@@ -79,7 +79,7 @@ function KorakkarSiddhar() {
         <div className="relative h-full flex items-end pb-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 w-full text-center">
             <Reveal>
-              <p className="text-2xl md:text-4xl font-serif-tamil text-gradient-gold italic leading-tight max-w-3xl mx-auto">
+              <p className="text-2xl md:text-4xl font-serif-tamil text-primary italic leading-tight max-w-3xl mx-auto">
                 "சித்தர் என்பவன் இறப்பற்றவன் — அவன் சமாதியில் அமர்ந்தாலும் அருள் வழங்கிக் கொண்டிருப்பான்."
               </p>
             </Reveal>
@@ -94,7 +94,7 @@ function KorakkarSiddhar() {
               <img src={samadhi} alt="ஜீவசமாதி" loading="lazy" className="rounded-3xl shadow-luxury" />
               <div>
                 <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">கோரக்கர் சித்தரின் கொடை</div>
-                <h2 className="text-3xl md:text-4xl font-semibold text-gradient-gold">அருள் தொடரும் பீடம்</h2>
+                <h2 className="text-3xl md:text-4xl font-semibold text-primary">அருள் தொடரும் பீடம்</h2>
                 <p className="mt-5 text-muted-foreground leading-loose">
                   ஜீவசமாதி தலத்தில் தியானம் செய்வோர் சித்தரின் ஆற்றலை நேரடியாக உணரலாம். உலகின் எந்த மூலையிலிருந்தும் வந்து இங்கு வேண்டிக்கொள்வோர் அருள் பெறுகின்றனர்.
                 </p>

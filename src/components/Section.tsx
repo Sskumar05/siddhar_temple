@@ -19,7 +19,7 @@ export function SectionHeading({ eyebrow, title, description, align = "left" }: 
   return (
     <div className={align === "center" ? "text-center max-w-2xl mx-auto" : "max-w-2xl"}>
       {eyebrow && <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">{eyebrow}</div>}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gradient-gold leading-tight">{title}</h2>
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary leading-tight">{title}</h2>
       {description && <p className="mt-4 text-muted-foreground leading-relaxed">{description}</p>}
     </div>
   );

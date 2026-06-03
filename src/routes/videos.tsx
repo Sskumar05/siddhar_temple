@@ -67,7 +67,7 @@ function Videos() {
           <div className="w-full max-w-4xl aspect-video rounded-2xl glass flex items-center justify-center text-center p-8">
             <div>
               <Play className="w-16 h-16 text-gold mx-auto mb-4" />
-              <div className="text-xl font-serif-tamil text-gradient-gold">{open}</div>
+              <div className="text-xl font-serif-tamil text-primary">{open}</div>
               <p className="mt-3 text-sm text-muted-foreground">காணொளி விரைவில் இணைக்கப்படும்.</p>
             </div>
           </div>

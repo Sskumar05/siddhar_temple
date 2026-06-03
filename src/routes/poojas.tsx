@@ -38,7 +38,7 @@ function Poojas() {
                     </div>
                     <div className="text-xs text-gold uppercase tracking-widest">0{i + 1}</div>
                   </div>
-                  <h3 className="text-xl font-semibold text-gradient-gold">{p.title}</h3>
+                  <h3 className="text-xl font-semibold text-primary">{p.title}</h3>
                   <div className="mt-2 text-sm text-gold/80">{p.time}</div>
                   <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
                 </div>
@@ -49,7 +49,7 @@ function Poojas() {
           {/* Schedule timeline */}
           <Reveal>
             <div className="mt-20 glass rounded-3xl p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-semibold text-gradient-gold mb-8">தினசரி அட்டவணை</h3>
+              <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-8">தினசரி அட்டவணை</h3>
               <div className="space-y-4">
                 {[
                   ["06:00", "சுப்ரபாதம் & திருமஞ்சனம்"],
