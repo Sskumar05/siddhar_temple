@@ -58,9 +58,9 @@ function Contact() {
                   <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-2xl bg-gray-50 overflow-hidden relative flex items-center justify-center">
                     {/* Placeholder for QR Code */}
                     <img 
-                      src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" 
+                      src="https://res.cloudinary.com/dhjupdyus/image/upload/v1780586058/QRcode_jw9seu.jpg" 
                       alt="Donation QR Code Placeholder" 
-                      className="w-full h-full object-cover p-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      className="w- h- object-cover p-6 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <div className="absolute inset-0 border-2 border-dashed border-gray-200 rounded-2xl m-2 pointer-events-none" />
                   </div>
