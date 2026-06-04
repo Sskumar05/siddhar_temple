@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Flame, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import logo from "../assets/logo.png";
 
 export function Footer() {
   return (
@@ -8,9 +9,9 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 mb-4">
-            <Flame className="w-6 h-6 text-gold" />
+            <img src={logo} alt="கோரக்கர் சித்தர்" className="w-15 h-15 object-contain" />
             <div className="text-primary font-serif-tamil text-lg font-semibold">
-              கோரக்கர் சித்தர் ஜீவசமாதி பீடம்
+              கோரக்கர் சித்தர்
             </div>
           </div>
           <p className="text-sm text-muted-foreground max-w-md leading-relaxed">

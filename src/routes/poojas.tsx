@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import { Sunrise, Moon, Calendar, Utensils, Flame } from "lucide-react";
+// import { Sunrise, Moon, Calendar, Utensils, Flame } from "lucide-react";
 
 export const Route = createFileRoute("/poojas")({
   head: () => ({
@@ -14,10 +14,10 @@ export const Route = createFileRoute("/poojas")({
 });
 
 const poojas = [
-  { icon: Sunrise, title: "தினசரி காலை பூஜை", time: "காலை 6:00 – 8:30", desc: "காலை அபிஷேகம், சூரிய நமஸ்காரம், சித்தர் சந்நிதி தீபாராதனை." },
-  { icon: Moon, title: "தினசரி மாலை பூஜை", time: "மாலை 6:00 – 8:00", desc: "சந்த்ய தீப ஆராதனை, ஒலிக்கும் மணி ஒலியில் சித்தர் வணக்கம்." },
-  { icon: Flame, title: "பௌர்ணமி பூஜை", time: "பௌர்ணமி தினம்", desc: "முழு நிலவில் சிறப்பு அபிஷேகம், சந்திர ஓம காரம், தீப ஒளி வழிபாடு." },
-  { icon: Utensils, title: "அன்னதானம்", time: "தினமும், பௌர்ணமி & திருவிழா", desc: "தினமும் அன்னதானமும், பௌர்ணமியில் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னமும் வழங்கப்படுகிறது." },
+  { title: "தினசரி காலை பூஜை", time: "காலை 6:00 – 8:30", desc: "காலை அபிஷேகம், சூரிய நமஸ்காரம், சித்தர் சந்நிதி தீபாராதனை." },
+  { title: "தினசரி மாலை பூஜை", time: "மாலை 6:00 – 8:00", desc: "சந்த்ய தீப ஆராதனை, ஒலிக்கும் மணி ஒலியில் சித்தர் வணக்கம்." },
+  { title: "பௌர்ணமி பூஜை", time: "பௌர்ணமி தினம்", desc: "முழு நிலவில் சிறப்பு அபிஷேகம், சந்திர ஓம காரம், தீப ஒளி வழிபாடு." },
+  { title: "அன்னதானம்", time: "தினமும், பௌர்ணமி & திருவிழா", desc: "தினமும் அன்னதானமும், பௌர்ணமியில் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னமும் வழங்கப்படுகிறது." },
 ];
 
 function Poojas() {
@@ -26,14 +26,14 @@ function Poojas() {
       <PageHero eyebrow="பூஜை அட்டவணை" title="தினசரி வழிபாடு" subtitle="பாரம்பரிய முறையில் ஒவ்வொரு பூஜையும் — காலை முதல் இரவு வரை." />
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             {poojas.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.06}>
                 <div className="hover-lift glass rounded-3xl p-8 h-full group">
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-gold group-hover:rotate-6 transition-luxury">
+                    {/* <div className="w-14 h-14 rounded-2xl bg-gradient-gold flex items-center justify-center shadow-gold group-hover:rotate-6 transition-luxury">
                       <p.icon className="w-7 h-7 text-primary-foreground" />
-                    </div>
+                    </div> */}
                     <div className="text-xs text-gold uppercase tracking-widest">0{i + 1}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-primary">{p.title}</h3>

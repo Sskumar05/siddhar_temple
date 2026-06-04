@@ -13,6 +13,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
+import { SplashScreen } from "../components/SplashScreen";
 
 function NotFoundComponent() {
   return (
@@ -72,12 +74,23 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <SplashScreen />
       <div className="relative min-h-screen flex flex-col w-full overflow-x-hidden max-w-[100vw]">
         <Navbar />
         <main className="flex-1">
           <Outlet />
         </main>
         <Footer />
+        <FloatingWhatsApp
+          phoneNumber="918248978136"
+          accountName="கோரக்கர் சித்தர் பீடம்"
+          statusMessage="Online · Usually replies instantly"
+          chatMessage="வணக்கம்! 🙏 கோரக்கர் சித்தர் ஜீவசமாதி பீடத்திற்கு வரவேற்கிறோம். பூஜை, நேர்த்திக்கடன், திருவிழா விவரங்களுக்கு WhatsApp-ல் தொடர்பு கொள்ளுங்கள்."
+          prefilledMessage="வணக்கம்! கோரக்கர் சித்தர் பீடம் பற்றி மேலும் அறிய விரும்புகிறேன்."
+          showNotification={true}
+          notificationCount={1}
+          tooltip="Chat with us"
+        />
       </div>
     </QueryClientProvider>
   );

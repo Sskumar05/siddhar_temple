@@ -21,20 +21,20 @@ function Contact() {
       <PageHero eyebrow="தொடர்புக்கு" title="எங்களைத் தொடர்புகொள்ள" subtitle="உங்கள் வேண்டுகோள், சந்தேகம், தரிசன ஏற்பாடு — அனைத்துக்கும் வரவேற்கிறோம்." />
 
       <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-3 gap-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
           {[
-            { icon: MapPin, title: "முகவரி", text: "அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம், வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம் – 611 002" },
-            { icon: Phone, title: "தொலைபேசி", text: "+91 98765 43210\n+91 4365 123 456" },
-            { icon: Mail, title: "மின்னஞ்சல்", text: "info@korakkarpeedam.org\ndarshan@korakkarpeedam.org" },
-            { icon: Clock, title: "தரிசன நேரம்", text: "காலை: 6:00 – 12:30\nமாலை: 4:00 – 9:00" },
+            { title: "முகவரி", text: "அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம், வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம் – 611 002" },
+            { title: "தொலைபேசி", text: "+91 98765 43210\n+91 4365 123 456" },
+            { title: "மின்னஞ்சல்", text: "info@korakkarpeedam.org\ndarshan@korakkarpeedam.org" },
+            { title: "தரிசன நேரம்", text: "காலை: 6:00 – 12:30\nமாலை: 4:00 – 9:00" },
           ].map((c, i) => (
             <Reveal key={c.title} delay={i * 0.06} className={i === 0 ? "lg:col-span-1" : ""}>
-              <div className="glass rounded-2xl p-7 h-full">
-                <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-4">
+              <div className="glass rounded-3xl p-8 md:p-10 h-full border border-gold/20 shadow-luxury hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 bg-white/50">
+                {/* <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-4">
                   <c.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold text-gold">{c.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{c.text}</p>
+                </div> */}
+                <h3 className="text-xl md:text-2xl font-bold text-[#D9381E] mb-4 tracking-wide font-serif-tamil">{c.title}</h3>
+                <p className="text-base md:text-lg text-gray-800 font-medium whitespace-pre-line leading-relaxed">{c.text}</p>
               </div>
             </Reveal>
           ))}

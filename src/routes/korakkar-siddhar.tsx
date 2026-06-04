@@ -73,18 +73,24 @@ function KorakkarSiddhar() {
         </div>
       </section>
 
-      {/* Large image panel */}
-      <section className="relative h-[60vh] overflow-hidden my-12">
-        <img src={lamps} alt="தீபாராதனை" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-background/20" />
-        <div className="relative h-full flex items-end pb-16">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6 w-full text-center">
-            <Reveal>
-              <p className="text-2xl md:text-4xl font-serif-tamil text-primary italic leading-tight max-w-3xl mx-auto">
+      {/* Quote Card Panel */}
+      <section className="py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <Reveal>
+            <div className="glass rounded-3xl p-10 md:p-16 text-center shadow-luxury border border-gold/20 relative overflow-hidden bg-white/40 group hover:-translate-y-1 transition-all duration-500">
+              {/* Decorative Header Line */}
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-gold" />
+              
+              {/* Large Decorative Quotes */}
+              <div className="text-gold opacity-20 absolute -top-6 -left-2 text-9xl font-serif leading-none group-hover:scale-110 transition-transform duration-500">"</div>
+              
+              <p className="text-2xl md:text-4xl font-serif-tamil text-[#D9381E] font-bold italic leading-relaxed max-w-3xl mx-auto relative z-10 drop-shadow-sm">
                 "சித்தர் என்பவன் இறப்பற்றவன் — அவன் சமாதியில் அமர்ந்தாலும் அருள் வழங்கிக் கொண்டிருப்பான்."
               </p>
-            </Reveal>
-          </div>
+              
+              <div className="text-gold opacity-20 absolute -bottom-12 -right-2 text-9xl font-serif leading-none rotate-180 group-hover:scale-110 transition-transform duration-500">"</div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

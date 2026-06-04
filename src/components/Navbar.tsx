@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Flame } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const navItems = [
   { to: "/", label: "முகப்பு" },
@@ -9,6 +10,7 @@ const navItems = [
   { to: "/history", label: "வரலாறு" },
   { to: "/poojas", label: "பூஜைகள்" },
   { to: "/festivals", label: "திருவிழாக்கள்" },
+  { to: "/organizers", label: "அறங்காவலர்கள்" },
   { to: "/gallery", label: "புகைப்படங்கள்" },
   { to: "/videos", label: "காணொளிகள்" },
   { to: "/contact", label: "தொடர்புக்கு" },
@@ -27,14 +29,12 @@ export function Navbar() {
 
   return (
     <header className={`sticky top-0 inset-x-0 z-50 bg-[#FFFFFF] border-b border-[#E5E5E5] shadow-[0_2px_10px_rgba(0,0,0,0.05)] transition-all duration-300 ${scrolled ? "py-3" : "py-4"}`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="relative">
-            <Flame className="w-7 h-7 text-[#E6B31E]" />
-          </div>
+      <div className="mx-auto max-w-10xl px-4 sm:px-6 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
+          <img src={logo} alt="கோரக்கர் சித்தர் லோகோ" className="w-15 h-15 sm:w-18 sm:h-18 object-contain" />
           <div className="leading-tight">
             <div className="font-serif-tamil text-sm sm:text-base font-semibold text-[#D9381E]">கோரக்கர் சித்தர்</div>
-            <div className="text-[10px] sm:text-xs text-[#666666] tracking-wider uppercase">ஜீவசமாதி பீடம்</div>
+            {/* <div className="text-[10px] sm:text-xs text-[#666666] tracking-wider uppercase"> ஜீவசமாதி பீடம்</div> */}
           </div>
         </Link>
 
@@ -53,12 +53,12 @@ export function Navbar() {
           ))}
         </nav>
 
-        <Link
+        {/* <Link
           to="/contact"
           className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-[#D9381E] text-white hover:bg-[#b02d18] text-sm font-medium transition-colors duration-300"
         >
           தரிசனம்
-        </Link>
+        </Link> */}
 
         <button
           onClick={() => setOpen(!open)}

@@ -68,9 +68,9 @@ function Home() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.7 }} className="w-full mt-12 hidden lg:block">
             <div className="grid lg:grid-cols-3 gap-6 place-items-center">
               {[
-                { n: "300+", l: "ஆண்டுகள் வரலாறு" },
-                { n: "10K+", l: "மாத பக்தர்கள்" },
-                { n: "12", l: "முக்கிய திருவிழா" },
+                { n: "200+", l: "ஆண்டுகள் வரலாறு" },
+                { n: "1K+", l: "மாத பக்தர்கள்" },
+                { n: "6", l: "முக்கிய திருவிழா" },
               ].map((s) => (
                 <div key={s.l} className="bg-white border border-[#D4AF37]/30 rounded-2xl p-6 text-center hover:shadow-lg transition-all shadow-card w-full max-w-[280px]">
                   <div className="text-4xl md:text-5xl font-serif-tamil font-bold text-[#D9381E] mb-2">{s.n}</div>
@@ -87,9 +87,9 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 place-items-center">
             {[
-              { n: "300+", l: "ஆண்டுகள் வரலாறு" },
-              { n: "10K+", l: "மாத பக்தர்கள்" },
-              { n: "12", l: "முக்கிய திருவிழா" },
+              { n: "200+", l: "ஆண்டுகள் வரலாறு" },
+              { n: "1K+", l: "மாத பக்தர்கள்" },
+              { n: "6", l: "முக்கிய திருவிழா" },
             ].map((s) => (
               <div key={s.l} className="bg-white border border-[#D4AF37]/40 shadow-[0_4px_20px_rgba(0,0,0,0.05)] rounded-2xl p-6 text-center w-full max-w-[320px]">
                 <div className="text-4xl sm:text-5xl font-serif-tamil font-bold text-[#D9381E] mb-2">{s.n}</div>
@@ -141,9 +141,9 @@ function Home() {
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.08}>
                 <div className="hover-lift bg-white border border-[#E5E5E5] shadow-card rounded-2xl p-7 h-full group">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 group-hover:scale-110 transition-luxury">
+                  {/* <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 group-hover:scale-110 transition-luxury">
                     <s.icon className="w-6 h-6 text-primary-foreground" />
-                  </div>
+                  </div> */}
                   <h3 className="text-lg font-bold text-[#D9381E]">{s.title}</h3>
                   <p className="mt-3 text-sm font-medium text-[#2C2C2C] leading-relaxed">{s.desc}</p>
                 </div>
@@ -255,7 +255,7 @@ function Home() {
   <div className="mx-auto max-w-5xl px-4 sm:px-6 relative z-10">
     <Reveal>
       <div className="text-center">
-        <Flame className="w-12 h-12 mx-auto mb-6 text-white" />
+        {/* <Flame className="w-12 h-12 mx-auto mb-6 text-white" /> */}
 
         <h2 className="text-4xl font-serif font-bold mb-6 text-white">
           உங்கள் வருகையை திட்டமிடுங்கள்
