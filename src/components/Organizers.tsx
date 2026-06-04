@@ -1,5 +1,6 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import jeeva_nandham from "../assets/jeeva_nandham.png";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 // ─── TypeScript Interfaces ───────────────────────────────────────────────────
@@ -27,7 +28,7 @@ const MAIN_LEADER: Organizer = {
   id: "leader-1",
   name: "இரா. ஜீவானந்தம்",
   role: "B.A.",
-  imageUrl: "src/assets/jeeva nandham.png",
+  imageUrl: jeeva_nandham,
   // bio: "Leading the foundation with over 20 years of spiritual service and dedication to the community.",
   socials: {
     facebook: "",
@@ -104,7 +105,7 @@ const SocialLinks = ({ socials }: { socials?: OrganizerSocials }) => {
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -114,7 +115,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
@@ -221,7 +222,7 @@ export const Organizers = () => {
             >
               <div className="w-[100px] h-[100px] rounded-lg p-1 bg-gray-100 group-hover:bg-orange-100 transition-colors duration-300 mb-5">
                 <img
-                  src={member.imageUrl}
+                  src={member.imageUrl || undefined}
                   alt={member.name}
                   className="w-full h-full object-cover rounded-lg border-2 border-white shadow-sm"
                 />
