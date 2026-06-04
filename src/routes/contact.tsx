@@ -41,6 +41,37 @@ function Contact() {
         </div>
       </section>
 
+      {/* Donation Section */}
+      <section className="py-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+          <Reveal>
+            <div className="glass rounded-3xl p-8 md:p-12 border border-gold/20 shadow-luxury bg-white/60 text-center">
+              <h2 className="text-3xl md:text-4xl font-serif-tamil font-bold text-[#D9381E] mb-4">
+                நன்கொடை
+              </h2>
+              <p className="text-gray-700 text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                கோவிலின் தினசரி பூஜைகள், அன்னதானம் மற்றும் திருப்பணிகளுக்கு உங்களால் இயன்ற நன்கொடைகளை வழங்கி இறையருள் பெற வேண்டுகிறோம்.
+              </p>
+              
+              <div className="inline-block group">
+                <div className="bg-white p-4 rounded-3xl shadow-md border border-gray-100 group-hover:-translate-y-2 group-hover:shadow-2xl transition-all duration-500">
+                  <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-2xl bg-gray-50 overflow-hidden relative flex items-center justify-center">
+                    {/* Placeholder for QR Code */}
+                    <img 
+                      src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg" 
+                      alt="Donation QR Code Placeholder" 
+                      className="w-full h-full object-cover p-4 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                    />
+                    <div className="absolute inset-0 border-2 border-dashed border-gray-200 rounded-2xl m-2 pointer-events-none" />
+                  </div>
+                  <p className="mt-4 font-bold text-gray-800 tracking-wide">Scan to Donate</p>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="pb-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
           <Reveal>
