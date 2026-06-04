@@ -65,7 +65,7 @@ const TEAM_MEMBERS: Organizer[] = [
   },
   {
     id: "member-4",
-    name: "வே. வி. திருநாவுக்கரசுi",
+    name: "வே. வி. திருநாவுக்கரசு",
     role: "",
     imageUrl: "",
     // bio: "Connecting with devotees and handling media communications.",

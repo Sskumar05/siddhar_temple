@@ -53,7 +53,7 @@ export const VIDEOS_DATA: VideoData[] = [
     id: "3",
     title: "தரிசனம்",
     cat: "கோரக்கர்",
-    // videoPath: "./src/assets/tharisanam.mp4",
+    videoUrl: "https://res.cloudinary.com/dhjupdyus/video/upload/v1780583271/lv_0_20260603202826_yvzd6w.mp4",
     // thumbnail: lamps,
     duration: "8:45",
   },
