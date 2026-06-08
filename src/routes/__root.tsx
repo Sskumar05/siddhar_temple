@@ -82,7 +82,7 @@ function RootComponent() {
         </main>
         <Footer />
         <FloatingWhatsApp
-          phoneNumber="918248978136"
+          phoneNumber="917502041000"
           accountName="கோரக்கர் சித்தர் பீடம்"
           statusMessage="Online · Usually replies instantly"
           chatMessage="வணக்கம்! 🙏 கோரக்கர் சித்தர் ஜீவசமாதி பீடத்திற்கு வரவேற்கிறோம். பூஜை, நேர்த்திக்கடன், திருவிழா விவரங்களுக்கு WhatsApp-ல் தொடர்பு கொள்ளுங்கள்."

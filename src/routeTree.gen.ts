@@ -17,6 +17,7 @@ import { Route as HistoryRouteImport } from './routes/history'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FestivalsRouteImport } from './routes/festivals'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AnnadhanamRouteImport } from './routes/annadhanam'
 import { Route as AboutTempleRouteImport } from './routes/about-temple'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -60,6 +61,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnnadhanamRoute = AnnadhanamRouteImport.update({
+  id: '/annadhanam',
+  path: '/annadhanam',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutTempleRoute = AboutTempleRouteImport.update({
   id: '/about-temple',
   path: '/about-temple',
@@ -74,6 +80,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about-temple': typeof AboutTempleRoute
+  '/annadhanam': typeof AnnadhanamRoute
   '/contact': typeof ContactRoute
   '/festivals': typeof FestivalsRoute
   '/gallery': typeof GalleryRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about-temple': typeof AboutTempleRoute
+  '/annadhanam': typeof AnnadhanamRoute
   '/contact': typeof ContactRoute
   '/festivals': typeof FestivalsRoute
   '/gallery': typeof GalleryRoute
@@ -99,6 +107,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about-temple': typeof AboutTempleRoute
+  '/annadhanam': typeof AnnadhanamRoute
   '/contact': typeof ContactRoute
   '/festivals': typeof FestivalsRoute
   '/gallery': typeof GalleryRoute
@@ -113,6 +122,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about-temple'
+    | '/annadhanam'
     | '/contact'
     | '/festivals'
     | '/gallery'
@@ -125,6 +135,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about-temple'
+    | '/annadhanam'
     | '/contact'
     | '/festivals'
     | '/gallery'
@@ -137,6 +148,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about-temple'
+    | '/annadhanam'
     | '/contact'
     | '/festivals'
     | '/gallery'
@@ -150,6 +162,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutTempleRoute: typeof AboutTempleRoute
+  AnnadhanamRoute: typeof AnnadhanamRoute
   ContactRoute: typeof ContactRoute
   FestivalsRoute: typeof FestivalsRoute
   GalleryRoute: typeof GalleryRoute
@@ -218,6 +231,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/annadhanam': {
+      id: '/annadhanam'
+      path: '/annadhanam'
+      fullPath: '/annadhanam'
+      preLoaderRoute: typeof AnnadhanamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about-temple': {
       id: '/about-temple'
       path: '/about-temple'
@@ -238,6 +258,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutTempleRoute: AboutTempleRoute,
+  AnnadhanamRoute: AnnadhanamRoute,
   ContactRoute: ContactRoute,
   FestivalsRoute: FestivalsRoute,
   GalleryRoute: GalleryRoute,

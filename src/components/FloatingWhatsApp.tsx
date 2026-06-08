@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 // ─── TypeScript Interfaces ───────────────────────────────────────────────────
 
 interface FloatingWhatsAppProps {
-  /** WhatsApp phone number in international format without + or spaces, e.g. "8248978136" */
+  /** WhatsApp phone number in international format without + or spaces, e.g. "7502041000" */
   phoneNumber?: string;
   /** Pre-filled message when opening WhatsApp */
   prefilledMessage?: string;
@@ -188,7 +188,7 @@ const ChatPopup = ({
 // ─── Main Component ───────────────────────────────────────────────────────────
 
 export const FloatingWhatsApp = ({
-  phoneNumber = "8248978136",
+  phoneNumber = "7502041000",
   prefilledMessage = "வணக்கம்! உங்கள் திருக்கோயில் பற்றி மேலும் அறிய விரும்புகிறேன்.",
   accountName = "கோரக்கர் சித்தர் பீடம்",
   avatar,

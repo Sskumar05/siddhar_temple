@@ -31,8 +31,8 @@ export function Footer() {
           <h4 className="text-gold text-sm uppercase tracking-widest mb-4">தொடர்பு</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
             <li className="flex gap-2"><MapPin className="w-4 h-4 text-gold shrink-0 mt-0.5" /> வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம்</li>
-            <li className="flex gap-2"><Phone className="w-4 h-4 text-gold shrink-0 mt-0.5" /> +91 98765 43210</li>
-            <li className="flex gap-2"><Mail className="w-4 h-4 text-gold shrink-0 mt-0.5" /> info@korakkarpeedam.org</li>
+            <li className="flex gap-2"><Phone className="w-4 h-4 text-gold shrink-0 mt-0.5" /> +91 75020 41000</li>
+            <li className="flex gap-2"><Mail className="w-4 h-4 text-gold shrink-0 mt-0.5" /> arulmigukorakkarsithar@gmail.com</li>
             <li className="flex gap-2"><Clock className="w-4 h-4 text-gold shrink-0 mt-0.5" /> காலை 6:00 – இரவு 9:00</li>
           </ul>
         </div>
