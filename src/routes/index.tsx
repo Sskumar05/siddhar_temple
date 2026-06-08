@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Flame, Heart, Sparkles, Star } from "lucide-react";
 import heroTemple from "../assets/hero.png";
 import siddhar from "../assets/image.png";
-import lamps from "../assets/lamps.jpg";
+import lamps from "../assets/vinayaga.png";
 import samadhi from "../assets/siddhar-img.png";
 import festival from "../assets/Karuvari.png";
-import pooja from "../assets/pooja.jpg";
-import annadhanam from "../assets/annadhanam.jpg";
-import mahashiva from "../assets/mahashiva.png";
+import pooja from "../assets/koraga jenthi.png";
+import annadhanam from "../assets/Annathanam.png";
+import mahashiva from "../assets/bless.png";
 import { Reveal, SectionHeading } from "../components/Section";
 
 export const Route = createFileRoute("/")({
@@ -23,11 +23,11 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: Flame, title: "தினசரி பூஜை", desc: "காலை மற்றும் மாலை அபிஷேக ஆராதனைகள் சித்தர் சமாதிக்கு வழங்கப்படுகின்றன." },
+  { icon: Flame, title: "தினசரி பூஜை", desc: "பதினெண் சித்தர்களில் ஒருவரான கோரக்கர் சித்தருக்கு தினமும் நடைபெறும் சிறப்பு பூஜை, பக்தர்களின் மனக்குறைகளை நீக்கி, ஆரோக்கியம், வளம், மனஅமைதி மற்றும் இறையருளைப் பெற வழிவகுக்கிறது." },
   { icon: Heart, title: "அன்னதானம்", desc: "அன்னதானம் காலை, மதியம், இரவு என மூன்று வேளைகளிலும் நடைபெறுகிறது. மேலும், வியாழக்கிழமைகளிலும் பௌர்ணமி நாட்களிலும் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னதானம் வழங்கப்படுகிறது" },
   // { icon: Sparkles, title: "குரு பூஜை", desc: "ஆண்டு தோறும் கோரக்கர் சித்தரின் குரு பூஜை விழா சிறப்பாக நடைபெறுகிறது." },
-  { icon: Star, title: "சித்தர் தரிசனம்", desc: "ஜீவசமாதி தரிசனத்தால் பக்தர்களுக்கு ஆன்மீக ஆற்றலும் அமைதியும் கிட்டும்." },
-  { icon: Star, title: "அன்னக்காவடி தர்மம்", desc: "வடக்குப் பொய்கை நல்லூரில் கோரக்கர் ஜீவசமாதி மற்றும் அன்னக்காவடி தர்மம்"}
+  { icon: Star, title: "சித்தர் தரிசனம்", desc: "பதினெண் சித்தர்களில் தலைசிறந்த கோரக்கர் சித்தரின் அருள் தரிசனம், ஞானம், மனஅமைதி, ஆரோக்கியம், வளம், செழிப்பு, ஆன்மீக முன்னேற்றம், இறையருள் மற்றும் வாழ்வில் வெற்றியை வழங்கும் புனித அனுபவமாகும்." },
+  { icon: Star, title: "அன்னக்காவடி தர்மம்", desc: "தினமும் சேகரிக்கப்படும் அன்னம் கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்பட்டு, பின்னர் பக்தர்களுக்கும் சிவனடியார்களுக்கும் வழங்கப்படுகிறது. பல நூற்றாண்டுகளாக இப்புனித மரபு தொடர்கிறது."}
 ];
 
 const galleryPreview = [samadhi, lamps, festival, pooja, annadhanam, heroTemple];

@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import festival from "../assets/festival.jpg";
-import lamps from "../assets/lamps.jpg";
-import samadhi from "../assets/samadhi.jpg";
-import pooja from "../assets/pooja.jpg";
+import lamps from "../assets/vinayaga.png";
+import samadhi from "../assets/siddhar-img.png";
+import pooja from "../assets/koraga jenthi.png";
 import hero from "../assets/hero-temple.jpg";
-import siddhar from "../assets/siddhar.jpg";
+import siddhar from "../assets/siddhar-img.png";
+import festival from "../assets/Karuvari.png";
 
 export const Route = createFileRoute("/videos")({
   head: () => ({

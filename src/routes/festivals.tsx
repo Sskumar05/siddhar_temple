@@ -1,29 +1,29 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import festival from "../assets/Karuvari.png";
-import lamps from "../assets/lamps.jpg";
-import pooja from "../assets/koraga jenthi.png";
-import samadhi from "../assets/samadhi.jpg";
-import mahashiva from "../assets/mahashiva.png";
+import Karuvari from "../assets/Karuvari.png";
+import lamps from "../assets/vinayaga.png";
+import Koragajenthi from "../assets/koraga jenthi.png";
+import samadhi from "../assets/siddhar-img.png";
+import mahashiva from "../assets/bless.png";
 
 export const Route = createFileRoute("/festivals")({
   head: () => ({
     meta: [
       { title: "திருவிழாக்கள் — கோரக்கர் சித்தர் கோவில்" },
       { name: "description", content: "ஆண்டு குரு பூஜை, மகா சிவராத்திரி, பௌர்ணமி திருவிழா, கார்த்திகை தீபம் — கோவிலின் முக்கிய திருவிழாக்கள்." },
-      { property: "og:image", content: festival },
+      { property: "og:image", content: Karuvari },
     ],
   }),
   component: Festivals,
 });
 
 const festivals = [
-  { img: samadhi, title: "பௌர்ணமி திருவிழா", month: "மாதந்தோறும்", desc: "முழு நிலா இரவில் சித்தர் சந்நிதி தீப ஒளியில் ஒளிர்கிறது. சந்திர ஓமம், சிறப்பு அர்ச்சனை." },
-  { img: festival, title: "ஐப்பசி பௌர்ணமி, பரணி விழா", month: "ஐப்பசி மாதம்", desc: "கோரக்கர் சித்தருக்கு சிறப்பு பூஜைகள், தீபாராதனைகள் மற்றும் பக்தர்கள் தரிசனத்துடன் சிறப்புற கொண்டாடப்படும் விழா." },
-  { img: pooja, title: "கோரக்கர் ஜெயந்தி விழா", month: "கார்த்திகை மாதம்", desc: "சித்தர் பெருமானின் அவதார தினத்தை முன்னிட்டு சிறப்பு பூஜைகள், அபிஷேகங்கள் மற்றும் பக்தர்கள் பங்கேற்புடன் சிறப்பாக நடைபெறும் விழா." },
-  { img: lamps, title: "கார்த்திகை தீபம்", month: "கார்த்திகை மாதம்", desc: "கோவில் முழுவதும் ஆயிரம் தீபங்கள் ஒளிர்கின்றன. ஒளியின் திருவிழா — ஞான ஒளியின் வடிவம்." },
-  { img: mahashiva, title: "மகா சிவராத்திரி", month: "மாசி மாதம்", desc: "இரவு முழுவதும் சிவ வழிபாடு, பஜனை, தியானம், அபிஷேகம் என அற்புதமான ஆன்மீக சூழல்." }
+  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929094/IMG_6245_erhrdy.jpg", title: "பௌர்ணமி திருவிழா", month: "மாதந்தோறும்", desc: "முழு நிலா இரவில் சித்தர் சந்நிதி தீப ஒளியில் ஒளிர்கிறது. சந்திர ஓமம், சிறப்பு அர்ச்சனை." },
+  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780937586/img_5003_mi2pcp.jpg", title: "ஐப்பசி பௌர்ணமி, பரணி விழா", month: "ஐப்பசி மாதம்", desc: "கோரக்கர் சித்தருக்கு சிறப்பு பூஜைகள், தீபாராதனைகள் மற்றும் பக்தர்கள் தரிசனத்துடன் சிறப்புற கொண்டாடப்படும் விழா." },
+  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780937821/img_5004_k0zeqf.jpg", title: "கோரக்கர் ஜெயந்தி விழா", month: "கார்த்திகை மாதம்", desc: "சித்தர் பெருமானின் அவதார தினத்தை முன்னிட்டு சிறப்பு பூஜைகள், அபிஷேகங்கள் மற்றும் பக்தர்கள் பங்கேற்புடன் சிறப்பாக நடைபெறும் விழா." },
+  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780932226/image_5000_bc7ahc.jpg", title: "கார்த்திகை தீபம்", month: "கார்த்திகை மாதம்", desc: "கோவில் முழுவதும் ஆயிரம் தீபங்கள் ஒளிர்கின்றன. ஒளியின் திருவிழா — ஞான ஒளியின் வடிவம்." },
+  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929087/IMG_6117_dtvqdd.jpg", title: "மகா சிவராத்திரி", month: "மாசி மாதம்", desc: "இரவு முழுவதும் சிவ வழிபாடு, பஜனை, தியானம், அபிஷேகம் என அற்புதமான ஆன்மீக சூழல்." }
 
 ];
 

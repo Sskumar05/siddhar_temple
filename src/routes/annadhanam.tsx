@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal, SectionHeading } from "../components/Section";
 import annadhanamImg from "../assets/Annathanam.png";
-import heroTemple from "../assets/hero-temple.jpg";
 
 export const Route = createFileRoute("/annadhanam")({
   head: () => ({
@@ -23,14 +22,7 @@ function AnnadhanamPage() {
         subtitle="பசி என்னும் நெருப்பு ஏழை எளியவர்களின் தேகத்தில் பற்றி எரிகின்ற போது அதனை அணைக்கும் முகத்தினால் தீவனமளிப்பதும் என்பது நேர்மையான அறங்களுள் ஒன்றாகும். அந்த கருணை வழியிலேயே வள்ளல்கள் பெருமக்களாகி வாழ்ந்தனர்." 
       />
 
-      {/* Hero CTA */}
-      <section className="pb-16 -mt-10 relative z-10 text-center">
-         <Reveal>
-             <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-semibold shadow-gold hover-lift text-lg">
-                அன்னதானம் செய்ய
-             </Link>
-         </Reveal>
-      </section>
+      
 
       {/* Sacred Quotes Section */}
       <section className="py-20 relative overflow-hidden">
@@ -82,7 +74,7 @@ function AnnadhanamPage() {
             <Reveal>
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-gold opacity-20 blur-2xl rounded-3xl" />
-                <img src={annadhanamImg} alt="அன்னதானம்" className="relative rounded-3xl shadow-luxury w-full aspect-[4/3] object-cover" />
+                <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1780937253/IMG_6154_gcc2hb.jpg" alt="அன்னதானம்" className="relative rounded-3xl shadow-luxury w-full aspect-[4/3] object-cover" />
               </div>
             </Reveal>
             <div>
@@ -108,9 +100,15 @@ function AnnadhanamPage() {
       {/* Annakkavadi Tradition */}
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal>
+          {/* <Reveal>
             <SectionHeading eyebrow="அன்னக்காவடி மரபு" title="பல நூற்றாண்டுகளாகத் தொடரும் பக்தி" align="center" />
-          </Reveal>
+          </Reveal> */}
+
+          <PageHero 
+        eyebrow="தொடரும் பக்தி மரபு" 
+        title="அன்னக்காவடி மரபு" 
+        subtitle="தினமும் வீடு தோறும் அன்னம் சேகரித்து கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்பட்டு, பின்னர் பக்தர்களுக்கும் சிவனடியார்களுக்கும் வழங்கப்படுகிறது. பல நூற்றாண்டுகளாகத் தொடரும் பக்தி மரபான இது, தானம் மற்றும் தர்மத்தின் உயர்ந்த அடையாளமாக இன்றளவும் கடைப்பிடிக்கப்பட்டு வருகிறது." 
+      />
           
           <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -171,6 +169,16 @@ function AnnadhanamPage() {
             </div>
           </Reveal>
         </div>
+      </section>
+
+
+      {/* Hero CTA */}
+      <section className="pb-16 -mt-10 relative z-10 text-center">
+         <Reveal>
+             <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-semibold shadow-gold hover-lift text-lg">
+                அன்னதானம் செய்ய
+             </Link>
+         </Reveal>
       </section>
 
       {/* Call to Action Banner */}

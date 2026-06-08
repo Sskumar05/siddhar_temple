@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
 
@@ -15,32 +15,56 @@ export const Route = createFileRoute("/contact")({
 });
 
 function Contact() {
-  const [sent, setSent] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMessage("");
+
+    try {
+      // TODO: Replace with your actual Supabase Edge Function URL
+      const response = await fetch("https://<YOUR_SUPABASE_PROJECT_REF>.supabase.co/functions/v1/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // "Authorization": `Bearer <YOUR_SUPABASE_ANON_KEY>` // Uncomment if your edge function requires auth
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to send message");
+      }
+
+      setStatus("success");
+      setFormData({ name: "", phone: "", email: "", subject: "", message: "" });
+      
+      // Reset success state after 5 seconds
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (error: any) {
+      console.error("Submission error:", error);
+      setStatus("error");
+      setErrorMessage(error.message || "An error occurred while sending your message. Please try again.");
+    }
+  };
+
   return (
     <>
       <PageHero eyebrow="தொடர்புக்கு" title="எங்களைத் தொடர்புகொள்ள" subtitle="உங்கள் வேண்டுகோள், சந்தேகம், தரிசன ஏற்பாடு — அனைத்துக்கும் வரவேற்கிறோம்." />
-
-      {/* <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
-          {[
-            { title: "முகவரி", text: "அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம், வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம் – 611 002" },
-            { title: "தொலைபேசி", text: "+91 75020 41000" },
-            { title: "மின்னஞ்சல்", text: "arulmigukorakkarsithar@gmail.com" },
-            { title: "நடைதிறப்பு", text: "காலை: 5:00 மணி முதல் பகல்: 1:00 மணி வரை\n மதியம்: 4:00 மணி முதல் இரவு: 9:00 மணி வரை \n காலை: 5:00 மணி முதல் பகல்: 1:00 மணி வரை\nமதியம்: 3:00 மணி முதல் இரவு: 9:00 மணி வரை"},
-            { title: "பூஜை நேரம்", text: "காலை  : 8:00 மணி \n மதியம் : 12:30 மணி \n இரவு : 8:30 மணி" },
-          ].map((c, i) => (
-            <Reveal key={c.title} delay={i * 0.06} className={i === 0 ? "lg:col-span-1" : ""}>
-              <div className="glass rounded-3xl p-8 md:p-10 h-full border border-gold/20 shadow-luxury hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 bg-white/50">
-                <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-4">
-                  <c.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-[#D9381E] mb-4 tracking-wide font-serif-tamil">{c.title}</h3>
-                <p className="text-base md:text-lg text-gray-800 font-medium whitespace-pre-line leading-relaxed">{c.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section> */}
 
       {/* Donation Section */}
       <section className="py-12">
@@ -61,7 +85,7 @@ function Contact() {
                     <img 
                       src="https://res.cloudinary.com/dhjupdyus/image/upload/v1780586058/QRcode_jw9seu.jpg" 
                       alt="Donation QR Code Placeholder" 
-                      className="w- h- object-cover p-6 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      className="w-full h-full object-cover p-6 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <div className="absolute inset-0 border-2 border-dashed border-gray-200 rounded-2xl m-2 pointer-events-none" />
                   </div>
@@ -79,7 +103,7 @@ function Contact() {
             <div className="rounded-3xl overflow-hidden shadow-luxury aspect-[4/3] glass">
               <iframe
                 title="கோவில் வரைபடம்"
-                src="https://www.google.com/maps?q=Nagapattinam&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.0296155345222!2d79.8406961!3d10.7321992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a556c052bd96773%3A0xd1f44817b4908649!2sArulmigu%20Shri%20Korakkar%20Siddhar&#39;s%20Jeeva%20Samadhi!5e0!3m2!1sen!2sin!4v1780943140572!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, filter: "invert(0.9) hue-rotate(180deg) saturate(0.6)" }}
@@ -91,23 +115,70 @@ function Contact() {
 
           <Reveal delay={0.1}>
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-              className="glass rounded-3xl p-8 md:p-10 space-y-5"
+              onSubmit={handleSubmit}
+              className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-xl relative overflow-hidden z-10"
             >
-              <h3 className="text-2xl font-semibold text-primary">செய்தி அனுப்ப</h3>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <Field label="பெயர்" type="text" />
-                <Field label="தொலைபேசி" type="tel" />
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-gold" />
+              
+              <div className="relative space-y-5">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-serif-tamil font-bold text-[#D9381E] tracking-wide">செய்தி அனுப்ப</h3>
+                  <p className="text-gray-600 mt-1 text-sm font-medium">உங்கள் விவரங்களை கீழே உள்ளிடவும்</p>
+                </div>
+                
+                {status === "success" && (
+                  <div className="bg-green-50 text-green-800 border border-green-200 rounded-xl p-4 flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-500" />
+                    <p className="font-medium text-sm">நன்றி! உங்கள் செய்தி வெற்றிகரமாக அனுப்பப்பட்டது. விரைவில் தொடர்புகொள்வோம்.</p>
+                  </div>
+                )}
+
+                {status === "error" && (
+                  <div className="bg-red-50 text-red-800 border border-red-200 rounded-xl p-4 flex items-center gap-3 animate-in fade-in slide-in-from-top-2">
+                    <AlertCircle className="w-5 h-5 text-red-500" />
+                    <p className="font-medium text-sm">{errorMessage}</p>
+                  </div>
+                )}
+                
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <Field label="பெயர்" type="text" name="name" value={formData.name} onChange={handleChange} required />
+                  <Field label="தொலைபேசி" type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+                </div>
+                
+                <div className="space-y-5">
+                  <Field label="மின்னஞ்சல்" type="email" name="email" value={formData.email} onChange={handleChange} required />
+                  <Field label="தலைப்பு" type="text" name="subject" value={formData.subject} onChange={handleChange} required />
+                  
+                  <div className="w-full group/field">
+                    <label className="block text-[13px] font-bold uppercase tracking-widest text-gray-800 mb-2 ml-1 group-focus-within/field:text-[#D9381E] transition-colors">
+                      செய்தி <span className="text-[#D9381E]">*</span>
+                    </label>
+                    <textarea 
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={4} 
+                      className="w-full bg-gray-50/50 border-2 border-gray-300 rounded-xl px-4 py-3.5 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:bg-white focus:border-[#D9381E] focus:ring-4 focus:ring-[#D9381E]/10 hover:border-[#D9381E]/50 transition-all duration-300 shadow-sm resize-none" 
+                    />
+                  </div>
+                  
+                  <button 
+                    type="submit" 
+                    disabled={status === "loading"}
+                    className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 mt-4 rounded-xl bg-gradient-gold text-white font-extrabold text-lg tracking-wider shadow-[0_8px_20px_rgba(218,165,32,0.4)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(218,165,32,0.6)] active:scale-[0.98] transition-all duration-300 disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-[0_8px_20px_rgba(218,165,32,0.4)] disabled:cursor-not-allowed"
+                  >
+                    <span className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-in-out" />
+                    <span className="relative flex items-center gap-2 drop-shadow-md">
+                      {status === "loading" ? (
+                        <>அனுப்புகிறது <Loader2 className="w-5 h-5 animate-spin" /></>
+                      ) : (
+                        <>செய்தி அனுப்ப <Send className="w-5 h-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" /></>
+                      )}
+                    </span>
+                  </button>
+                </div>
               </div>
-              <Field label="மின்னஞ்சல்" type="email" />
-              <Field label="தலைப்பு" type="text" />
-              <div>
-                <label className="block text-xs uppercase tracking-widest text-gold mb-2">செய்தி</label>
-                <textarea rows={5} className="w-full bg-input/40 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30 transition-luxury" />
-              </div>
-              <button type="submit" className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-gradient-gold text-primary-foreground font-medium gold-glow transition-luxury">
-                {sent ? "நன்றி — விரைவில் தொடர்புகொள்வோம்" : <>செய்தி அனுப்ப <Send className="w-4 h-4" /></>}
-              </button>
             </form>
           </Reveal>
         </div>
@@ -116,11 +187,20 @@ function Contact() {
   );
 }
 
-function Field({ label, type }: { label: string; type: string }) {
+function Field({ label, type, name, value, onChange, required = false }: any) {
   return (
-    <div className="w-full">
-      <label className="block text-xs uppercase tracking-widest text-gold mb-2">{label}</label>
-      <input type={type} className="w-full bg-input/40 border border-border rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30 transition-luxury" />
+    <div className="w-full group/field">
+      <label className="block text-[13px] font-bold uppercase tracking-widest text-gray-800 mb-2 ml-1 group-focus-within/field:text-[#D9381E] transition-colors">
+        {label} {required && <span className="text-[#D9381E]">*</span>}
+      </label>
+      <input 
+        type={type} 
+        name={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        className="w-full bg-gray-50/50 border-2 border-gray-300 rounded-xl px-4 py-3.5 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:bg-white focus:border-[#D9381E] focus:ring-4 focus:ring-[#D9381E]/10 hover:border-[#D9381E]/50 transition-all duration-300 shadow-sm" 
+      />
     </div>
   );
 }

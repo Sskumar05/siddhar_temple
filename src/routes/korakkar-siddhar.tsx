@@ -2,8 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
 import siddhar from "../assets/siddhar-img.png";
-import lamps from "../assets/lamps.jpg";
-import samadhi from "../assets/Arul_beedam.png";
+import Arul_beedam from "../assets/Arul_beedam.png";
 
 
 export const Route = createFileRoute("/korakkar-siddhar")({
@@ -91,7 +90,7 @@ function KorakkarSiddhar() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <Reveal>
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <img src={samadhi} alt="ஜீவசமாதி" loading="lazy" className="rounded-3xl shadow-luxury" />
+              <img src={Arul_beedam} alt="ஜீவசமாதி" loading="lazy" className="rounded-3xl shadow-luxury" />
               <div>
                 <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">கோரக்கர் சித்தரின் கொடை</div>
                 <h2 className="text-3xl md:text-4xl font-semibold text-primary">அருள் தொடரும் பீடம்</h2>
