@@ -145,19 +145,14 @@ function Home() {
       </section>
 
       {/* FESTIVAL HIGHLIGHTS */}
-      <section className="relative py-24 md:py-32">
+      <section className="py-24 bg-[#FAFAFA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="flex flex-wrap justify-between items-end gap-6 mb-14">
-            <Reveal><SectionHeading eyebrow="திருவிழாக்கள்" title="புனித கொண்டாட்டங்கள்" /></Reveal>
-            <Link to="/festivals" className="text-sm text-gold border-b border-gold/40 pb-1 hover:gap-3 transition-all inline-flex items-center gap-2">
-              அனைத்தும் காண <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <Reveal><SectionHeading eyebrow="திருவிழாக்கள்" title="புனித கொண்டாட்டங்கள்" align="center" /></Reveal>
+          <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { img: mahashiva, title: "மகா சிவராத்திரி", date: "மாசி மாதம்" },
-              { img: festival, title: "ஐப்பசி பௌர்ணமி, பரணி விழா", date: "ஐப்பசி மாதம்" },
-              { img: lamps, title: "கார்த்திகை தீபம்", date: "கார்த்திகை மாதம்" },
+              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781113816/pancha_murthi_koahvs.png", title: "பஞ்ச மூர்த்தி விழா", month: "ஐப்பசி மாதம்", desc: "அருள்மிகு கோரக்கர் சித்தரின் அருளால் ஐந்து தெய்வங்களின் சங்கமத்தை கொண்டாடும், பக்தர்களுக்கு ஒற்றுமையும் ஆன்மீக சக்தியும் வழங்கும் புனிதப் பெருவிழா." },
+              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781113968/IMG_6228_z48eqw.jpg", title: "ஐப்பசி பரணி பெருவிழா", month: "ஐப்பசி மாதம்", desc: "பௌர்ணமி மற்றும் ஐப்பசி பரணியில் சிறப்பு வழிபாடும், ஆயிரக்கணக்கான பக்தர்கள் தரிசனமும் அன்னதானமும் பெற்று அருளாசி பெறுகின்றனர்" },
+              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929087/IMG_6117_dtvqdd.jpg", title: "ஆடி பிரம்மோற்சவ விழா", month: "ஐப்பசி மாதம்", desc: "கோரக்கர் ஆசிரமத்தில் ஆடி பிரம்மோற்சவ விழா நடைபெறுகிறது. சித்தரின் அருளை நாடும் பக்தர்கள் தரிசனமும் அன்னதானமும் பெறுகின்றனர்." },
             ].map((f, i) => (
               <Reveal key={f.title} delay={i * 0.1}>
                 <div className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
@@ -172,6 +167,11 @@ function Home() {
                 </div>
               </Reveal>
             ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Link to="/festivals" className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#D9381E] text-white font-medium hover:bg-[#b02d18] transition-colors duration-300">
+              அனைத்தும் காண
+            </Link>
           </div>
         </div>
       </section>

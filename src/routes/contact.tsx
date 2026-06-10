@@ -35,18 +35,23 @@ function Contact() {
     setErrorMessage("");
 
     try {
-      // TODO: Replace with your actual Supabase Edge Function URL
-      const response = await fetch("https://<YOUR_SUPABASE_PROJECT_REF>.supabase.co/functions/v1/send-email", {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+
+      if (!supabaseUrl) {
+        throw new Error("Supabase URL is not configured. Please contact the administrator.");
+      }
+
+      const response = await fetch(`${supabaseUrl}/functions/v1/send-email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          // "Authorization": `Bearer <YOUR_SUPABASE_ANON_KEY>` // Uncomment if your edge function requires auth
+          "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`
         },
         body: JSON.stringify(formData)
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
+        const errorData = await response.json().catch(() => ({}));
         throw new Error(errorData.error || "Failed to send message");
       }
 
@@ -85,7 +90,7 @@ function Contact() {
                     <img 
                       src="https://res.cloudinary.com/dhjupdyus/image/upload/v1780586058/QRcode_jw9seu.jpg" 
                       alt="Donation QR Code Placeholder" 
-                      className="w-full h-full object-cover p-6 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      className="object-cover p-6 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                     />
                     <div className="absolute inset-0 border-2 border-dashed border-gray-200 rounded-2xl m-2 pointer-events-none" />
                   </div>
@@ -97,7 +102,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="pb-24">
+      <section className="pb-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
           <Reveal>
             <div className="rounded-3xl overflow-hidden shadow-luxury aspect-[4/3] glass">
@@ -166,7 +171,7 @@ function Contact() {
                   <button 
                     type="submit" 
                     disabled={status === "loading"}
-                    className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 mt-4 rounded-xl bg-gradient-gold text-white font-extrabold text-lg tracking-wider shadow-[0_8px_20px_rgba(218,165,32,0.4)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(218,165,32,0.6)] active:scale-[0.98] transition-all duration-300 disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-[0_8px_20px_rgba(218,165,32,0.4)] disabled:cursor-not-allowed"
+                    className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-4 mt-4 rounded-xl bg-[#D9381E] text-white font-extrabold text-lg tracking-wider shadow-[0_8px_20px_rgba(218,165,32,0.4)] hover:-translate-y-1 hover:shadow-[0_12px_25px_rgba(218,165,32,0.6)] active:scale-[0.98] transition-all duration-300 disabled:opacity-70 disabled:hover:translate-y-0 disabled:hover:shadow-[0_8px_20px_rgba(218,165,32,0.4)] disabled:cursor-not-allowed"
                   >
                     <span className="absolute inset-0 bg-white/20 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300 ease-in-out" />
                     <span className="relative flex items-center gap-2 drop-shadow-md">

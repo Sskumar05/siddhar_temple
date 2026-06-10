@@ -18,7 +18,7 @@ function Poojas() {
       <PageHero 
         eyebrow="தினசரி வழிபாடு" 
         title="பூஜை நேரங்கள்" 
-        subtitle="அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி திருக்கோவிலின் தினசரி நடைதிறப்பு மற்றும் பூஜை நேரங்கள்." 
+        subtitle="அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம் தினசரி நடைதிறப்பு மற்றும் பூஜை நேரங்கள்." 
       />
       
       <section className="py-24 relative overflow-hidden">
@@ -35,7 +35,7 @@ function Poojas() {
                 <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <h3 className="text-3xl font-semibold text-primary mb-10 flex items-center gap-4">
-                  <span className="w-12 h-[2px] bg-gold/50 block"></span>
+                  {/* <span className="w-12 h-[2px] bg-gold/50 block"></span> */}
                   நடைதிறப்பு
                 </h3>
 
@@ -77,7 +77,7 @@ function Poojas() {
                 <div className="absolute inset-0 bg-gradient-to-bl from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 <h3 className="text-3xl font-semibold text-primary mb-10 flex items-center gap-4">
-                  <span className="w-12 h-[2px] bg-gold/50 block"></span>
+                  {/* <span className="w-12 h-[2px] bg-gold/50 block"></span> */}
                   பூஜை நேரம்
                 </h3>
 
@@ -150,12 +150,12 @@ function Poojas() {
             <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
               <div className="p-8 rounded-[2rem] bg-background/60 border border-border/40 hover:border-gold/30 transition-colors relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-gold to-transparent"></div>
-                <p className="text-muted-foreground leading-loose text-lg text-justify md:text-center">
+                <p className="text-muted-foreground leading-loose text-lg text-justify md:text-center text-left md:text-justify text-base md:text-lg leading-8">
                   கோரக்கர் சித்தரின் எந்திர மந்திரம் ஆன்மீக ஆற்றல், மனஅமைதி மற்றும் இறையருளைப் பெற உதவும் புனித அருள்வழியாக பக்தர்களால் போற்றப்படுகிறது. பக்தியுடனும் நம்பிக்கையுடனும் சித்தரை தியானித்து வழிபடுவதன் மூலம் நேர்மறை எண்ணங்கள், மனவலிமை மற்றும் ஆன்மீக முன்னேற்றம் கிடைக்கும் என நம்பப்படுகிறது.
                 </p>
               </div>
 
-              <div className="p-6 rounded-[2rem] bg-gold/5 border border-gold/20 text-center relative overflow-hidden">
+              <div className="text-center">
                 <div className="absolute left-1/2 -top-4 -translate-x-1/2 w-16 h-16 rounded-full bg-gold/20 blur-xl"></div>
                 <p className="text-primary font-semibold text-xl md:text-2xl italic relative z-10">
                   "கோரக்கர் சித்தரின் அருள் என்றும் பக்தர்களை காத்து வழிநடத்துகிறது"

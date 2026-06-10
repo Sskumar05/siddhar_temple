@@ -1,24 +1,29 @@
+// @ts-ignore
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+// @ts-ignore
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3"
 
-const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY")
-const ADMIN_EMAIL = Deno.env.get("ADMIN_EMAIL") || "arulmigukorakkarsithar@gmail.com"
+// Tell TypeScript that Deno is a globally available variable
+declare const Deno: any;
+
+const RESEND_API_KEY = Deno.env.get("VITE_RESEND_API_KEY")
+const ADMIN_EMAIL = Deno.env.get("ADMIN_EMAIL") || "sshathiskumar54@gmail.com"
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 }
 
-serve(async (req) => {
+serve(async (req: Request) => {
   // Handle CORS Preflight Requests
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders })
   }
 
   try {
-    const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
-    const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY") ?? "";
-    
+    const supabaseUrl = Deno.env.get("VITE_SUPABASE_URL") ?? Deno.env.get("VITE_SUPABASE_URL") ?? "https://lajlyvafzczqxnshpftv.supabase.co";
+    const supabaseKey = Deno.env.get("VITE_SUPABASE_ANON_KEY") ?? Deno.env.get("VITE_SUPABASE_ANON_KEY") ?? "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhamx5dmFmemN6cXhuc2hwZnR2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODEwOTExMTcsImV4cCI6MjA5NjY2NzExN30.ViorYXFTPdPZa67hRPKkknN1fusescAsG9gDtVrpk28";
+
     // Create Supabase client
     const supabaseClient = createClient(supabaseUrl, supabaseKey, {
       global: { headers: { Authorization: req.headers.get('Authorization')! } }
@@ -39,16 +44,27 @@ serve(async (req) => {
     // Insert into Supabase 'contact_messages' table
     const { error: dbError } = await supabaseClient
       .from("contact_messages")
+      // .insert([
+      //   {
+      //     name,
+      //     phone,
+      //     email,
+      //     subject,
+      //     message,
+      //     ip_address: req.headers.get("x-forwarded-for") || null
+      //   }
+      // ])
+
       .insert([
         {
           name,
           phone,
           email,
-          subject,
-          message,
-          ip_address: req.headers.get("x-forwarded-for") || null
+          message
         }
       ])
+
+      
 
     if (dbError) {
       console.error("Database Insert Error:", dbError)
@@ -110,7 +126,7 @@ serve(async (req) => {
           `
         })
       })
-      
+
       // Log errors if email fails, but don't fail the whole request if DB succeeded
       if (!adminEmailResponse.ok) {
         console.error("Admin Email failed", await adminEmailResponse.text())
@@ -119,7 +135,7 @@ serve(async (req) => {
         console.error("User Email failed", await userEmailResponse.text())
       }
     } else {
-       console.warn("RESEND_API_KEY is not set. Emails were not sent.")
+      console.warn("RESEND_API_KEY is not set. Emails were not sent.")
     }
 
     return new Response(

@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 
 const navItems = [
   { to: "/", label: "முகப்பு" },
-  { to: "/about-temple", label: "கோவில்" },
+  { to: "/about-temple", label: "பீடம்" },
   { to: "/korakkar-siddhar", label: "வரலாறு"},
   // { to: "/history", label: "வரலாறு" },
   { to: "/poojas", label: "பூஜைகள்" },

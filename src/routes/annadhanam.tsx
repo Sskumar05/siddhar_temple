@@ -34,7 +34,7 @@ function AnnadhanamPage() {
                 <blockquote className="relative z-10 text-xl md:text-2xl text-primary font-serif-tamil leading-relaxed">
                   அற்றார் அழிபசி தீர்த்தல் அஃதொருவன் பெற்றான் பொருள்வைப்புழி
                 </blockquote>
-                <div className="mt-6 text-muted-foreground font-medium">— திருவள்ளுவர்</div>
+                {/* <div className="mt-6 text-muted-foreground font-medium">— திருவள்ளுவர்</div> */}
               </div>
             </Reveal>
             <Reveal delay={0.2}>
@@ -43,7 +43,7 @@ function AnnadhanamPage() {
                 <blockquote className="relative z-10 text-xl md:text-2xl text-primary font-serif-tamil leading-relaxed">
                   மாந்தின் ஞாலத்து வாழ்வோர்க்கு எல்லாம் உண்டி கொடுத்தோர் உயிர் கொடுத்தோரே
                 </blockquote>
-                <div className="mt-6 text-muted-foreground font-medium">— தமிழ் சான்றோர் வாக்கு</div>
+                {/* <div className="mt-6 text-muted-foreground font-medium">— தமிழ் சான்றோர் வாக்கு</div> */}
               </div>
             </Reveal>
           </div>
@@ -104,25 +104,7 @@ function AnnadhanamPage() {
         title="அன்னக்காவடி மரபு" 
         subtitle="தினமும் வீடு தோறும் அன்னம் சேகரித்து கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்பட்டு, பின்னர் பக்தர்களுக்கும் சிவனடியார்களுக்கும் வழங்கப்படுகிறது. பல நூற்றாண்டுகளாகத் தொடரும் பக்தி மரபான இது, தானம் மற்றும் தர்மத்தின் உயர்ந்த அடையாளமாக இன்றளவும் கடைப்பிடிக்கப்பட்டு வருகிறது." 
       />
-          
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "புறப்பாடு", desc: "தினமும் இரவு 7:00 மணியளவில் கோரக்கர் ஆசிரமத்திலிருந்து அன்னக்காவடிகள் வடக்கு மற்றும் தெற்கு திசைகளை நோக்கி புறப்படுகின்றன." },
-              { step: "02", title: "சேகரிப்பு", desc: "ஊர் மக்களின் வீடுகளிலிருந்து சாதம் பக்தி சிரத்தையுடன் சேகரிக்கப்படுகிறது." },
-              { step: "03", title: "நிவேதனம்", desc: "சேகரிக்கப்பட்ட அன்னம் முதலில் கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்படுகிறது." },
-              { step: "04", title: "விநியோகம்", desc: "பின்னர் அது சிவனடியார்களுக்கும் பக்தர்களுக்கும் பிரசாதமாக வழங்கப்படுகிறது." },
-            ].map((item, i) => (
-              <Reveal key={item.step} delay={i * 0.1}>
-                <div className="glass p-8 rounded-3xl h-full relative hover-lift group">
-                  <div className="text-5xl font-bold text-gold/10 absolute top-4 right-4 group-hover:text-gold/20 transition-colors">{item.step}</div>
-                  <h3 className="text-2xl font-semibold text-primary mb-4 relative z-10">{item.title}</h3>
-                  <p className="text-muted-foreground relative z-10">{item.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* Annakkavadi Featured Image */}
       <section className="py-10 pb-20">
@@ -143,6 +125,27 @@ function AnnadhanamPage() {
           </Reveal>
         </div>
       </section>
+          
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { step: "01", title: "புறப்பாடு", desc: "தினமும் இரவு 7:00 மணியளவில் கோரக்கர் ஆசிரமத்திலிருந்து அன்னக்காவடிகள் வடக்கு மற்றும் தெற்கு திசைகளை நோக்கி புறப்படுகின்றன." },
+              { step: "02", title: "சேகரிப்பு", desc: "ஊர் மக்களின் வீடுகளிலிருந்து சாதம் பக்தி சிரத்தையுடன் சேகரிக்கப்படுகிறது." },
+              { step: "03", title: "நிவேதனம்", desc: "சேகரிக்கப்பட்ட அன்னம் முதலில் கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்படுகிறது." },
+              { step: "04", title: "விநியோகம்", desc: "பின்னர் அது சிவனடியார்களுக்கும் பக்தர்களுக்கும் பிரசாதமாக வழங்கப்படுகிறது." },
+            ].map((item, i) => (
+              <Reveal key={item.step} delay={i * 0.1}>
+                <div className="glass p-8 rounded-3xl h-full relative hover-lift group">
+                  <div className="text-5xl font-bold text-gold/10 absolute top-4 right-4 group-hover:text-gold/20 transition-colors">{item.step}</div>
+                  <h3 className="text-2xl font-semibold text-primary mb-4 relative z-10">{item.title}</h3>
+                  <p className="text-muted-foreground relative z-10">{item.desc}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
 
       {/* Annadhanam Contribution Plans */}
       <section className="py-24 bg-gold/5 relative overflow-hidden">
@@ -190,7 +193,7 @@ function AnnadhanamPage() {
       {/* Hero CTA */}
       <section className="pb-16 -mt-10 relative z-10 text-center">
          <Reveal>
-             <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-semibold shadow-gold hover-lift text-lg">
+             <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-[#D9381E]  text-primary-foreground font-semibold shadow-gold hover-lift text-lg">
                 அன்னதானம் செய்ய
              </Link>
          </Reveal>

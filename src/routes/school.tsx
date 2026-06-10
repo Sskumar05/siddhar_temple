@@ -36,13 +36,50 @@ function SchoolPage() {
     setStatus("loading");
     setErrorMessage("");
 
-    // Simulate submission delay
-    setTimeout(() => {
+    try {
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      if (!supabaseUrl || !anonKey) {
+        throw new Error("Supabase credentials are not configured.");
+      }
+
+      const response = await fetch(`${supabaseUrl}/rest/v1/school_enquiries`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "apikey": anonKey,
+          "Authorization": `Bearer ${anonKey}`,
+          "Prefer": "return=minimal"
+        },
+        body: JSON.stringify({
+          student_name: formData.studentName,
+          parent_name: formData.parentName,
+          mobile_number: formData.phone,
+          email: formData.email || null,
+          class_applying_for: formData.classApplying,
+          address: formData.address,
+          message: formData.message || null,
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.message || "Failed to submit enquiry");
+      }
+
       setStatus("success");
       setFormData({ studentName: "", parentName: "", phone: "", email: "", classApplying: "", address: "", message: "" });
+      
+      // Reset success state after 5 seconds
       setTimeout(() => setStatus("idle"), 5000);
-    }, 1500);
+    } catch (err: any) {
+      console.error("Submission error:", err);
+      setStatus("error");
+      setErrorMessage(err.message || "An error occurred while submitting your enquiry.");
+    }
   };
+
 
   return (
     <>
@@ -50,8 +87,23 @@ function SchoolPage() {
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-hero grain">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
           <div>
+            {/* Mobile & Tablet: logo + title side by side */}
+            <div className="flex items-center gap-4 mb-4 lg:hidden">
+              <img
+                src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781074340/school_logo_eidj41.png"
+                alt="கோரக்கர் பள்ளி லோகோ"
+                className="flex-shrink-0 w-[120px] h-[120px] md:w-[140px] md:h-[140px] object-contain drop-shadow-xl animate-float"
+              />
+              <h1 className="text-2xl md:text-3xl font-semibold leading-snug">
+                <span className="text-primary">அருள்மிகு கோரக்கர்</span>
+                <br />
+                <span className="italic font-light">மெட்ரிகுலேஷன் பள்ளி</span>
+              </h1>
+            </div>
+
+            {/* Desktop: title without logo (logo shown in right column) */}
             <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">அறிவே உயர்ந்த செல்வம்</div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.15] mb-6">
+            <h1 className="hidden lg:block text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.15] mb-6">
               <span className="text-primary">அருள்மிகு கோரக்கர்</span>
               <br />
               <span className="italic font-light">மெட்ரிகுலேஷன் பள்ளி</span>
@@ -68,7 +120,8 @@ function SchoolPage() {
               </a>
             </div>
           </div>
-          <div className="relative flex justify-center lg:justify-end">
+          {/* Desktop: large logo in right column */}
+          <div className="relative hidden lg:flex justify-center lg:justify-end">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-gold opacity-20 blur-3xl rounded-full" />
             <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781074340/school_logo_eidj41.png" alt="கோரக்கர் பள்ளி லோகோ" className="relative w-64 h-64 md:w-[400px] md:h-[400px] object-contain drop-shadow-2xl animate-float" />
           </div>
