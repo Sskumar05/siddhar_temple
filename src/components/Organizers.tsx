@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import jeeva_nandham from "../assets/jeeva_nandham.png";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 // ─── TypeScript Interfaces ───────────────────────────────────────────────────
@@ -28,7 +27,7 @@ const MAIN_LEADER: Organizer = {
   id: "leader-1",
   name: "இரா. ஜீவானந்தம்",
   role: "B.A.",
-  imageUrl: jeeva_nandham,
+  imageUrl: ,
   // bio: "Leading the foundation with over 20 years of spiritual service and dedication to the community.",
   socials: {
     facebook: "",
