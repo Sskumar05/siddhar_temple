@@ -1,8 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import siddhar from "../assets/siddhar-img.png";
-import Arul_beedam from "../assets/Arul_beedam.png";
 
 
 export const Route = createFileRoute("/korakkar-siddhar")({
@@ -10,7 +8,6 @@ export const Route = createFileRoute("/korakkar-siddhar")({
     meta: [
       { title: "கோரக்கர் சித்தர் — வாழ்க்கை வரலாறு" },
       { name: "description", content: "பதினெண் சித்தர்களுள் தலைசிறந்த கோரக்கர் சித்தரின் வாழ்க்கை, ஆற்றல்கள், போதனைகள், இலக்கியம் மற்றும் மரபு." },
-      { property: "og:image", content: siddhar },
     ],
   }),
   component: KorakkarSiddhar,
@@ -47,7 +44,7 @@ function KorakkarSiddhar() {
           </div>
           <div className="relative">
             <div className="absolute -inset-6 bg-gradient-gold opacity-30 blur-3xl rounded-full" />
-            <img src={siddhar} alt="கோரக்கர் சித்தர்" width={1280} height={1600} className="relative rounded-3xl shadow-luxury w-full" />
+            <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1780933638/img_5001_aaayj0.jpg" alt="கோரக்கர் சித்தர்" width={1280} height={1600} className="relative rounded-3xl shadow-luxury w-full" />
           </div>
         </div>
       </section>
@@ -90,7 +87,7 @@ function KorakkarSiddhar() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <Reveal>
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <img src={Arul_beedam} alt="ஜீவசமாதி" loading="lazy" className="rounded-3xl shadow-luxury" />
+              <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781077473/Arul_beedam_gszga7.jpg" alt="ஜீவசமாதி" loading="lazy" className="rounded-3xl shadow-luxury" />
               <div>
                 <div className="text-xs uppercase tracking-[0.3em] text-gold mb-3">கோரக்கர் சித்தரின் கொடை</div>
                 <h2 className="text-3xl md:text-4xl font-semibold text-primary">அருள் தொடரும் பீடம்</h2>

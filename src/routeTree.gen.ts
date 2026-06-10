@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VideosRouteImport } from './routes/videos'
+import { Route as SchoolRouteImport } from './routes/school'
 import { Route as PoojasRouteImport } from './routes/poojas'
 import { Route as OrganizersRouteImport } from './routes/organizers'
 import { Route as KorakkarSiddharRouteImport } from './routes/korakkar-siddhar'
@@ -24,6 +25,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const VideosRoute = VideosRouteImport.update({
   id: '/videos',
   path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SchoolRoute = SchoolRouteImport.update({
+  id: '/school',
+  path: '/school',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PoojasRoute = PoojasRouteImport.update({
@@ -88,6 +94,7 @@ export interface FileRoutesByFullPath {
   '/korakkar-siddhar': typeof KorakkarSiddharRoute
   '/organizers': typeof OrganizersRoute
   '/poojas': typeof PoojasRoute
+  '/school': typeof SchoolRoute
   '/videos': typeof VideosRoute
 }
 export interface FileRoutesByTo {
@@ -101,6 +108,7 @@ export interface FileRoutesByTo {
   '/korakkar-siddhar': typeof KorakkarSiddharRoute
   '/organizers': typeof OrganizersRoute
   '/poojas': typeof PoojasRoute
+  '/school': typeof SchoolRoute
   '/videos': typeof VideosRoute
 }
 export interface FileRoutesById {
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/korakkar-siddhar': typeof KorakkarSiddharRoute
   '/organizers': typeof OrganizersRoute
   '/poojas': typeof PoojasRoute
+  '/school': typeof SchoolRoute
   '/videos': typeof VideosRoute
 }
 export interface FileRouteTypes {
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/korakkar-siddhar'
     | '/organizers'
     | '/poojas'
+    | '/school'
     | '/videos'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -143,6 +153,7 @@ export interface FileRouteTypes {
     | '/korakkar-siddhar'
     | '/organizers'
     | '/poojas'
+    | '/school'
     | '/videos'
   id:
     | '__root__'
@@ -156,6 +167,7 @@ export interface FileRouteTypes {
     | '/korakkar-siddhar'
     | '/organizers'
     | '/poojas'
+    | '/school'
     | '/videos'
   fileRoutesById: FileRoutesById
 }
@@ -170,6 +182,7 @@ export interface RootRouteChildren {
   KorakkarSiddharRoute: typeof KorakkarSiddharRoute
   OrganizersRoute: typeof OrganizersRoute
   PoojasRoute: typeof PoojasRoute
+  SchoolRoute: typeof SchoolRoute
   VideosRoute: typeof VideosRoute
 }
 
@@ -180,6 +193,13 @@ declare module '@tanstack/react-router' {
       path: '/videos'
       fullPath: '/videos'
       preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/school': {
+      id: '/school'
+      path: '/school'
+      fullPath: '/school'
+      preLoaderRoute: typeof SchoolRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/poojas': {
@@ -266,6 +286,7 @@ const rootRouteChildren: RootRouteChildren = {
   KorakkarSiddharRoute: KorakkarSiddharRoute,
   OrganizersRoute: OrganizersRoute,
   PoojasRoute: PoojasRoute,
+  SchoolRoute: SchoolRoute,
   VideosRoute: VideosRoute,
 }
 export const routeTree = rootRouteImport

@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import manthiramImage from "../assets/manthiram-Picsart-AiImageEnhancer.jpeg";
 
 export const Route = createFileRoute("/poojas")({
   head: () => ({
@@ -139,7 +138,7 @@ function Poojas() {
                  <div className="absolute bottom-4 right-4 w-6 h-6 border-b-2 border-r-2 border-gold/50 rounded-br-lg"></div>
 
                  <img 
-                   src={manthiramImage} 
+                   src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781079348/Manthiram_hn23zh.png"
                    alt="கோரக்கர் சித்தர் எந்திர மந்திரம்" 
                    className="w-full h-auto object-contain rounded-[1.5rem] shadow-2xl relative z-10"
                  />

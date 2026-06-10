@@ -14,6 +14,7 @@ const navItems = [
   // { to: "/organizers", label: "அறங்காவலர்கள்" },
   { to: "/gallery", label: "புகைப்படங்கள்" },
   { to: "/videos", label: "காணொளிகள்" },
+  { to: "/school", label: "பள்ளி" },
   { to: "/contact", label: "தொடர்புக்கு" },
 ] as const;
 

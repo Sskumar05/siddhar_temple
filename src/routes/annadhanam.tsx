@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal, SectionHeading } from "../components/Section";
-import annadhanamImg from "../assets/Annathanam.png";
 
 export const Route = createFileRoute("/annadhanam")({
   head: () => ({
@@ -100,10 +99,6 @@ function AnnadhanamPage() {
       {/* Annakkavadi Tradition */}
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          {/* <Reveal>
-            <SectionHeading eyebrow="அன்னக்காவடி மரபு" title="பல நூற்றாண்டுகளாகத் தொடரும் பக்தி" align="center" />
-          </Reveal> */}
-
           <PageHero 
         eyebrow="தொடரும் பக்தி மரபு" 
         title="அன்னக்காவடி மரபு" 
@@ -126,6 +121,26 @@ function AnnadhanamPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Annakkavadi Featured Image */}
+      <section className="py-10 pb-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <Reveal>
+            <div className="group relative rounded-3xl overflow-hidden border-2 border-gold/30 shadow-luxury hover:shadow-[0_20px_60px_rgba(212,175,55,0.25)] transition-all duration-700">
+              <img
+                src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781081117/Annakavadi_uxjnaw.png"
+                alt="அன்னக்காவடி மரபு"
+                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 ring-1 ring-inset ring-gold/20 rounded-3xl pointer-events-none" />
+            </div>
+            <p className="mt-5 text-center text-sm text-muted-foreground tracking-wide italic">
+              பல நூற்றாண்டுகளாக தொடரும் கோரக்கர் சித்தரின் அன்னக்காவடி மரபு
+            </p>
+          </Reveal>
         </div>
       </section>
 

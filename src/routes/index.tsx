@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ArrowRight, Flame, Heart, Sparkles, Star } from "lucide-react";
+import { ArrowRight, Flame, Heart, Star } from "lucide-react";
 import heroTemple from "../assets/hero.png";
-import siddhar from "../assets/image.png";
 import lamps from "../assets/vinayaga.png";
 import samadhi from "../assets/siddhar-img.png";
 import festival from "../assets/Karuvari.png";
@@ -16,7 +15,6 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம் — முகப்பு" },
       { name: "description", content: "வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம். ஆன்மீக அனுபவம், பூஜைகள், திருவிழாக்கள், கோரக்கர் சித்தர் வரலாறு." },
-      { property: "og:image", content: heroTemple },
     ],
   }),
   component: Home,
@@ -27,7 +25,7 @@ const services = [
   { icon: Heart, title: "அன்னதானம்", desc: "அன்னதானம் காலை, மதியம், இரவு என மூன்று வேளைகளிலும் நடைபெறுகிறது. மேலும், வியாழக்கிழமைகளிலும் பௌர்ணமி நாட்களிலும் ஆயிரக்கணக்கான பக்தர்களுக்கு அன்னதானம் வழங்கப்படுகிறது" },
   // { icon: Sparkles, title: "குரு பூஜை", desc: "ஆண்டு தோறும் கோரக்கர் சித்தரின் குரு பூஜை விழா சிறப்பாக நடைபெறுகிறது." },
   { icon: Star, title: "சித்தர் தரிசனம்", desc: "பதினெண் சித்தர்களில் தலைசிறந்த கோரக்கர் சித்தரின் அருள் தரிசனம், ஞானம், மனஅமைதி, ஆரோக்கியம், வளம், செழிப்பு, ஆன்மீக முன்னேற்றம், இறையருள் மற்றும் வாழ்வில் வெற்றியை வழங்கும் புனித அனுபவமாகும்." },
-  { icon: Star, title: "அன்னக்காவடி தர்மம்", desc: "தினமும் சேகரிக்கப்படும் அன்னம் கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்பட்டு, பின்னர் பக்தர்களுக்கும் சிவனடியார்களுக்கும் வழங்கப்படுகிறது. பல நூற்றாண்டுகளாக இப்புனித மரபு தொடர்கிறது."}
+  { icon: Star, title: "அன்னக்காவடி தர்மம்", desc: "தினமும் சேகரிக்கப்படும் அன்னம் கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்பட்டு, பின்னர் பக்தர்களுக்கும் சிவனடியார்களுக்கும் வழங்கப்படுகிறது. பல நூற்றாண்டுகளாக இப்புனித மரபு தொடர்கிறது." }
 ];
 
 const galleryPreview = [samadhi, lamps, festival, pooja, annadhanam, heroTemple];
@@ -37,7 +35,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative w-full h-screen min-h-screen max-w-[100vw] flex flex-col items-center justify-center overflow-hidden">
-        <img src={heroTemple} alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781078590/hero_tk4jtw.png" alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" />
 
         <div className="relative z-10 mx-auto max-w-[900px] px-4 w-full flex flex-col items-center justify-center text-center">
@@ -61,7 +59,7 @@ function Home() {
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] font-medium hover:bg-[#D4AF37]/10 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 w-full sm:w-auto">
-              தரிசனத்துக்கு வருக
+              தொடர்புக்கு
             </Link>
           </motion.div>
 
@@ -106,11 +104,7 @@ function Home() {
           <Reveal>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-gold opacity-20 blur-2xl rounded-3xl" />
-              <img src={siddhar} alt="கோரக்கர் சித்தர்" width={1280} height={1600} loading="lazy" className="relative rounded-3xl shadow-luxury w-full" />
-              {/* <div className="absolute -bottom-6 -right-6 glass rounded-2xl p-5 max-w-[200px]">
-                <div className="text-gold text-3xl font-serif-tamil">ௐ</div>
-                <div className="text-xs text-muted-foreground mt-1">பதினெண் சித்தர்களில் முதன்மையானவர்</div>
-              </div> */}
+              <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781077474/siddhar_image_ymczdf.jpg" alt="கோரக்கர் சித்தர்" width={1280} height={1600} loading="lazy" className="relative rounded-3xl shadow-luxury w-full" />
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -120,9 +114,9 @@ function Home() {
             </h2>
             <p className="mt-6 text-muted-foreground leading-loose">
               வடக்கு பொய்கைநல்லூரில் அமைந்துள்ள இக்கோவில், மகா சித்தர் கோரக்கரின் ஜீவசமாதி பெற்றுள்ள புனித தலமாகும். பதினெண் சித்தர்களில் ஒருவராகப் போற்றப்படுகிறார். யோகம், ஞானம் மற்றும் காயகல்பத்தில் சிறந்து விளங்கிய மகா சித்தர்.
-            <p className="mt-4 text-muted-foreground leading-loose">
-              அவரது ஜீவசமாதி இன்று பக்தர்களுக்கு அருளும் ஆன்மீக ஒளியும் வழங்கும் புனிதத் தலமாக திகழ்கிறது.
-            </p>
+              <p className="mt-4 text-muted-foreground leading-loose">
+                அவரது ஜீவசமாதி இன்று பக்தர்களுக்கு அருளும் ஆன்மீக ஒளியும் வழங்கும் புனிதத் தலமாக திகழ்கிறது.
+              </p>
             </p>
             <Link to="/about-temple" className="mt-8 inline-flex items-center gap-2 text-gold border-b border-gold/40 pb-1 hover:gap-3 transition-all">
               மேலும் அறிய <ArrowRight className="w-4 h-4" />
@@ -141,9 +135,6 @@ function Home() {
             {services.map((s, i) => (
               <Reveal key={s.title} delay={i * 0.08}>
                 <div className="hover-lift bg-white border border-[#E5E5E5] shadow-card rounded-2xl p-7 h-full group">
-                  {/* <div className="w-12 h-12 rounded-xl bg-gradient-gold flex items-center justify-center mb-5 group-hover:scale-110 transition-luxury">
-                    <s.icon className="w-6 h-6 text-primary-foreground" />
-                  </div> */}
                   <h3 className="text-lg font-bold text-[#D9381E]">{s.title}</h3>
                   <p className="mt-3 text-sm font-medium text-[#2C2C2C] leading-relaxed">{s.desc}</p>
                 </div>
@@ -190,11 +181,15 @@ function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal><SectionHeading eyebrow="புகைப்படத் தொகுப்பு" title="கோவில் காட்சிகள்" align="center" /></Reveal>
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {galleryPreview.slice(0, 3).map((src, i) => (
+            {[
+              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780928667/WhatsApp_Image_2026-06-03_at_2.43.43_PM_vjrewz.jpg" },
+              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780932868/IMG_6335_gguoyf.jpg" },
+              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929094/IMG_6245_erhrdy.jpg" },
+            ].map((src, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <div className="group flex flex-col bg-[#FFF8E7] border border-[#D4AF37]/50 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(212,175,55,0.2)] transition-luxury">
                   <div className="overflow-hidden aspect-[4/3] w-full">
-                    <img src={src} alt="கோவில் காட்சி" loading="lazy" className="w-full h-full object-cover brightness-100 contrast-105 group-hover:scale-[1.03] transition-transform duration-700" />
+                    <img src={src.img} alt="கோவில் காட்சி" loading="lazy" className="w-full h-full object-cover brightness-100 contrast-105 group-hover:scale-[1.03] transition-transform duration-700" />
                   </div>
                 </div>
               </Reveal>
@@ -230,51 +225,31 @@ function Home() {
         </div>
       </section>
 
+
       {/* CTA */}
-      {/* <section className="py-24">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+      <section className="py-24 relative overflow-hidden bg-primary text-white mb-[-75px]">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-30"></div>
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 relative z-10">
           <Reveal>
-            <div className="relative overflow-hidden rounded-3xl glass p-12 md:p-16 text-center">
-              <div className="absolute inset-0 bg-gradient-gold opacity-10" />
-              <div className="relative">
-                <Flame className="w-12 h-12 text-gold mx-auto mb-6" />
-                <h2 className="text-3xl md:text-5xl font-semibold text-primary">அருளுக்காக வருக</h2>
-                <p className="mt-5 text-muted-foreground max-w-xl mx-auto">கோரக்கர் சித்தரின் ஜீவசமாதியைத் தரிசித்து உங்கள் ஆன்மீகப் பயணத்தைத் தொடங்குங்கள்.</p>
-                <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-medium gold-glow transition-luxury">
-                  தரிசன நேரம் பார்க்க <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+            <div className="text-center">
+              <h2 className="text-4xl font-serif font-bold mb-6 text-white">
+                உங்கள் வருகையை திட்டமிடுங்கள்
+              </h2>
+
+              <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+                கோரக்கர் சித்தரின் அருளைப் பெற உங்களை அன்புடன் வரவேற்கிறோம்.
+              </p>
+
+              <Link to="/contact">
+                <button className="bg-accent text-[#1A1A1A] hover:bg-accent/90 rounded-xl px-10 py-4 text-lg font-bold gold-glow inline-flex items-center gap-2">
+                  தொடர்பு கொள்ள
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </Link>
             </div>
           </Reveal>
         </div>
-      </section> */}
-
-        <section className="py-24 relative overflow-hidden bg-primary text-white">
-  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-30"></div>
-
-  <div className="mx-auto max-w-5xl px-4 sm:px-6 relative z-10">
-    <Reveal>
-      <div className="text-center">
-        {/* <Flame className="w-12 h-12 mx-auto mb-6 text-white" /> */}
-
-        <h2 className="text-4xl font-serif font-bold mb-6 text-white">
-          உங்கள் வருகையை திட்டமிடுங்கள்
-        </h2>
-
-        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-          கோரக்கர் சித்தரின் அருளைப் பெற உங்களை அன்புடன் வரவேற்கிறோம்.
-        </p>
-
-        <Link to="/contact">
-          <button className="bg-accent text-[#1A1A1A] hover:bg-accent/90 rounded-xl px-10 py-4 text-lg font-bold gold-glow inline-flex items-center gap-2">
-            தொடர்பு கொள்ள
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </Link>
-      </div>
-    </Reveal>
-  </div>
-</section>
+      </section>
 
     </>
   );

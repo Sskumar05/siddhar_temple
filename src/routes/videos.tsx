@@ -1,12 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/PageHero";
 import { Reveal } from "../components/Section";
-import lamps from "../assets/vinayaga.png";
-import samadhi from "../assets/siddhar-img.png";
-import pooja from "../assets/koraga jenthi.png";
-import hero from "../assets/hero-temple.jpg";
-import siddhar from "../assets/siddhar-img.png";
-import festival from "../assets/Karuvari.png";
+
 
 export const Route = createFileRoute("/videos")({
   head: () => ({
@@ -46,7 +41,6 @@ export const VIDEOS_DATA: VideoData[] = [
     title: "மந்திரம்",
     cat: "கோரக்கர்",
     videoUrl: "https://res.cloudinary.com/dhjupdyus/video/upload/v1780582148/WhatsApp_Video_2026-06-03_at_10.36.07_PM_m7syr1.mp4",
-    thumbnail: festival,
     duration: "12:18",
   },
   {
@@ -54,7 +48,6 @@ export const VIDEOS_DATA: VideoData[] = [
     title: "தரிசனம்",
     cat: "கோரக்கர்",
     videoUrl: "https://res.cloudinary.com/dhjupdyus/video/upload/v1780583271/lv_0_20260603202826_yvzd6w.mp4",
-    // thumbnail: lamps,
     duration: "8:45",
   },
 ];

@@ -68,8 +68,8 @@ function AboutTemple() {
                   {/* <div className="w-36 h-36 mx-auto rounded-full bg-gold/20 border-4 border-white shadow-xl overflow-hidden mb-6 flex items-center justify-center">
                     <img src="https://ui-avatars.com/api/?name=J&background=D9381E&color=fff&size=256" alt="இரா. ஜீவானந்தம்" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div> */}
-                  <h3 className="text-2xl font-bold text-primary mb-2">இரா. ஜீவானந்தம்</h3>
-                  <p className="text-[#D9381E] font-bold tracking-wide text-lg">B.A.</p>
+                  <h3 className="text-2xl font-bold text-black mb-2">இரா. ஜீவானந்தம்</h3>
+                  <p className="font-medium text-sm">B.A.</p>
                   {/* <p className="text-gold font-semibold mt-2 px-4 py-1 bg-gold/10 rounded-full inline-block">(நிர்வாக அறங்காவலர்)</p> */}
                 </div>
               </div>
@@ -78,7 +78,6 @@ function AboutTemple() {
 
            <Reveal>
             <div className="text-center mb-16">
-              <span className="text-gold font-medium tracking-widest uppercase text-sm mb-4 block">கோவில் நிர்வாகம்</span>
               <h2 className="text-3xl md:text-5xl font-semibold text-primary">அறங்காவலர்கள்</h2>
               <div className="w-24 h-1 bg-gold mx-auto mt-6 rounded-full"></div>
             </div>
@@ -90,11 +89,8 @@ function AboutTemple() {
             {/* Card 2 with degree */}
             <Reveal delay={0.2}>
               <div className="group glass rounded-3xl p-6 text-center border border-border/50 hover:border-gold/50 shadow-sm hover:shadow-xl hover:scale-[1.03] transition-all duration-500 bg-white/40 h-full flex flex-col items-center justify-center">
-                {/* <div className="w-24 h-24 mx-auto rounded-full bg-gold/10 border-4 border-white shadow-md overflow-hidden mb-5">
-                   <img src="https://ui-avatars.com/api/?name=K&background=D9381E&color=fff&size=200" alt="வே. அ. கிருஷ்ணன்" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div> */}
-                <h3 className="text-lg font-bold text-primary mb-1">வே. அ. கிருஷ்ணன்</h3>
-                <p className="text-[#D9381E] font-medium text-sm">M.A., B.Ed.</p>
+                <h3 className="text-lg font-bold text-black mb-1">வே. அ. கிருஷ்ணன்</h3>
+                <p className="font-medium text-sm">M.A., B.Ed.</p>
               </div>
             </Reveal>
 
@@ -106,10 +102,7 @@ function AboutTemple() {
             ].map((person, index) => (
               <Reveal key={person.name} delay={0.3 + index * 0.1}>
                 <div className="group glass rounded-3xl p-6 text-center border border-border/50 hover:border-gold/50 shadow-sm hover:shadow-xl hover:scale-[1.03] transition-all duration-500 bg-white/40 h-full flex flex-col items-center justify-center">
-                  {/* <div className="w-24 h-24 mx-auto rounded-full bg-gold/10 border-4 border-white shadow-md overflow-hidden mb-5">
-                     <img src={`https://ui-avatars.com/api/?name=${person.id}&background=D9381E&color=fff&size=200`} alt={person.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </div> */}
-                  <h3 className="text-lg font-bold text-primary">{person.name}</h3>
+                  <h3 className="text-lg font-bold text-black">{person.name}</h3>
                 </div>
               </Reveal>
             ))}

@@ -15,7 +15,7 @@ export const Route = createFileRoute("/gallery")({
 
 // Update these with your actual Cloudinary URLs
 const cloudinaryImages = [
-  { src: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780928667/WhatsApp_Image_2026-06-03_at_2.43.43_PM_vjrewz.jpg" },
+  { src: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780928667/WhatsApp_Image_2026-06-03_at_2.43.43_PM_vjrewz.jpg"},
   { src: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780932868/IMG_6335_gguoyf.jpg" },
   { src: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929094/IMG_6245_erhrdy.jpg" },
   { src: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780932226/image_5000_bc7ahc.jpg" },
