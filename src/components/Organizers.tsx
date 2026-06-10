@@ -27,7 +27,7 @@ const MAIN_LEADER: Organizer = {
   id: "leader-1",
   name: "இரா. ஜீவானந்தம்",
   role: "B.A.",
-  imageUrl: ,
+  imageUrl:"" ,
   // bio: "Leading the foundation with over 20 years of spiritual service and dedication to the community.",
   socials: {
     facebook: "",
