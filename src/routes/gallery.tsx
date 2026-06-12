@@ -6,7 +6,7 @@ import { PageHero } from "../components/PageHero";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "புகைப்படத் தொகுப்பு — கோரக்கர் சித்தர் கோவில்" },
+      { title: "புகைப்படத் தொகுப்பு — கோரக்கர் சித்தர் " },
       { name: "description", content: "கோவில் காட்சிகள், திருவிழாக்கள், அன்னதானம், பூஜை நிகழ்வுகள் புகைப்படத் தொகுப்பு." },
     ],
   }),
@@ -87,7 +87,7 @@ function Gallery() {
 
   return (
     <>
-      <PageHero eyebrow="புகைப்படத் தொகுப்பு" title="கோவில் காட்சிகள்" subtitle="ஒவ்வொரு படமும் ஓர் ஆன்மீக கதை சொல்கிறது." />
+      <PageHero eyebrow="புகைப்படத் தொகுப்பு" title="கோரக்கர் சித்தர் காட்சிகள்" subtitle="ஒவ்வொரு படமும் ஓர் ஆன்மீக கதை சொல்கிறது." />
 
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">

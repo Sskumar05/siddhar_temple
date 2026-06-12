@@ -35,7 +35,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative w-full h-screen min-h-screen max-w-[100vw] flex flex-col items-center justify-center overflow-hidden">
-        <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781078590/hero_tk4jtw.png" alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <img src="/src/assets/Hero_img.png" alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" />
 
         <div className="relative z-10 mx-auto max-w-[900px] px-4 w-full flex flex-col items-center justify-center text-center">
@@ -50,15 +50,15 @@ function Home() {
           </motion.h1>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-[#F5F5F5] leading-relaxed drop-shadow-md">
-            பதினெண் சித்தர்களுள் ஒருவராம் கோரக்கர் சித்தரின் புனித ஜீவசமாதி தலம். அருள், அமைதி, ஆன்மீகத்தின் இல்லம்.
+            பதினெண் சித்தர்களுள் ஒருவராம் கோரக்கர் சித்தரின் புனித ஜீவசமாதி தலம். அருள், அமைதி, ஆன்மீகத்தின் பீடம்.
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.45 }} className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full">
             <Link to="/about-temple" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#D9381E] text-white font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto">
-              கோவில் பற்றி அறிய
+              பீடம் பற்றி அறிய
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border-2 border-[#D4AF37] text-[#D4AF37] font-medium hover:bg-[#D4AF37]/10 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 w-full sm:w-auto">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-transparent border-3 border-[#D4AF37] text-[#D4AF37] font-medium hover:bg-[#D4AF37]/10 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 w-full sm:w-auto">
               தொடர்புக்கு
             </Link>
           </motion.div>
@@ -108,7 +108,7 @@ function Home() {
             </div>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">கோவில் பற்றி</div>
+            <div className="text-xs uppercase tracking-[0.3em] text-gold mb-4">பீடம் பற்றி</div>
             <h2 className="text-4xl md:text-5xl font-semibold text-primary leading-tight">
               அருள் பிறக்கும் <br /> புனித பீடம்
             </h2>
@@ -179,7 +179,7 @@ function Home() {
       {/* GALLERY PREVIEW */}
       <section className="py-24 bg-[#FAFAFA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal><SectionHeading eyebrow="புகைப்படத் தொகுப்பு" title="கோவில் காட்சிகள்" align="center" /></Reveal>
+          <Reveal><SectionHeading eyebrow="புகைப்படத் தொகுப்பு" title="காட்சிகள்" align="center" /></Reveal>
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780928667/WhatsApp_Image_2026-06-03_at_2.43.43_PM_vjrewz.jpg" },
@@ -210,7 +210,7 @@ function Home() {
           <div className="mt-14 grid md:grid-cols-3 gap-6">
             {[
               { t: "கோரக்கர் சித்தரின் தரிசனம் என் வாழ்வை மாற்றியது. அமைதியும் தெளிவும் கிடைத்தது.", n: "முருகன், சென்னை" },
-              { t: "இக்கோவிலின் ஆற்றல் வார்த்தைகளுக்கு அப்பாற்பட்டது. அன்னதானம் அற்புதம்.", n: "லட்சுமி, மதுரை" },
+              { t: "பீடம்  ஆற்றல் வார்த்தைகளுக்கு அப்பாற்பட்டது. அன்னதானம் அற்புதம்.", n: "லட்சுமி, மதுரை" },
               { t: "பௌர்ணமி பூஜையில் கலந்துகொண்ட அனுபவம் என்றும் நினைவில் நிற்கும்.", n: "ராமன், கோயம்புத்தூர்" },
             ].map((q, i) => (
               <Reveal key={i} delay={i * 0.1}>

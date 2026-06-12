@@ -14,13 +14,13 @@ export const Route = createFileRoute("/festivals")({
 });
 
 const festivals = [
-  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781117318/IMG_6248_rcyuqi.jpg", title: "பௌர்ணமி விழா", month: "மாதந்தோறும்", desc: "இன்று காலை நாதஸ்வரம் தொடங்கி, அன்னாபிஷேகம், பௌர்ணமி விழா, மங்கல இசை, சொற்பொழிவு என பஞ்ச மூர்த்தி விழா சிறப்பாக நடைபெறுகிறது." },
+  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781256148/Moon_w6z16s.jpg", title: "பௌர்ணமி விழா", month: "மாதந்தோறும்", desc: "இன்று காலை நாதஸ்வரம் தொடங்கி, அன்னாபிஷேகம், பௌர்ணமி விழா, மங்கல இசை, சொற்பொழிவு என பஞ்ச மூர்த்தி விழா சிறப்பாக நடைபெறுகிறது." },
   { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781113968/IMG_6228_z48eqw.jpg", title: "ஐப்பசி பரணி பெருவிழா", month: "ஐப்பசி மாதம்", desc: "பௌர்ணமி மற்றும் ஐப்பசி பரணியில் சிறப்பு வழிபாடும், ஆயிரக்கணக்கான பக்தர்கள் தரிசனமும் அன்னதானமும் பெற்று அருளாசி பெறுகின்றனர்" },
   { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929087/IMG_6117_dtvqdd.jpg", title: "ஆடி பிரம்மோற்சவ விழா", month: "ஐப்பசி மாதம்", desc: "கோரக்கர் ஆசிரமத்தில் ஆடி பிரம்மோற்சவ விழா நடைபெறுகிறது. சித்தரின் அருளை நாடும் பக்தர்கள் தரிசனமும் அன்னதானமும் பெறுகின்றனர்." },
   { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780928667/WhatsApp_Image_2026-06-03_at_2.43.43_PM_vjrewz.jpg", title: " ஆங்கில புத்தாண்டு விழா ", month: "ஐப்பசி மாதம்", desc: "கோரக்கர் ஆசிரமத்தில் ஆங்கில புத்தாண்டு விழா; பக்தர்கள் சித்தர் தரிசனமும் அன்னதானமும் பெற்று அருளாசி; கோரக்கரின் அருள் எல்லோருக்கும்." },
   { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781113816/pancha_murthi_koahvs.png", title: "பஞ்ச மூர்த்தி விழா", month: "ஐப்பசி மாதம்", desc: "அருள்மிகு கோரக்கர் சித்தரின் அருளால் ஐந்து தெய்வங்களின் சங்கமத்தை கொண்டாடும், பக்தர்களுக்கு ஒற்றுமையும் ஆன்மீக சக்தியும் வழங்கும் புனிதப் பெருவிழா." },
   { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780932868/IMG_6335_gguoyf.jpg", title: "கோரக்கர் ஜெயந்தி விழா", month: "கார்த்திகை மாதம்", desc: "சித்தர் பெருமானின் அவதார தினத்தை முன்னிட்டு சிறப்பு பூஜைகள், அபிஷேகங்கள் மற்றும் பக்தர்கள் பங்கேற்புடன் சிறப்பாக நடைபெறும் விழா." },
-  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780932226/image_5000_bc7ahc.jpg", title: "கார்த்திகை தீபம்", month: "கார்த்திகை மாதம்", desc: "கோவில் முழுவதும் ஆயிரம் தீபங்கள் ஒளிர்கின்றன. ஒளியின் திருவிழா — ஞான ஒளியின் வடிவம்." },
+  { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781117318/IMG_6248_rcyuqi.jpg", title: "கார்த்திகை தீபம்", month: "கார்த்திகை மாதம்", desc: "கோவில் முழுவதும் ஆயிரம் தீபங்கள் ஒளிர்கின்றன. ஒளியின் திருவிழா — ஞான ஒளியின் வடிவம்." },
   { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929094/IMG_6245_erhrdy.jpg", title: "மகா சிவராத்திரி", month: "மாசி மாதம்", desc: "இரவு முழுவதும் சிவ வழிபாடு, பஜனை, தியானம், அபிஷேகம் என அற்புதமான ஆன்மீக சூழல்." }
 
 ];

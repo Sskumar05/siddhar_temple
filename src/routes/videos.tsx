@@ -55,7 +55,7 @@ export const VIDEOS_DATA: VideoData[] = [
 function Videos() {
   return (
     <>
-      <PageHero eyebrow="காணொளிகள்" title="ஆன்மீக காட்சிகள்" subtitle="கோவில் வாழ்க்கையின் காட்சிகள், திருவிழா நினைவுகள், ஞான சொற்பொழிவுகள்." />
+      <PageHero eyebrow="காணொளிகள்" title="ஆன்மீக காட்சிகள்" subtitle="கோரக்கர் சித்தர் காட்சிகள், திருவிழா நினைவுகள், ஞான சொற்பொழிவுகள்." />
 
       <section className="py-24 bg-gradient-to-b from-orange-50/30 to-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">

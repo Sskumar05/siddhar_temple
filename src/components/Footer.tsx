@@ -21,7 +21,7 @@ export function Footer() {
         <div>
           <h4 className="text-gold text-sm uppercase tracking-widest mb-4">பக்கங்கள்</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><Link to="/about-temple" className="hover:text-gold transition-luxury">கோவில்</Link></li>
+            <li><Link to="/about-temple" className="hover:text-gold transition-luxury">பீடம்</Link></li>
             <li><Link to="/poojas" className="hover:text-gold transition-luxury">பூஜைகள்</Link></li>
             <li><Link to="/festivals" className="hover:text-gold transition-luxury">திருவிழாக்கள்</Link></li>
             <li><Link to="/gallery" className="hover:text-gold transition-luxury">புகைப்படங்கள்</Link></li>

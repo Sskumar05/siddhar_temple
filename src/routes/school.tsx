@@ -281,6 +281,7 @@ function SchoolPage() {
                       <option value="6">6 ஆம் வகுப்பு</option>
                       <option value="7">7 ஆம் வகுப்பு</option>
                       <option value="8">8 ஆம் வகுப்பு</option>
+                      <option value="8">9 ஆம் வகுப்பு</option>
 
                     </select>
                   </div>
