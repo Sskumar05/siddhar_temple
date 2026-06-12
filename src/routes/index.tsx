@@ -35,7 +35,7 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative w-full h-screen min-h-screen max-w-[100vw] flex flex-col items-center justify-center overflow-hidden">
-        <img src="/src/assets/Hero_img.png" alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
+        <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781273842/Hero_Image_duuqjl.png" alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" />
 
         <div className="relative z-10 mx-auto max-w-[900px] px-4 w-full flex flex-col items-center justify-center text-center">
