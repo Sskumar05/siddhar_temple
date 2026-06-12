@@ -17,17 +17,16 @@ const NAV: NavItem[] = [
     children: [
       { label: "சித்தர் அறிமுகம்", to: "/about-temple" },
       { label: "வரலாறு", to: "/korakkar-siddhar" },
-      { label: "பள்ளி", to: "/school" },
     ],
   },
   {
-    label: "வழிபாடுகள்",
+    label: "ஆன்மிக சேவைகள்",
     children: [
       { label: "பூஜைகள்", to: "/poojas" },
       { label: "அன்னதானம்", to: "/annadhanam" },
+      { label: "திருவிழாக்கள்", to: "/festivals" },
     ],
   },
-  { label: "திருவிழாக்கள்", to: "/festivals" },
   {
     label: "நிகழ்வுகள்",
     children: [
@@ -35,6 +34,7 @@ const NAV: NavItem[] = [
       { label: "வீடியோக்கள்", to: "/videos" },
     ],
   },
+  { label: "பள்ளி", to: "/school" },
   { label: "தொடர்பு", to: "/contact" },
 ];
 
@@ -386,7 +386,7 @@ export function Navbar() {
 
           {/* Mobile CTA */}
           <div className="mt-4 pt-3 border-t border-[#D4AF37]/20">
-            <Link
+            {/* <Link
               to="/contact"
               onClick={() => setMobileOpen(false)}
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold
@@ -395,7 +395,7 @@ export function Navbar() {
                 transition-all duration-200 active:scale-95"
             >
               🙏 தரிசனத்திற்கு தொடர்பு கொள்ளுங்கள்
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

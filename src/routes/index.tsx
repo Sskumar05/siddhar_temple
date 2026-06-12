@@ -68,7 +68,7 @@ function Home() {
               {[
                 { n: "200+", l: "ஆண்டுகள் வரலாறு" },
                 { n: "1K+", l: "மாத பக்தர்கள்" },
-                { n: "6", l: "முக்கிய திருவிழா" },
+                { n: "8", l: "முக்கிய திருவிழா" },
               ].map((s) => (
                 <div key={s.l} className="bg-white border border-[#D4AF37]/30 rounded-2xl p-6 text-center hover:shadow-lg transition-all shadow-card w-full max-w-[280px]">
                   <div className="text-4xl md:text-5xl font-serif-tamil font-bold text-[#D9381E] mb-2">{s.n}</div>
@@ -87,7 +87,7 @@ function Home() {
             {[
               { n: "200+", l: "ஆண்டுகள் வரலாறு" },
               { n: "1K+", l: "மாத பக்தர்கள்" },
-              { n: "6", l: "முக்கிய திருவிழா" },
+              { n: "8", l: "முக்கிய திருவிழா" },
             ].map((s) => (
               <div key={s.l} className="bg-white border border-[#D4AF37]/40 shadow-[0_4px_20px_rgba(0,0,0,0.05)] rounded-2xl p-6 text-center w-full max-w-[320px]">
                 <div className="text-4xl sm:text-5xl font-serif-tamil font-bold text-[#D9381E] mb-2">{s.n}</div>
