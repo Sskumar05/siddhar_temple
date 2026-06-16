@@ -46,11 +46,11 @@ function Home() {
 
           <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.1 }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif-tamil font-bold leading-tight text-white drop-shadow-xl flex flex-col items-center justify-center w-full">
             அருள்மிகு கோரக்கர் சித்தர்
-            <span className="italic font-light text-white/90 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 block">ஜீவசமாதி பீடம்</span>
+            <span className="italic font-light text-white/90 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-4 block"> ஜீவசமாதி பீடம்</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl text-[#F5F5F5] leading-relaxed drop-shadow-md">
-            பதினெண் சித்தர்களுள் ஒருவராம் கோரக்கர் சித்தரின் புனித ஜீவசமாதி தலம். அருள், அமைதி, ஆன்மீகத்தின் பீடம்.
+            பதினெண் சித்தர்களுள் ஒருவர் கோரக்கர் சித்தரின் புனித ஜீவசமாதி தலம். அருள், அமைதி, ஆன்மீகத்தின் பீடம்.
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.45 }} className="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full">

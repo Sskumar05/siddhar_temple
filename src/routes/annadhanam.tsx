@@ -15,13 +15,13 @@ export const Route = createFileRoute("/annadhanam")({
 function AnnadhanamPage() {
   return (
     <>
-      <PageHero 
-        eyebrow="தானத்தில் சிறந்தது அன்னதானம்" 
-        title="அன்னதானம்" 
-        subtitle="பசி என்னும் நெருப்பு ஏழை எளியவர்களின் தேகத்தில் பற்றி எரிகின்ற போது அதனை அணைக்கும் முகத்தினால் தீவனமளிப்பதும் என்பது நேர்மையான அறங்களுள் ஒன்றாகும். அந்த கருணை வழியிலேயே வள்ளல்கள் பெருமக்களாகி வாழ்ந்தனர்." 
+      <PageHero
+        eyebrow="தானத்தில் சிறந்தது அன்னதானம்"
+        title="அன்னதானம்"
+        subtitle="பசி என்ற நெருப்பு ஏழை எளியவர்களின் தேகத்தில் பற்றி எரிகின்ற போது அதை நீக்க எடுக்கப்படும் முயற்சிதான் ஜிவகாருண்யம் என்பது இராமலிங்க அடிகளாரின் வாக்கு. அந்த கருத்தை வலியுறுத்திய வள்ளுவர் பெருமகனார்."
       />
 
-      
+
 
       {/* Sacred Quotes Section */}
       <section className="py-20 relative overflow-hidden">
@@ -59,7 +59,7 @@ function AnnadhanamPage() {
           <Reveal delay={0.2}>
             <div className="mt-12 space-y-6 text-lg text-muted-foreground leading-loose">
               <p>மணிமேகலையில் பசியினையைப் போக்குவோர் உயிர் கொடுத்தோராவர் என்று விளக்கப்படுகிறது.</p>
-              <p className="font-semibold text-primary">"பசி வந்து பிடித்துவிட்டால் விழுப்பம், கல்வி, நாணம், புத்தி, அறிவு, சீர்திருத்தம், அழகு, பக்தி, இன்பம் ஆகிய பத்தும் பறந்து போகும் என்பது பழமொழி."</p>
+              <p className="font-semibold text-primary">"பசி வந்திட குடிப்பிறப்பு, விழுப்பம், கல்வி, நாணம், புத்தி, அறிவு, சிற்றின்பம், அழகு, பக்தி, இன்பம் ஆகிய பத்தும் பறந்து போகும் என்பது பழமொழி."</p>
               <p>உயிரையே காக்கும் உயர்ந்த தர்மமாக அன்னதானம் கருதப்படுகிறது. அதனால் தான் அன்னத்தை "பிரம்மம்" என்று வேதங்கள் போற்றுகின்றன.</p>
             </div>
           </Reveal>
@@ -85,7 +85,7 @@ function AnnadhanamPage() {
                   <p>ஒவ்வொரு நாளும் சித்தர் ஆசிரமத்திற்கு யாத்திரீகர்கள், துறவிகள், திக்கற்றவர்கள் என பல தரப்பட்டவர்கள் வந்து வழிபாடு நிகழ்த்தி இரவு ஆசிரமத்திலேயே தங்குகின்றனர்.</p>
                   <p>இந்த ஆசிரமத்தில் நாள்தோறும் தங்குவோர் எத்தனை பேராயினும் அத்தனை பேருக்கும் மூன்று வேளை உணவு வழங்கப்பட்டு வருகிறது.</p>
                   <div className="p-6 glass rounded-2xl border-l-4 border-l-gold">
-                    <p className="font-semibold text-primary">திக்கற்றோருக்கு தங்குமிடம்,<br/>பசித்தோருக்கு உணவு,<br/>நோயுற்றோருக்கு மருந்து வழங்கி வாழ்விப்பதே சைவ சமய நெறியாகும்.</p>
+                    <p className="font-semibold text-primary">திக்கற்றோருக்கு தங்குமிடம்,<br />பசித்தோருக்கு உணவு,<br />நோயுற்றோருக்கு மருந்து வழங்கி வாழ்விப்பதே சைவ சமய நெறியாகும்.</p>
                   </div>
                   <p>இதுவே சித்தர்கள் போற்றிய சீரிய நெறியாகும். சித்தர்களுள் கோரக்கர் சித்தர் இந்நெறியில் தலைசிறந்த அருட்பெருஞ்சான்றோராக போற்றப்படுகிறார்.</p>
                   <p className="text-xl text-primary font-medium">அவரது ஜீவசமாதி அமைந்துள்ள இந்த ஆசிரமத்தில் பசித்த வயிற்றோடு படுத்து உறங்கியவர் எவரும் இல்லை.</p>
@@ -97,36 +97,44 @@ function AnnadhanamPage() {
       </section>
 
       {/* Annakkavadi Tradition */}
-      <section className="py-24">
+      <section className="py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <PageHero 
-        eyebrow="தொடரும் பக்தி மரபு" 
-        title="அன்னக்காவடி மரபு" 
-        subtitle="தினமும் வீடு தோறும் அன்னம் சேகரித்து கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்பட்டு, பின்னர் பக்தர்களுக்கும் சிவனடியார்களுக்கும் வழங்கப்படுகிறது. பல நூற்றாண்டுகளாகத் தொடரும் பக்தி மரபான இது, தானம் மற்றும் தர்மத்தின் உயர்ந்த அடையாளமாக இன்றளவும் கடைப்பிடிக்கப்பட்டு வருகிறது." 
-      />
+          <PageHero
+            eyebrow="தொடரும் பக்தி மரபு"
+            title="அன்னக்காவடி மரபு"
+            subtitle="தினமும் வீடு தோறும் அன்னம் சேகரித்து கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்பட்டு, பின்னர் பக்தர்களுக்கும் சிவனடியார்களுக்கும் வழங்கப்படுகிறது. பல நூற்றாண்டுகளாகத் தொடரும் பக்தி மரபான இது, தானம் மற்றும் தர்மத்தின் உயர்ந்த அடையாளமாக இன்றளவும் கடைப்பிடிக்கப்பட்டு வருகிறது."
+          />
 
 
-      {/* Annakkavadi Featured Image */}
-      <section className="py-10 pb-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <Reveal>
-            <div className="group relative rounded-3xl overflow-hidden border-2 border-gold/30 shadow-luxury hover:shadow-[0_20px_60px_rgba(212,175,55,0.25)] transition-all duration-700">
-              <img
-                src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781081117/Annakavadi_uxjnaw.png"
-                alt="அன்னக்காவடி மரபு"
-                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 ring-1 ring-inset ring-gold/20 rounded-3xl pointer-events-none" />
+          {/* Annakkavadi Featured Image */}
+          <section className="py-10 pb-20">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6">
+              <Reveal>
+                <div className="group relative rounded-3xl overflow-hidden border-2 border-gold/30 shadow-luxury hover:shadow-[0_20px_60px_rgba(212,175,55,0.25)] transition-all duration-700">
+                  <img
+                    src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781081117/Annakavadi_uxjnaw.png"
+                    alt="அன்னக்காவடி மரபு"
+                    className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-gold/20 rounded-3xl pointer-events-none" />
+                </div>
+                <p className="mt-5 text-center text-sm text-muted-foreground tracking-wide italic">
+                  பல நூற்றாண்டுகளாக தொடரும் கோரக்கர் சித்தரின் அன்னக்காவடி மரபு
+                </p>
+              </Reveal>
             </div>
-            <p className="mt-5 text-center text-sm text-muted-foreground tracking-wide italic">
-              பல நூற்றாண்டுகளாக தொடரும் கோரக்கர் சித்தரின் அன்னக்காவடி மரபு
-            </p>
-          </Reveal>
-        </div>
-      </section>
-          
-          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </section>
+
+           <section>
+                 <p className="mt-12 space-y-6 text-lg text-muted-foreground leading-loose justify-center text-center ">
+                  அன்னக்காவடி தருமம் தாயே!
+                  நாள்தோறும், இரவில் அடியவர்களுக்கு அன்னம் பாலிக்கக் கோரக்கச் சித்தர் ஆலயத்தில் சிறப்பான ஒரு நெறி பல நூறு ஆண்டுகளாகப் பின்பற்றப்பட்டு வருகிறது. இவ்வாசிரமத்தின் தலைமப் பூசாரியோ, அன்றி அவரின் உதவியாளர்களில் ஒருவரோ மாலை 7.00 மணி அளவில் தம் தோளில் ஓர் அன்னக்காவடியை ஏந்தி இவ்வூரின் வடக்கு மற்றும் தெற்கு வீதிகளில் உள்ள இல்லங்களுக்கு செல்வார்.
+                  காவடியின் இருபக்கங்களிலும் பெரிய பானைகள் உரியில் வைக்கப் பெற்றிருக்கும். இரண்டு அன்னக்காவடி தம் இல்லத்தின் வாயிலில் வந்து நின்றவுடன், புதிதாக இரவில் சமைத்த சோற்றினை ஒரு தட்டில் எடுத்து வந்து அவ்வில்லத்துப் பெண்கள் அன்னக்காவடிப் பானையில் இடுகின்றனர். ‘அன்னக்காவடி தருமம் தாயே’ என்று கூறி வரும், இவ்வன்னக்காவடிக்கு அங்கு வாழ்ந்து வரும் அனைவரும் அன்னம் பாலிக்கப்படுகிறது.
+                </p>
+              </section>
+
+          {/* <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { step: "01", title: "புறப்பாடு", desc: "தினமும் இரவு 7:00 மணியளவில் கோரக்கர் ஆசிரமத்திலிருந்து அன்னக்காவடிகள் வடக்கு மற்றும் தெற்கு திசைகளை நோக்கி புறப்படுகின்றன." },
               { step: "02", title: "சேகரிப்பு", desc: "ஊர் மக்களின் வீடுகளிலிருந்து சாதம் பக்தி சிரத்தையுடன் சேகரிக்கப்படுகிறது." },
@@ -141,11 +149,11 @@ function AnnadhanamPage() {
                 </div>
               </Reveal>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
-      
+
 
       {/* Annadhanam Contribution Plans */}
       <section className="py-24 bg-gold/5 relative overflow-hidden">
@@ -153,7 +161,7 @@ function AnnadhanamPage() {
           <Reveal>
             <SectionHeading eyebrow="அன்னதான கட்டணங்கள்" title="உங்கள் பங்களிப்பு" align="center" />
           </Reveal>
-          
+
           <div className="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Reveal delay={0.1}>
               <div className="glass p-8 md:p-10 rounded-3xl border border-gold/30 hover-lift text-center flex flex-col items-center h-full">
@@ -166,7 +174,7 @@ function AnnadhanamPage() {
                 </div>
               </div>
             </Reveal>
-            
+
             <Reveal delay={0.2}>
               <div className="glass p-8 md:p-10 rounded-3xl border border-gold/30 hover-lift text-center flex flex-col items-center h-full">
                 {/* <div className="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mb-6">
@@ -179,7 +187,7 @@ function AnnadhanamPage() {
               </div>
             </Reveal>
           </div>
-          
+
           <Reveal delay={0.3}>
             <div className="mt-12 text-center max-w-2xl mx-auto text-muted-foreground bg-white/50 p-6 rounded-2xl border border-gold/10">
               <p>உங்கள் பங்களிப்பு தினசரி அன்னதான சேவைக்கும், யாத்திரீகர்களின் உணவுக்கும், ஆதரவற்றோரின் நலனுக்கும் பயன்படுத்தப்படுகிறது.</p>
@@ -192,11 +200,11 @@ function AnnadhanamPage() {
 
       {/* Hero CTA */}
       <section className="pb-16 -mt-10 relative z-10 text-center">
-         <Reveal>
-             <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-[#D9381E]  text-primary-foreground font-semibold shadow-gold hover-lift text-lg">
-                அன்னதானம் செய்ய
-             </Link>
-         </Reveal>
+        <Reveal>
+          <Link to="/contact" className="inline-flex items-center px-8 py-4 rounded-full bg-[#D9381E]  text-primary-foreground font-semibold shadow-gold hover-lift text-lg">
+            அன்னதானம் செய்ய
+          </Link>
+        </Reveal>
       </section>
 
       {/* Call to Action Banner */}

@@ -70,6 +70,7 @@ function AboutTemple() {
                   </div> */}
                   <h3 className="text-2xl font-bold text-black mb-2">இரா. ஜீவானந்தம்</h3>
                   <p className="font-medium text-sm">B.A.</p>
+                  <p className="font-medium text-sm">Former Minister</p>
                   {/* <p className="text-gold font-semibold mt-2 px-4 py-1 bg-gold/10 rounded-full inline-block">(நிர்வாக அறங்காவலர்)</p> */}
                 </div>
               </div>
