@@ -150,22 +150,18 @@ function Home() {
           <Reveal><SectionHeading eyebrow="திருவிழாக்கள்" title="புனித கொண்டாட்டங்கள்" align="center" /></Reveal>
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781113816/pancha_murthi_koahvs.png", title: "பஞ்ச மூர்த்தி விழா", month: "ஐப்பசி மாதம்", desc: "அருள்மிகு கோரக்கர் சித்தரின் அருளால் ஐந்து தெய்வங்களின் சங்கமத்தை கொண்டாடும், பக்தர்களுக்கு ஒற்றுமையும் ஆன்மீக சக்தியும் வழங்கும் புனிதப் பெருவிழா." },
-              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1781113968/IMG_6228_z48eqw.jpg", title: "ஐப்பசி பரணி பெருவிழா", month: "ஐப்பசி மாதம்", desc: "பௌர்ணமி மற்றும் ஐப்பசி பரணியில் சிறப்பு வழிபாடும், ஆயிரக்கணக்கான பக்தர்கள் தரிசனமும் அன்னதானமும் பெற்று அருளாசி பெறுகின்றனர்" },
-              { img: "https://res.cloudinary.com/dhjupdyus/image/upload/v1780929087/IMG_6117_dtvqdd.jpg", title: "ஆடி பிரம்மோற்சவ விழா", month: "ஐப்பசி மாதம்", desc: "கோரக்கர் ஆசிரமத்தில் ஆடி பிரம்மோற்சவ விழா நடைபெறுகிறது. சித்தரின் அருளை நாடும் பக்தர்கள் தரிசனமும் அன்னதானமும் பெறுகின்றனர்." },
+              { title: "மாதந்தோறும் பௌர்ணமி விழா", desc: "இன்று காலை நாதஸ்வரம் தொடங்கி, அன்னாபிஷேகம், பௌர்ணமி விழா, மங்கல இசை, சொற்பொழிவு என பஞ்ச மூர்த்தி விழா சிறப்பாக நடைபெறுகிறது." },
+              { title: "ஐப்பசி பரணி விழா", desc: "பௌர்ணமி மற்றும் ஐப்பசி பரணியில் சிறப்பு வழிபாடும், ஆயிரக்கணக்கான பக்தர்கள் தரிசனமும் அன்னதானமும் பெற்று அருளாசி பெறுகின்றனர்" },
+              { title: "ஆடி பிரம்மோற்சவ விழா", desc: "கோரக்கர் ஆசிரமத்தில் ஆடி பிரம்மோற்சவ விழா நடைபெறுகிறது. சித்தரின் அருளை நாடும் பக்தர்கள் தரிசனமும் அன்னதானமும் பெறுகின்றனர்." },
             ].map((f, i) => (
-              <Reveal key={f.title} delay={i * 0.1}>
-                <div className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img src={f.img} alt={f.title} width={1280} height={960} loading="lazy" className="w-full h-full object-cover brightness-100 contrast-105 group-hover:scale-105 transition-luxury duration-700" />
-                    <div className="absolute inset-0 bg-black/10 transition-opacity duration-700 group-hover:opacity-0" />
-                  </div>
-                  <div className="p-7 flex-1 flex flex-col justify-center text-center bg-[#FFF8E7]">
-                    <div className="text-xs uppercase font-bold tracking-widest text-[#2C2C2C] mb-2">{f.date}</div>
-                    <div className="text-2xl font-serif-tamil font-bold text-[#D9381E]">{f.title}</div>
-                  </div>
+             <Reveal key={f.title} delay={i * 0.1}>
+              <article className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
+                <div className="p-8 md:p-10 flex-1 flex flex-col justify-start">
+                  <h3 className="text-2xl md:text-2xl font-serif-tamil font-bold text-[#D9381E] mb-3">{f.title}</h3>
+                  <p className="text-[#2C2C2C] leading-relaxed font-medium">{f.desc}</p>
                 </div>
-              </Reveal>
+              </article>
+            </Reveal>
             ))}
           </div>
           <div className="mt-8 flex justify-center">

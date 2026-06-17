@@ -29,14 +29,13 @@ const festivals = [
 function Festivals() {
   return (
     <>
-      <PageHero eyebrow="புனித கொண்டாட்டங்கள்" title="அருள்மிகு கோரக்கர் சித்தர் ஆசரம ஆண்டு திருவிழாக்கள்" />
+      <PageHero eyebrow="திருவிழாக்கள்" title="அருள்மிகு கோரக்கர் சித்தர் ஆசரம ஆண்டு திருவிழாக்கள்" />
      <section className="py-5">
        <div className="relative rounded-[2rem] overflow-hidden border border-gold/20 p-2 bg-background/50">
           <Reveal>
                  <img 
                    src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781599734/IMG_20260616_141613_x4ruqs.png"
-                   alt="கோரக்கர் சித்தர் எந்திர மந்திரம்" 
-                   className="h-[70%] w-[70%] justify-center items-center mx-auto object-contain rounded-[1.5rem] shadow-2xl relative z-10 "
+                   className="h-full w-full sm:w-[75%] sm:h-[70%] justify-center items-center mx-auto object-contain rounded-[1.5rem] shadow-2xl relative z-10 "
                  />
           </Reveal>
         </div>
@@ -50,7 +49,7 @@ function Festivals() {
             <Reveal key={f.title} delay={i * 0.1}>
               <article className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
                 <div className="p-8 md:p-10 flex-1 flex flex-col justify-start">
-                  <h3 className="text-3xl md:text-4xl font-serif-tamil font-bold text-[#D9381E] mb-3">{f.title}</h3>
+                  <h3 className="text-2xl md:text-2xl font-serif-tamil font-bold text-[#D9381E] mb-3">{f.title}</h3>
                   <p className="text-[#2C2C2C] leading-relaxed font-medium">{f.desc}</p>
                 </div>
               </article>

@@ -23,8 +23,8 @@ const sections = [
 function AboutTemple() {
   return (
     <>
-      <PageHero eyebrow="பீடம் பற்றி" title="அருள் நிறைந்த தலம்" subtitle="நூற்றாண்டுகளின் ஆன்மீக மரபு, கம்பீரமான கட்டிடக்கலை, அமைதியின் சூழல்." />
-      
+      <PageHero eyebrow="பீடம் பற்றி" title="கோரக்கர் நிறைந்த தலம்" subtitle="நூற்றாண்டுகளின் ஆன்மீக மரபு, கம்பீரமான கட்டிடக்கலை, அமைதியின் சூழல்." />
+
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 space-y-24 md:space-y-32">
           {sections.map((s, i) => (
@@ -51,63 +51,11 @@ function AboutTemple() {
         <div className="absolute bottom-0 left-0 -ml-40 -mb-40 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 relative z-10">
-          <Reveal>
-            <div className="text-center mb-16">
-              <span className="text-gold font-medium tracking-widest uppercase text-sm mb-4 block">கோவில் நிர்வாகம்</span>
-              <h2 className="text-3xl md:text-5xl font-semibold text-primary">நிர்வாக அறங்காவலர்</h2>
-              <div className="w-24 h-1 bg-gold mx-auto mt-6 rounded-full"></div>
-            </div>
-          </Reveal>
-
-          {/* Main Leader Card */}
-          <div className="flex justify-center mb-12">
-            <Reveal delay={0.1}>
-              <div className="group glass rounded-[2.5rem] p-8 md:p-12 w-full max-w-md border-2 border-gold shadow-luxury hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 text-center relative overflow-hidden bg-white/60">
-                <div className="absolute inset-0 bg-gradient-to-b from-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative z-10">
-                  {/* <div className="w-36 h-36 mx-auto rounded-full bg-gold/20 border-4 border-white shadow-xl overflow-hidden mb-6 flex items-center justify-center">
-                    <img src="https://ui-avatars.com/api/?name=J&background=D9381E&color=fff&size=256" alt="இரா. ஜீவானந்தம்" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                  </div> */}
-                  <h3 className="text-2xl font-bold text-black mb-2">இரா. ஜீவானந்தம்</h3>
-                  <p className="font-medium text-sm">B.A.</p>
-                  <p className="font-medium text-sm">Former Minister</p>
-                  {/* <p className="text-gold font-semibold mt-2 px-4 py-1 bg-gold/10 rounded-full inline-block">(நிர்வாக அறங்காவலர்)</p> */}
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-           <Reveal>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-semibold text-primary">அறங்காவலர்கள்</h2>
-              <div className="w-24 h-1 bg-gold mx-auto mt-6 rounded-full"></div>
-            </div>
-          </Reveal>
-
-          {/* Grid for remaining 4 cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            
-            {/* Card 2 with degree */}
-            <Reveal delay={0.2}>
-              <div className="group glass rounded-3xl p-6 text-center border border-border/50 hover:border-gold/50 shadow-sm hover:shadow-xl hover:scale-[1.03] transition-all duration-500 bg-white/40 h-full flex flex-col items-center justify-center">
-                <h3 className="text-lg font-bold text-black mb-1">வே. அ. கிருஷ்ணன்</h3>
-                <p className="font-medium text-sm">M.A., B.Ed.</p>
-              </div>
-            </Reveal>
-
-            {/* Cards 3, 4, 5 without degree */}
-            {[
-              { name: "E.R. காசிநாதன்", id: "K" },
-              { name: "வை. இரா. ஜெயச்சந்திரன்", id: "J" },
-              { name: "வே. வி. திருநாவுக்கரசு", id: "T" },
-            ].map((person, index) => (
-              <Reveal key={person.name} delay={0.3 + index * 0.1}>
-                <div className="group glass rounded-3xl p-6 text-center border border-border/50 hover:border-gold/50 shadow-sm hover:shadow-xl hover:scale-[1.03] transition-all duration-500 bg-white/40 h-full flex flex-col items-center justify-center">
-                  <h3 className="text-lg font-bold text-black">{person.name}</h3>
-                </div>
-              </Reveal>
-            ))}
-
+          <div className="text-center mb-16">
+            <span className="text-gold font-medium tracking-widest uppercase text-sm mb-4 block">பீடம் நிர்வாகம்</span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-primary">அருள்மிகு கோரக்கர் ஆசிரம நிர்வாகம்</h2>
+            <div className="w-24 h-1 bg-gold mx-auto mt-6 rounded-full"></div>
+            <p className="mt-6 text-muted-foreground leading-loose max-w-4xl mx-auto">தற்போதைய ஆசிரம நிர்வாகமானது வடக்குப் பொய்கை நல்லூரை பூர்வீகமாகக் கொண்ட சோழிய வெள்ளாள பிள்ளைமார்களால் "அருள்மிகு கோரக்கர் சித்தர் ஆசிரம அறக்கட்டளை" தோற்றுவிக்கப்பட்டு, நாகை பதிவு அலுவலகத்தில் பதிவு செய்யப்பட்டுள்ளது. பதிவு எண் 40/2015.மேற்கண்ட அறக்கட்டளையில் பதிவு செய்யப்பட்ட பொதுக்குழு உறுப்பினர்களால் செயற்குழு உறுப்பினர்கள் தேர்வு செய்யப்படுவார்கள். செயற்குழு உறுப்பினர்களால் ஐந்து அறங்காவலர்கள் தேர்வு செய்யப்படுவார்கள். ஐந்து அறங்காவலர்களால் ஒரு நிர்வாக அறங்காவலர் தேர்வு செய்யப்படுவார். இந்த நிர்வாகக்குழு ஆசிரமம் மற்றும் பள்ளி நிர்வாகத்தினை கவனித்துக் கொண்டு வருகிறார்கள். இந்த நடைமுறை வழக்கமாக தொன்றுதொட்டு செயல்படுத்தப்படுகிறது.</p>
           </div>
         </div>
       </section>

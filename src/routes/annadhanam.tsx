@@ -31,19 +31,19 @@ function AnnadhanamPage() {
             <Reveal delay={0.1}>
               <div className="glass p-8 md:p-12 rounded-3xl h-full flex flex-col justify-center relative hover-lift">
                 <div className="absolute top-6 left-6 text-6xl text-gold/20 font-serif">"</div>
-                <blockquote className="relative z-10 text-xl md:text-2xl text-primary font-serif-tamil leading-relaxed">
+                <blockquote className="relative z-10 text-sm md:text-xl text-primary font-serif-tamil leading-relaxed">
                   அற்றார் அழிபசி தீர்த்தல் அஃதொருவன் பெற்றான் பொருள்வைப்புழி
                 </blockquote>
-                {/* <div className="mt-6 text-muted-foreground font-medium">— திருவள்ளுவர்</div> */}
+                <div className="mt-6 text-sm md:text-xl text-muted-foreground font-medium">— திருவள்ளுவர்</div>
               </div>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="glass p-8 md:p-12 rounded-3xl h-full flex flex-col justify-center relative hover-lift">
                 <div className="absolute top-6 left-6 text-6xl text-gold/20 font-serif">"</div>
-                <blockquote className="relative z-10 text-xl md:text-2xl text-primary font-serif-tamil leading-relaxed">
-                  மாந்தின் ஞாலத்து வாழ்வோர்க்கு எல்லாம் உண்டி கொடுத்தோர் உயிர் கொடுத்தோரே
+                <blockquote className="relative z-10 text-sm md:text-xl text-primary font-serif-tamil leading-relaxed">
+                  மனதின் ஞாலத்து வாழ்வோருக்கு எல்லாம் உண்டி கொடுத்தோர் உயிர் கொடுத் தோரே
                 </blockquote>
-                {/* <div className="mt-6 text-muted-foreground font-medium">— தமிழ் சான்றோர் வாக்கு</div> */}
+                <div className="mt-6 text-sm md:text-xl text-muted-foreground font-medium">— தமிழ் சான்றோர் வாக்கு</div>
               </div>
             </Reveal>
           </div>
@@ -54,13 +54,13 @@ function AnnadhanamPage() {
       <section className="py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <Reveal>
-            <SectionHeading eyebrow="அன்னதானத்தின் மகிமை" title="உயிரையே காக்கும் தர்மம்" align="center" />
+            {/* <SectionHeading eyebrow="அன்னதானத்தின் மகிமை" title="உயிரையே காக்கும் தர்மம்" align="center" /> */}
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-12 space-y-6 text-lg text-muted-foreground leading-loose">
-              <p>மணிமேகலையில் பசியினையைப் போக்குவோர் உயிர் கொடுத்தோராவர் என்று விளக்கப்படுகிறது.</p>
-              <p className="font-semibold text-primary">"பசி வந்திட குடிப்பிறப்பு, விழுப்பம், கல்வி, நாணம், புத்தி, அறிவு, சிற்றின்பம், அழகு, பக்தி, இன்பம் ஆகிய பத்தும் பறந்து போகும் என்பது பழமொழி."</p>
-              <p>உயிரையே காக்கும் உயர்ந்த தர்மமாக அன்னதானம் கருதப்படுகிறது. அதனால் தான் அன்னத்தை "பிரம்மம்" என்று வேதங்கள் போற்றுகின்றன.</p>
+              <p>மணிமேகலையில் பசிப்பிணியைப் போக்குவோர் உயிர் கொடுத்தோராகவும், ஒப்பற்ற புகழுக்கு சொந்தக்காரர்கள் என்று விளம்புகின்றார்.</p>
+              <p className="font-semibold text-primary">"பசி வந்திட குடிப்பிறப்பு, விழுப்பம், கல்வி, நாணம், புகழ், அழகு, சிற்றின்பம், அறிவு, பக்தி, இன்பம் ஆகிய பத்தும் பறந்து போகும் என்பது பழமொழி."</p>
+              <p>உயிராகிய ஒளி பசியால் குறைவது என்பது கடவுளாகிய ஒளி நம் உடலை விட்டே விலகுவதே ஆகும், அதனால் தான் அன்னத்தை "பிரம்மம்" என்று வேதம் கூறுகிறது. தன்பசியாற்றிக் கொள்வதோடு பிறர் பசியாற்றும் பண்புடையது மனித உயிர்.</p>
             </div>
           </Reveal>
         </div>
@@ -78,17 +78,17 @@ function AnnadhanamPage() {
             </Reveal>
             <div>
               <Reveal delay={0.1}>
-                <SectionHeading eyebrow="கோரக்கர் ஆசிரம அன்னதான மரபு" title="சீரிய நெறி" />
+                {/* <SectionHeading eyebrow="கோரக்கர் ஆசிரம அன்னதான மரபு" title="சீரிய நெறி" /> */}
               </Reveal>
               <Reveal delay={0.2}>
                 <div className="mt-8 space-y-6 text-muted-foreground leading-relaxed">
-                  <p>ஒவ்வொரு நாளும் சித்தர் ஆசிரமத்திற்கு யாத்திரீகர்கள், துறவிகள், திக்கற்றவர்கள் என பல தரப்பட்டவர்கள் வந்து வழிபாடு நிகழ்த்தி இரவு ஆசிரமத்திலேயே தங்குகின்றனர்.</p>
+                  <p>ஒவ்வொரு நாளும் சித்தர் ஆசிரமத்திற்கு யாத்திரீகர்கள், துறவிகள், திக்கற்றவர்கள் என பல தரப்பட்டவர்கள் வந்து வழிபாடு நிகழ்த்தி இரவு சித்தர் ஆசிரமத்திலேயே தங்குகின்றனர்.</p>
                   <p>இந்த ஆசிரமத்தில் நாள்தோறும் தங்குவோர் எத்தனை பேராயினும் அத்தனை பேருக்கும் மூன்று வேளை உணவு வழங்கப்பட்டு வருகிறது.</p>
                   <div className="p-6 glass rounded-2xl border-l-4 border-l-gold">
-                    <p className="font-semibold text-primary">திக்கற்றோருக்கு தங்குமிடம்,<br />பசித்தோருக்கு உணவு,<br />நோயுற்றோருக்கு மருந்து வழங்கி வாழ்விப்பதே சைவ சமய நெறியாகும்.</p>
+                    <p className="font-semibold text-primary">திக்கற்றோருக்குத் தங்கும் இடமும்,<br />பசித்தாருக்கு உணவும்,<br />நோயுற்றார்க்கு மருந்தும் நல்கி வாழ்விப்பதே சைவ சமய நெறியாகும்.</p>
                   </div>
-                  <p>இதுவே சித்தர்கள் போற்றிய சீரிய நெறியாகும். சித்தர்களுள் கோரக்கர் சித்தர் இந்நெறியில் தலைசிறந்த அருட்பெருஞ்சான்றோராக போற்றப்படுகிறார்.</p>
-                  <p className="text-xl text-primary font-medium">அவரது ஜீவசமாதி அமைந்துள்ள இந்த ஆசிரமத்தில் பசித்த வயிற்றோடு படுத்து உறங்கியவர் எவரும் இல்லை.</p>
+                  <p>இதுவே சித்தர்கள் போற்றிய சீரிய நெறியும் ஆகும். சித்தர்கள் பலருள்ளும் கோரக்கர் சித்தர் இந்நெறியில் தலை நின்ற அருட்பெருஞ் சான்றோராவர்.</p>
+                  <p className="text-xl text-primary font-medium">அவர் ஜீவ சமாதி கூடியுள்ள இந்த ஆசிரமத்தில் பசித்த வயிற்றோடு படுத்து உறங்கியவர் எவரும் இல்லை</p>
                 </div>
               </Reveal>
             </div>
