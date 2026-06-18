@@ -80,7 +80,7 @@ function Contact() {
                 நன்கொடை
               </h2>
               <p className="text-gray-700 text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-                பீடத்தின் தினசரி பூஜைகள், அன்னதானம் மற்றும் திருப்பணிகளுக்கு உங்களால் இயன்ற நன்கொடைகளை வழங்கி இறையருள் பெற வேண்டுகிறோம்.
+                பீடத்தின் தினசரி பூஜைகள் அன்னதானம் மற்றும் திருப்பணிகளுக்கு நன்கொடை வழங்க விரும்புபவர்கள் ஆசிரம அலுவலகத்தை அணுகி செலுத்த அன்புடன் வேண்டுகிறோம்
               </p>
               
               <div className="inline-block group">
@@ -88,11 +88,11 @@ function Contact() {
                   <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-2xl bg-gray-50 overflow-hidden relative flex items-center justify-center">
                     {/* Placeholder for QR Code */}
                     <img 
-                      src="https://res.cloudinary.com/dhjupdyus/image/upload/v1780586058/QRcode_jw9seu.jpg" 
+                      src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781786253/WhatsApp_Image_2026-06-18_at_4.00.56_PM_m4wxbo.jpg" 
                       alt="Donation QR Code Placeholder" 
-                      className="object-cover p-6 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                      className="object-cover p-6 opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                     />
-                    <div className="absolute inset-0 border-2 border-dashed border-gray-200 rounded-2xl m-2 pointer-events-none" />
+                    <div className="absolute inset-0 border-2 border-dashed border-gray-200 rounded-3xl m-2 pointer-events-none" />
                   </div>
                   <p className="mt-4 font-bold text-gray-800 tracking-wide">Scan to Donate</p>
                 </div>

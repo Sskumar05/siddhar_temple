@@ -34,7 +34,7 @@ function AnnadhanamPage() {
                 <blockquote className="relative z-10 text-sm md:text-xl text-primary font-serif-tamil leading-relaxed">
                   அற்றார் அழிபசி தீர்த்தல் அஃதொருவன் பெற்றான் பொருள்வைப்புழி
                 </blockquote>
-                <div className="mt-6 text-sm md:text-xl text-muted-foreground font-medium">— திருவள்ளுவர்</div>
+                <div className="mt-6 text-sm md:text-xl text-muted-foreground font-medium">— என்று திருக்குறளில் வள்ளுவர் பெருமகனாரும்</div>
               </div>
             </Reveal>
             <Reveal delay={0.2}>
@@ -43,7 +43,7 @@ function AnnadhanamPage() {
                 <blockquote className="relative z-10 text-sm md:text-xl text-primary font-serif-tamil leading-relaxed">
                   மனதின் ஞாலத்து வாழ்வோருக்கு எல்லாம் உண்டி கொடுத்தோர் உயிர் கொடுத் தோரே
                 </blockquote>
-                <div className="mt-6 text-sm md:text-xl text-muted-foreground font-medium">— தமிழ் சான்றோர் வாக்கு</div>
+                <div className="mt-6 text-sm md:text-xl text-muted-foreground font-medium">— என்று சீத்தலைச்சாத்தனார்</div>
               </div>
             </Reveal>
           </div>
@@ -190,8 +190,8 @@ function AnnadhanamPage() {
 
           <Reveal delay={0.3}>
             <div className="mt-12 text-center max-w-2xl mx-auto text-muted-foreground bg-white/50 p-6 rounded-2xl border border-gold/10">
-              <p>உங்கள் பங்களிப்பு தினசரி அன்னதான சேவைக்கும், யாத்திரீகர்களின் உணவுக்கும், ஆதரவற்றோரின் நலனுக்கும் பயன்படுத்தப்படுகிறது.</p>
-              <p className="mt-4 text-primary font-medium">அன்னதானம் மற்றும் சிறப்பு பூஜை செய்ய விரும்பும் உள்ளவர்கள் அலுவலகத்தில் பணம் செலுத்தி ரசீது பெற்றுக்கொள்ளுமாறு பணிவுடன் கேட்டுக்கொள்ளப்படுகிறார்கள்.</p>
+              <p>அன்னதானம், சிறப்பு பூஜை செய்ய விரும்பும் உள்ளவர்கள் அலுவலகத்தில் பணம் செலுத்தி ரசீது பெற்றுக்கொள்ளுமாறு பணிவுடன் கேட்டுக்கொள்ளப்படுகிறார்கள்.</p>
+              {/* <p className="mt-4 text-primary font-medium">அன்னதானம், சிறப்பு பூஜை செய்ய விரும்பும் உள்ளவர்கள் அலுவலகத்தில் பணம் செலுத்தி ரசீது பெற்றுக்கொள்ளுமாறு பணிவுடன் கேட்டுக்கொள்ளப்படுகிறார்கள்.</p> */}
             </div>
           </Reveal>
         </div>

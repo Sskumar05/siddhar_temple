@@ -129,7 +129,7 @@ function Home() {
       <section className="relative py-24 bg-[oklch(0.09_0.005_60)]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal>
-            <SectionHeading eyebrow="சேவைகள்" title="பீடத்தின் தினசரி சேவைகள்" description="தினசரி பூஜை முதல் அன்னதானம் வரை — பக்தர்களுக்கான முழுமையான ஆன்மீக சேவைகள்." align="center" />
+            <SectionHeading eyebrow="சேவைகள்" title="பீடத்தில் நடக்கும் தினசரி சேவைகள்" description="தினசரி பூஜை முதல் அன்னதானம் வரை — பக்தர்களுக்கான முழுமையான ஆன்மீக சேவைகள்." align="center" />
           </Reveal>
           <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s, i) => (
@@ -147,7 +147,7 @@ function Home() {
       {/* FESTIVAL HIGHLIGHTS */}
       <section className="py-24 bg-[#FAFAFA]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <Reveal><SectionHeading eyebrow="திருவிழாக்கள்" title="புனித கொண்டாட்டங்கள்" align="center" /></Reveal>
+          <Reveal><SectionHeading eyebrow="திருவிழாக்கள்" title="ஆன்மீக விழாக்கள்" align="center" /></Reveal>
           <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { title: "மாதந்தோறும் பௌர்ணமி விழா", desc: "இன்று காலை நாதஸ்வரம் தொடங்கி, அன்னாபிஷேகம், பௌர்ணமி விழா, மங்கல இசை, சொற்பொழிவு என பஞ்ச மூர்த்தி விழா சிறப்பாக நடைபெறுகிறது." },
@@ -203,7 +203,7 @@ function Home() {
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal><SectionHeading eyebrow="பக்தர்களின் அனுபவம்" title="அருள் வாக்குகள்" align="center" /></Reveal>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { t: "கோரக்கர் சித்தரின் தரிசனம் என் வாழ்வை மாற்றியது. அமைதியும் தெளிவும் கிடைத்தது.", n: "முருகன், சென்னை" },
               { t: "பீடம்  ஆற்றல் வார்த்தைகளுக்கு அப்பாற்பட்டது. அன்னதானம் அற்புதம்.", n: "லட்சுமி, மதுரை" },
@@ -228,11 +228,11 @@ function Home() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 relative z-10">
           <Reveal>
             <div className="text-center">
-              <h2 className="text-4xl font-serif font-bold mb-6 text-white">
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-6 text-white">
                 உங்கள் வருகையை திட்டமிடுங்கள்
               </h2>
 
-              <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto">
                 கோரக்கர் சித்தரின் அருளைப் பெற உங்களை அன்புடன் வரவேற்கிறோம்.
               </p>
 

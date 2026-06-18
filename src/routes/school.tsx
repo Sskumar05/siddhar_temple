@@ -193,9 +193,15 @@ function SchoolPage() {
             {[
               "தரமான கல்வி",
               "அனுபவமிக்க ஆசிரியர்கள்",
+              "பள்ளி உள்கட்டமைப்பு வசதிகள் நிறைந்தது",
+              "குறைந்த கல்வி கட்டணம்",
+              "ஏழை எளிய மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்குதல்",
+              "மதிய உணவு திட்டம்",
+              "Extra curricular activities (YOGA,SILAMBAM,BHARATHAM,KARATHAI,CHESS)",
               "பாதுகாப்பான கல்விச் சூழல்",
               "முழுமையான ஆளுமை வளர்ச்சி",
               "மாணவர்களின் எதிர்கால வெற்றியை நோக்கிய வழிகாட்டுதல்"
+              
             ].map((feature, i) => (
               <Reveal key={i}>
                 <div className="flex items-start gap-5 p-4 rounded-2xl transition-all duration-300">
@@ -405,7 +411,7 @@ function SchoolGallery() {
           )}
 
           {/* Grid Gallery */}
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {grid.map((img, i) => (
               <Reveal key={i}>
                 <div

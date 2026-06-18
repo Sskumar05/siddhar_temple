@@ -29,7 +29,7 @@ const festivals = [
 function Festivals() {
   return (
     <>
-      <PageHero eyebrow="திருவிழாக்கள்" title="அருள்மிகு கோரக்கர் சித்தர் ஆசரம ஆண்டு திருவிழாக்கள்" />
+      <PageHero eyebrow="திருவிழாக்கள்" title="அருள்மிகு கோரக்கர் சித்தர் ஆசிரம ஆண்டு திருவிழாக்கள்" />
      <section className="py-5">
        <div className="relative rounded-[2rem] overflow-hidden border border-gold/20 p-2 bg-background/50">
           <Reveal>

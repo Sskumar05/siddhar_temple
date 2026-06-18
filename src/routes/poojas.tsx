@@ -150,7 +150,7 @@ function Poojas() {
             <div className="grid md:grid-cols-1 gap-8 max-w-4xl mx-auto">
               <div className="p-8 rounded-[2rem] bg-background/60 border border-border/40 hover:border-gold/30 transition-colors relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-gold to-transparent"></div>
-                <p className="text-muted-foreground leading-loose text-lg text-justify md:text-center text-left md:text-justify text-base md:text-lg leading-8">
+                <p className="text-muted-foreground text-left md:text-justify text-base md:text-lg leading-8">
                   கோரக்கர் சித்தரின் எந்திர மந்திரம் ஆன்மீக ஆற்றல், மனஅமைதி மற்றும் இறையருளைப் பெற உதவும் புனித அருள்வழியாக பக்தர்களால் போற்றப்படுகிறது. பக்தியுடனும் நம்பிக்கையுடனும் சித்தரை தியானித்து வழிபடுவதன் மூலம் நேர்மறை எண்ணங்கள், மனவலிமை மற்றும் ஆன்மீக முன்னேற்றம் கிடைக்கும் என நம்பப்படுகிறது.
                 </p>
               </div>

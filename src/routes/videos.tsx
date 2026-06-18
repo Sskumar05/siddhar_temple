@@ -28,27 +28,26 @@ export interface VideoData {
 // To add a real video, simply provide the 'videoPath' (e.g., "/videos/my-video.mp4").
 // If 'videoPath' is not provided, it will gracefully fallback to showing the thumbnail.
 export const VIDEOS_DATA: VideoData[] = [
-  // {
-  //   id: "1",
-  //   title: "கோவில் சுற்றுப்பயணம்",
-  //   cat: "கோவில்",
-  //   videoPath: "./src/assets/full.mp4",
-  //   thumbnail: hero,
-  //   duration: "5:32",
-  // },
   {
-    id: "2",
+    id: "1",
     title: "மந்திரம்",
     cat: "கோரக்கர்",
     videoUrl: "https://res.cloudinary.com/dhjupdyus/video/upload/v1780582148/WhatsApp_Video_2026-06-03_at_10.36.07_PM_m7syr1.mp4",
-    duration: "12:18",
+    // duration: "12:18",
   },
   {
-    id: "3",
+    id: "2",
     title: "தரிசனம்",
     cat: "கோரக்கர்",
     videoUrl: "https://res.cloudinary.com/dhjupdyus/video/upload/v1780583271/lv_0_20260603202826_yvzd6w.mp4",
-    duration: "8:45",
+    // duration: "8:45",
+  },
+  {
+    id: "3",
+    title: "யார்கண்ணன்",
+    cat: "கோரக்கர்",
+    videoUrl: "https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1527473059092810%2F&show_text=false&width=267&t=0",
+    // duration: "12:18",
   },
 ];
 
