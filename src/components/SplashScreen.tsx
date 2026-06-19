@@ -32,7 +32,7 @@ export function SplashScreen() {
         <img
           src={logo}
           alt="கோரக்கர் சித்தர் லோகோ"
-          className="w-70 h-70 sm:w-80 sm:h-80 object-contain mb-1 drop-shadow-xl"  // ✅ FIXED: mb-6 to mb-1
+          className="w-70 h-70 sm:w-80 sm:h-80 object-contain mb-1 drop-shadow-xl"
         />
         <div className="leading-tight text-center">
           <div className="font-serif-tamil text-2xl sm:text-3xl font-bold text-[#D9381E] mb-1">

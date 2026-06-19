@@ -6,7 +6,7 @@ import { PageHero } from "../components/PageHero";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "புகைப்படத் தொகுப்பு — கோரக்கர் சித்தர் " },
+      { title: "புகைப்படத் தொகுப்பு — கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
       { name: "description", content: "கோவில் காட்சிகள், திருவிழாக்கள், அன்னதானம், பூஜை நிகழ்வுகள் புகைப்படத் தொகுப்பு." },
     ],
   }),

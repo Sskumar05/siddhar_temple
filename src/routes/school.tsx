@@ -7,7 +7,7 @@ import { Send, Loader2, CheckCircle2, AlertCircle, X, ZoomIn } from "lucide-reac
 export const Route = createFileRoute("/school")({
   head: () => ({
     meta: [
-      { title: "பள்ளி — அருள்மிகு கோரக்கர் மெட்ரிகுலேஷன் பள்ளி" },
+      { title: "பள்ளி — கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
       { name: "description", content: "தரமான கல்வி, ஒழுக்கம் மற்றும் மாணவர்களின் முழுமையான வளர்ச்சியை நோக்கமாகக் கொண்டு செயல்படும் கல்வி நிலையம்." },
     ],
   }),

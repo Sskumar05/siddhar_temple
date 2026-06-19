@@ -6,7 +6,7 @@ import { Reveal } from "../components/Section";
 export const Route = createFileRoute("/festivals")({
   head: () => ({
     meta: [
-      { title: "திருவிழாக்கள் — கோரக்கர் சித்தர் கோவில்" },
+      { title: "திருவிழாக்கள் — கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
       { name: "description", content: "ஆண்டு குரு பூஜை, மகா சிவராத்திரி, பௌர்ணமி திருவிழா, கார்த்திகை தீபம் — கோவிலின் முக்கிய திருவிழாக்கள்." },
     ],
   }),

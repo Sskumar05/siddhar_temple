@@ -7,7 +7,7 @@ import { Reveal } from "../components/Section";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "தொடர்புக்கு — கோரக்கர் சித்தர் கோவில்" },
+      { title: "தொடர்புக்கு — கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
       { name: "description", content: "கோவில் முகவரி, தொலைபேசி, மின்னஞ்சல், தரிசன நேரம், கூகிள் வரைபடம்." },
     ],
   }),

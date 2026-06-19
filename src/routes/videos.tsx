@@ -6,7 +6,7 @@ import { Reveal } from "../components/Section";
 export const Route = createFileRoute("/videos")({
   head: () => ({
     meta: [
-      { title: "காணொளிகள் — கோரக்கர் சித்தர் கோவில்" },
+      { title: "காணொளிகள் — கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
       { name: "description", content: "கோவில் காணொளிகள், திருவிழா காட்சிகள், ஆன்மீக சொற்பொழிவுகள்." },
     ],
   }),

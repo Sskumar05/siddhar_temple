@@ -6,7 +6,7 @@ import { Reveal } from "../components/Section";
 export const Route = createFileRoute("/korakkar-siddhar")({
   head: () => ({
     meta: [
-      { title: "கோரக்கர் சித்தர் — வாழ்க்கை வரலாறு" },
+      { title: " வரலாறு — கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
       { name: "description", content: "பதினெண் சித்தர்களுள் தலைசிறந்த கோரக்கர் சித்தரின் வாழ்க்கை, ஆற்றல்கள், போதனைகள், இலக்கியம் மற்றும் மரபு." },
     ],
   }),
