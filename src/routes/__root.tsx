@@ -4,6 +4,8 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useNavigate,
+  useLocation,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -77,6 +79,18 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    // On mobile devices, redirect to home page on initial load/refresh if not already there
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      if (location.pathname !== '/') {
+        navigate({ to: '/' });
+      }
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <SplashScreen />
