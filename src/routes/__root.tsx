@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import faviconUrl from "../assets/logo.png";
+import faviconUrl from "../assets/image.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -55,7 +55,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம் — அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம். ஆன்மீக அனுபவம், பூஜைகள், திருவிழாக்கள்." },
     ],
     links: [
-      { rel: "icon", type: "logo.png", href: faviconUrl },
+      { rel: "icon", type: "image/png", href: faviconUrl },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" }, 
       { rel: "stylesheet", href: appCss }
     ],

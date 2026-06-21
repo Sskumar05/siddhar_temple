@@ -19,17 +19,15 @@ const festivals = [
   { title: "ஐப்பசி பரணி விழா", desc: "பௌர்ணமி மற்றும் ஐப்பசி பரணியில் சிறப்பு வழிபாடும், ஆயிரக்கணக்கான பக்தர்கள் தரிசனமும் அன்னதானமும் பெற்று அருளாசி பெறுகின்றனர்" },
   { title: "ஆடி பிரம்மோற்சவ விழா", desc: "கோரக்கர் ஆசிரமத்தில் ஆடி பிரம்மோற்சவ விழா நடைபெறுகிறது. சித்தரின் அருளை நாடும் பக்தர்கள் தரிசனமும் அன்னதானமும் பெறுகின்றனர்." },
   { title: "ஆங்கில புத்தாண்டு பிறப்பு விழா", desc: "கோரக்கர் ஆசிரமத்தில் ஆங்கில புத்தாண்டு விழா; பக்தர்கள் சித்தர் தரிசனமும் அன்னதானமும் பெற்று அருளாசி; கோரக்கரின் அருள் எல்லோருக்கும்." },
-  { title: "பஞ்ச மூர்த்தி விழா", desc: "அருள்மிகு கோரக்கர் சித்தரின் அருளால் ஐந்து தெய்வங்களின் சங்கமத்தை கொண்டாடும், பக்தர்களுக்கு ஒற்றுமையும் ஆன்மீக சக்தியும் வழங்கும் புனிதப் பெருவிழா." },
   { title: "கோரக்கர் ஜெயந்தி விழா", desc: "சித்தர் பெருமானின் அவதார தினத்தை முன்னிட்டு சிறப்பு பூஜைகள், அபிஷேகங்கள் மற்றும் பக்தர்கள் பங்கேற்புடன் சிறப்பாக நடைபெறும் விழா." },
   { title: "கார்த்திகை மாத சோமவார விழா", desc: "கோவில் முழுவதும் ஆயிரம் தீபங்கள் ஒளிர்கின்றன. ஒளியின் திருவிழா — ஞான ஒளியின் வடிவம்." },
   { title: "மகா சிவராத்திரி விழா", desc: "இரவு முழுவதும் சிவ வழிபாடு, பஜனை, தியானம், அபிஷேகம் என அற்புதமான ஆன்மீக சூழல்." }
-
 ];
 
 function Festivals() {
   return (
     <>
-      <PageHero eyebrow="திருவிழாக்கள்" title="அருள்மிகு கோரக்கர் சித்தர் ஆசிரம ஆண்டு திருவிழாக்கள்" />
+      <PageHero eyebrow="திருவிழாக்கள்" title="ஆசிரம ஆண்டு திருவிழாக்கள்" />
      <section className="py-5">
        <div className="relative rounded-[2rem] overflow-hidden border border-gold/20 p-2 bg-background/50">
           <Reveal>
@@ -43,18 +41,41 @@ function Festivals() {
 
 
       {/* Festivals List Section */}
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-2 gap-8">
-          {festivals.map((f, i) => (
-            <Reveal key={f.title} delay={i * 0.1}>
-              <article className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
-                <div className="p-8 md:p-10 flex-1 flex flex-col justify-start">
-                  <h3 className="text-2xl md:text-2xl font-serif-tamil font-bold text-[#D9381E] mb-3">{f.title}</h3>
-                  <p className="text-[#2C2C2C] leading-relaxed font-medium">{f.desc}</p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+      <section className="py-24 ">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 grid md:grid-cols-2 gap-8 justify-center items-center">
+          {festivals.map((f, i) => {
+            const isLastOdd = i === festivals.length - 1 && festivals.length % 2 !== 0;
+            return (
+              <div 
+                key={f.title} 
+                className={isLastOdd ? "md:col-span-2 md:w-[calc(50%-1rem)] md:mx-auto w-full" : "w-full"}
+              >
+                <Reveal delay={i * 0.1}>
+                  <article className="group overflow-hidden rounded-3xl bg-[#FFF8E7] border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] flex flex-col h-full">
+                    <div className="p-8 md:p-10 flex-1 flex flex-col justify-start">
+                      <h3 className="text-2xl md:text-2xl font-serif-tamil font-bold text-[#D9381E] mb-3">{f.title}</h3>
+                      <p className="text-[#2C2C2C] leading-relaxed font-medium">{f.desc}</p>
+                    </div>
+                  </article>
+                </Reveal>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+
+       {/* Quote Card Panel */}
+      <section className="py-2">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <Reveal>
+            <div className="glass rounded-3xl p-10 md:p-14 text-center bg-gradient-to-br from-gold/20 to-amber-800/20 backdrop-blur-sm border border-[#D4AF37]/50 shadow-[0_4px_20px_rgba(0,0,0,0.05)] shadow-luxury">
+              <h3 className="text-3xl md:text-4xl font-semibold text-primary"> பஞ்ச மூர்த்தி விழா</h3>
+              <p className="mt-5 text-muted-foreground leading-loose max-w-3.2xl mx-auto text-left">
+                ஐப்பசி பழனி நாள் அன்று வடக்கு பொய்கை நல்லூர் அருள்மிகு நந்திநாதஸ்வர திருக்கோவிலிருந்து அதிகாலை 3 மணி அளவில் சென்று ஜண்டா முழங்க வாகன வேடிக்கைகளுடன் மேல தாளம் முழங்க பஞ்சமூர்த்தி வீதியுள்ள காட்சி நடைபெறும். அந்த வீதி உலா காட்சியானது அருள் மிகு கோரகர் சித்தர் ஆசிரமத்திற்கு எதிரில் நின்று செட்டியார் தம்பதிகளுக்கு அருள் காட்சி கொடுப்பது ஆயுதகமாக நடைபெற்று வருகிறது, ஊர் முழுவதும் வீதி உலா காட்சி நடைபெற்று முடிவில் நந்தினாதஸ்வர அந்த காட்சியானது முடிவாகும்.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
