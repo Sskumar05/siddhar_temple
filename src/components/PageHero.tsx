@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
-export function PageHero({ eyebrow, title, subtitle, children }: { eyebrow?: string; title: string; subtitle?: string; children?: ReactNode }) {
+export function PageHero({ eyebrow, title, subtitle, className, children }: { eyebrow?: string; title: string; subtitle?: string; className?: string; children?: ReactNode }) {
   return (
-    <section className="relative pt-36 pb-20 overflow-hidden bg-gradient-hero grain">
+    <section className={`relative pt-25 pb-20 overflow-hidden bg-gradient-hero grain ${className || ""}`}>
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-1/4 w-96 h-96 bg-gold/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-ember/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />

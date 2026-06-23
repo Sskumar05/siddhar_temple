@@ -25,7 +25,7 @@ function AboutTemple() {
     <>
       <PageHero eyebrow="பீடம் பற்றி" title="கோரக்கர் அருள் நிறைந்த தலம்" subtitle="நூற்றாண்டுகளின் ஆன்மீக மரபு, கம்பீரமான கட்டிடக்கலை, அமைதியின் சூழல்." />
 
-      <section className="py-24">
+      <section className="py- sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 space-y-24 md:space-y-32">
           {sections.map((s, i) => (
             <Reveal key={s.title}>
