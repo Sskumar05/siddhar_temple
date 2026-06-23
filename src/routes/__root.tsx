@@ -55,11 +55,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
       { name: "description", content: "வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம் — அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம். ஆன்மீக அனுபவம், பூஜைகள், திருவிழாக்கள்." },
+      {name: "google-site-verification", content: "abc123xyz456"},
     ],
     links: [
       { rel: "icon", type: "image/png", href: faviconUrl },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" }, 
       { rel: "stylesheet", href: appCss }
+      
     ],
   }),
   shellComponent: RootShell,
