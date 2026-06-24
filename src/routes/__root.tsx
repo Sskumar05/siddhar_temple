@@ -1,3 +1,4 @@
+import { templeSchema } from "../lib/schema";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -94,6 +95,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   {
     property: "og:type",
     content: "website"
+  },
+],
+scripts: [
+  {
+    type: "application/ld+json",
+    children: JSON.stringify(templeSchema),
   },
 ],
   links: [
