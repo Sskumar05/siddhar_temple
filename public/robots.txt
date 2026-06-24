@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://korakkarsiddhar.in/sitemap.xml
