@@ -51,6 +51,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
+    
    meta: [
   { charSet: "utf-8" },
   { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -97,12 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     content: "website"
   },
 ],
-scripts: [
-  {
-    type: "application/ld+json",
-    children: JSON.stringify(templeSchema),
-  },
-],
+
   links: [
   {
     rel: "canonical",
@@ -125,6 +121,13 @@ scripts: [
     href: appCss
   }
 ],
+scripts: [
+  {
+    type: "application/ld+json",
+    children: JSON.stringify(templeSchema),
+  },
+],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -135,8 +138,31 @@ scripts: [
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="ta">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
+      <head>
+        <HeadContent />
+
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CVW4M6DR69"
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CVW4M6DR69');
+            `,
+          }}
+        />
+      </head>
+
+      <body>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }
