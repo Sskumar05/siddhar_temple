@@ -135,7 +135,7 @@ function SchoolPage() {
             <div className="text-center text-xs uppercase tracking-[0.3em] text-gold mb-4">பள்ளியைப் பற்றி</div>
             <div className="glass rounded-3xl p-10 md:p-14 text-center border border-[#E5E5E5]/50 shadow-sm">
               <h2 className="text-3xl md:text-4xl font-semibold text-primary">பள்ளி அறிமுகம்</h2>
-              <p className="mt-6 text-lg text-muted-foreground leading-loose max-w-3xl mx-auto">
+              <p className="text-left md:text-center mt-6 text-lg text-muted-foreground leading-loose max-w-3xl mx-auto">
                 அருள்மிகு கோரக்கர் மெட்ரிகுலேஷன் பள்ளி மாணவர்களுக்கு தரமான கல்வி, நல்லொழுக்கம் மற்றும் வாழ்க்கைத் திறன்களை வழங்கும் நோக்கத்துடன் செயல்பட்டு வருகிறது. கல்வியுடன் ஒழுக்கம், பண்பு மற்றும் சமூகப் பொறுப்புணர்வை வளர்க்கும் கல்விச் சூழலை பள்ளி வழங்குகிறது.
               </p>
             </div>
@@ -171,7 +171,7 @@ function SchoolPage() {
           </Reveal>
 
           <Reveal className="h-full">
-            <div className="h-full glass rounded-3xl p-8 md:p-10 bg-gradient-to-br from-gold/5 to-transparent border border-gold/20 shadow-sm flex flex-col justify-center text-center md:text-left">
+            <div className="h-full glass rounded-3xl p-8 md:p-10 bg-gradient-to-br from-gold/5 to-transparent border border-gold/20 shadow-sm flex flex-col justify-center text-left md:text-left">
               <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-6">எங்கள் நோக்கம்</h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 ஒவ்வொரு மாணவரும் அறிவு, ஒழுக்கம் மற்றும் தன்னம்பிக்கையுடன் வளர்ந்து சமூகத்திற்கு பயனுள்ள குடிமகனாக உருவாக வேண்டும் என்பதே எங்கள் நோக்கமாகும்.

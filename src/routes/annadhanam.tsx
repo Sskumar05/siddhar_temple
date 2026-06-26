@@ -30,7 +30,7 @@ function AnnadhanamPage() {
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             <Reveal delay={0.1}>
               <div className="glass p-8 md:p-12 rounded-3xl h-full flex flex-col justify-center relative hover-lift">
-                <div className="absolute top-6 left-6 text-6xl text-gold/20 font-serif">"</div>
+                {/* <div className="absolute top-6 left-6 text-6xl text-gold/20 font-serif">"</div> */}
                 <blockquote className="relative z-10 text-sm md:text-xl text-primary font-serif-tamil leading-relaxed">
                   அற்றார் அழிபசி தீர்த்தல் அஃதொருவன் பெற்றான் பொருள்வைப்புழி
                 </blockquote>
@@ -39,7 +39,7 @@ function AnnadhanamPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <div className="glass p-8 md:p-12 rounded-3xl h-full flex flex-col justify-center relative hover-lift">
-                <div className="absolute top-6 left-6 text-6xl text-gold/20 font-serif">"</div>
+                {/* <div className="absolute top-6 left-6 text-6xl text-gold/20 font-serif">"</div> */}
                 <blockquote className="relative z-10 text-sm md:text-xl text-primary font-serif-tamil leading-relaxed">
                   மனதின் ஞாலத்து வாழ்வோருக்கு எல்லாம் உண்டி கொடுத்தோர் உயிர் கொடுத் தோரே
                 </blockquote>
@@ -51,15 +51,15 @@ function AnnadhanamPage() {
       </section>
 
       {/* Annadhanam Mahimai */}
-      <section className="py-24">
+      <section className="py-5">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
           <Reveal>
-            {/* <SectionHeading eyebrow="அன்னதானத்தின் மகிமை" title="உயிரையே காக்கும் தர்மம்" align="center" /> */}
+            <SectionHeading eyebrow="அன்னதானத்தின் மகிமை" title="" align="center" />
           </Reveal>
           <Reveal delay={0.2}>
-            <div className="mt-12 space-y-6 text-lg text-muted-foreground leading-loose">
+            <div className="mt-5 space-y-6 text-lg text-muted-foreground leading-loose text-left">
               <p>மணிமேகலையில் பசிப்பிணியைப் போக்குவோர் உயிர் கொடுத்தோராகவும், ஒப்பற்ற புகழுக்கு சொந்தக்காரர்கள் என்று விளம்புகின்றார்.</p>
-              <p className="font-semibold text-primary">"பசி வந்திட குடிப்பிறப்பு, விழுப்பம், கல்வி, நாணம், புகழ், அழகு, சிற்றின்பம், அறிவு, பக்தி, இன்பம் ஆகிய பத்தும் பறந்து போகும் என்பது பழமொழி."</p>
+              <p className="font-semibold text-primary text-center">"பசி வந்திட குடிப்பிறப்பு, விழுப்பம், கல்வி, நாணம், புகழ், அழகு, சிற்றின்பம், அறிவு, பக்தி, இன்பம் ஆகிய பத்தும் பறந்து போகும் என்பது பழமொழி."</p>
               <p>உயிராகிய ஒளி பசியால் குறைவது என்பது கடவுளாகிய ஒளி நம் உடலை விட்டே விலகுவதே ஆகும், அதனால் தான் அன்னத்தை "பிரம்மம்" என்று வேதம் கூறுகிறது. தன்பசியாற்றிக் கொள்வதோடு பிறர் பசியாற்றும் பண்புடையது மனித உயிர்.</p>
             </div>
           </Reveal>
@@ -127,29 +127,12 @@ function AnnadhanamPage() {
           </section>
 
            <section>
-                 <p className="mt-12 space-y-6 text-lg text-muted-foreground leading-loose justify-center text-center ">
-                  அன்னக்காவடி தருமம் தாயே!
-                  நாள்தோறும், இரவில் அடியவர்களுக்கு அன்னம் பாலிக்கக் கோரக்கச் சித்தர் ஆலயத்தில் சிறப்பான ஒரு நெறி பல நூறு ஆண்டுகளாகப் பின்பற்றப்பட்டு வருகிறது. இவ்வாசிரமத்தின் தலைமப் பூசாரியோ, அன்றி அவரின் உதவியாளர்களில் ஒருவரோ மாலை 7.00 மணி அளவில் தம் தோளில் ஓர் அன்னக்காவடியை ஏந்தி இவ்வூரின் வடக்கு மற்றும் தெற்கு வீதிகளில் உள்ள இல்லங்களுக்கு செல்வார்.
+                 <p className="mt-5 space-y-5 text-lg text-muted-foreground leading-loose justify-center text-left ">
+                  <span className="sm:ml-24">அன்னக்காவடி தருமம் தாயே!
+                  நாள்தோறும், இரவில் அடியவர்களுக்கு அன்னம் பாலிக்கக் கோரக்கச் சித்தர் ஆலயத்தில் சிறப்பான</span> ஒரு நெறி பல நூறு ஆண்டுகளாகப் பின்பற்றப்பட்டு வருகிறது. இவ்வாசிரமத்தின் தலைமப் பூசாரியோ, அன்றி அவரின் உதவியாளர்களில் ஒருவரோ மாலை 7.00 மணி அளவில் தம் தோளில் ஓர் அன்னக்காவடியை ஏந்தி இவ்வூரின் வடக்கு மற்றும் தெற்கு வீதிகளில் உள்ள இல்லங்களுக்கு செல்வார்.
                   காவடியின் இருபக்கங்களிலும் பெரிய பானைகள் உரியில் வைக்கப் பெற்றிருக்கும். இரண்டு அன்னக்காவடி தம் இல்லத்தின் வாயிலில் வந்து நின்றவுடன், புதிதாக இரவில் சமைத்த சோற்றினை ஒரு தட்டில் எடுத்து வந்து அவ்வில்லத்துப் பெண்கள் அன்னக்காவடிப் பானையில் இடுகின்றனர். ‘அன்னக்காவடி தருமம் தாயே’ என்று கூறி வரும், இவ்வன்னக்காவடிக்கு அங்கு வாழ்ந்து வரும் அனைவரும் அன்னம் பாலிக்கப்படுகிறது.
                 </p>
               </section>
-
-          {/* <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { step: "01", title: "புறப்பாடு", desc: "தினமும் இரவு 7:00 மணியளவில் கோரக்கர் ஆசிரமத்திலிருந்து அன்னக்காவடிகள் வடக்கு மற்றும் தெற்கு திசைகளை நோக்கி புறப்படுகின்றன." },
-              { step: "02", title: "சேகரிப்பு", desc: "ஊர் மக்களின் வீடுகளிலிருந்து சாதம் பக்தி சிரத்தையுடன் சேகரிக்கப்படுகிறது." },
-              { step: "03", title: "நிவேதனம்", desc: "சேகரிக்கப்பட்ட அன்னம் முதலில் கோரக்கர் சித்தருக்கு நிவேதனம் செய்யப்படுகிறது." },
-              { step: "04", title: "விநியோகம்", desc: "பின்னர் அது சிவனடியார்களுக்கும் பக்தர்களுக்கும் பிரசாதமாக வழங்கப்படுகிறது." },
-            ].map((item, i) => (
-              <Reveal key={item.step} delay={i * 0.1}>
-                <div className="glass p-8 rounded-3xl h-full relative hover-lift group">
-                  <div className="text-5xl font-bold text-gold/10 absolute top-4 right-4 group-hover:text-gold/20 transition-colors">{item.step}</div>
-                  <h3 className="text-2xl font-semibold text-primary mb-4 relative z-10">{item.title}</h3>
-                  <p className="text-muted-foreground relative z-10">{item.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div> */}
         </div>
       </section>
 
