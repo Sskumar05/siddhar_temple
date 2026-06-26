@@ -1,3 +1,4 @@
+import { templeSchema } from "../lib/schema";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -50,19 +51,83 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம்" },
-      { name: "description", content: "வடக்கு பொய்கைநல்லூர், நாகப்பட்டினம் — அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம். ஆன்மீக அனுபவம், பூஜைகள், திருவிழாக்கள்." },
-      {name: "google-site-verification", content: "abc123xyz456"},
-    ],
-    links: [
-      { rel: "icon", type: "image/png", href: faviconUrl },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" }, 
-      { rel: "stylesheet", href: appCss }
-      
-    ],
+    
+   meta: [
+  { charSet: "utf-8" },
+  { name: "viewport", content: "width=device-width, initial-scale=1" },
+
+  {
+    title: "Korakkar Siddhar Temple | Jeeva Samadhi Peedam | Nagapattinam | கோரக்கர் சித்தர்"
+  },
+
+  {
+    name: "description",
+    content:
+      "Korakkar Siddhar Jeeva Samadhi Peedam, Vadakku Poigainallur, Nagapattinam, Tamil Nadu. One of the 18 Tamil Siddhars. Temple timings, poojas, festivals and annadhanam."
+  },
+
+  {
+    name: "keywords",
+    content:
+      "Korakkar Siddhar Temple, Korakkar Siddhar, Gorakkar Siddhar, Jeeva Samadhi, Nagapattinam Temple, Siddhar Temple Tamil Nadu, கொரக்கர் சித்தர், கோரக்கர் சித்தர் ஜீவசமாதி"
+  },
+
+  {
+    name: "google-site-verification",
+    content: "abc123xyz456"
+  },
+
+  {
+    property: "og:title",
+    content: "Korakkar Siddhar Temple | Jeeva Samadhi Peedam"
+  },
+
+  {
+    property: "og:description",
+    content:
+      "Arulmigu Korakkar Siddhar Jeeva Samadhi Peedam - Vadakku Poigainallur, Nagapattinam."
+  },
+
+  {
+    property: "og:url",
+    content: "https://korakkarsiddhar.in"
+  },
+
+  {
+    property: "og:type",
+    content: "website"
+  },
+],
+
+  links: [
+  {
+    rel: "canonical",
+    href: "https://korakkarsiddhar.in"
+  },
+
+  {
+    rel: "icon",
+    type: "image/png",
+    href: faviconUrl
+  },
+
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;500;600;700;800&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+  },
+
+  {
+    rel: "stylesheet",
+    href: appCss
+  }
+],
+scripts: [
+  {
+    type: "application/ld+json",
+    children: JSON.stringify(templeSchema),
+  },
+],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -73,8 +138,31 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="ta">
-      <head><HeadContent /></head>
-      <body>{children}<Scripts /></body>
+      <head>
+        <HeadContent />
+
+        {/* Google Analytics */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-CVW4M6DR69"
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CVW4M6DR69');
+            `,
+          }}
+        />
+      </head>
+
+      <body>
+        {children}
+        <Scripts />
+      </body>
     </html>
   );
 }
