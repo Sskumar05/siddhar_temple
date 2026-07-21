@@ -41,8 +41,15 @@ export function Footer() {
       </div>
       <div className="border-t border-border/40 py-6 text-center text-xs text-muted-foreground">
         © {new Date().getFullYear()} அருள்மிகு கோரக்கர் சித்தர் ஜீவசமாதி பீடம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
-        <p className="text-xs text-muted-foreground mt-3">Developed by <span className="text-gold">INFYNUX SOLUTIONS</span></p>
-      </div>
+<div className="container-x pb-6 pt-3 text-center text-xs text-white/40 ">
+        Developed by{" "}
+        <a
+          href="https://infynuxsolutions.in/"
+          className="font-semibold text-red-500 hover:text-red-500 transition-colors duration-300"
+        >
+          INFYNUX SOLUTIONS
+        </a>
+      </div>      </div>
     </footer>
   );
 }

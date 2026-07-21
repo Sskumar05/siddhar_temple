@@ -292,113 +292,168 @@ export function Navbar() {
     setMobileOpen(false);
   }, [pathname]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   return (
-    <header
-      className={`
-        sticky top-0 inset-x-0 z-50 w-full
-        transition-all duration-300
-        ${scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-[#D4AF37]/20"
-          : "bg-white border-b border-[#E5E5E5]/60"
-        }
-      `}
-    >
-      {/* Gold top accent bar */}
-      <div className="h-[3px] w-full bg-gradient-to-r from-[#B38600] via-[#D4AF37] to-[#FFCC33]" />
-
-      <div
-        className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? "py-2.5" : "py-3"}`}
-      >
-        {/* ── Logo ── */}
-        <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
-          <div className="relative">
-            <img
-              src={logo}
-              alt="கோரக்கர் சித்தர் லோகோ"
-              className={`object-contain transition-all duration-300 ${scrolled ? "w-12 h-12" : "w-14 h-14"}`}
-            />
-          </div>
-          <div className="leading-tight">
-            <div className="font-serif text-sm sm:text-base font-bold text-[#D9381E] tracking-wide">
-              கோரக்கர் சித்தர்
-            </div>
-            <div className="text-[10px] sm:text-[11px] text-[#B38600] font-medium tracking-widest uppercase">
-              ஜீவசமாதி பீடம்
-            </div>
-          </div>
-        </Link>
-
-        {/* ── Desktop Nav ── */}
-        <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
-          {NAV.map((item) =>
-            item.children ? (
-              <DesktopDropdown key={item.label} item={item} pathname={pathname} />
-            ) : (
-              <DesktopLink key={item.to} item={item} pathname={pathname} />
-            )
-          )}
-        </nav>
-
-        {/* ── Donate / CTA button (desktop) ── */}
-        {/* <Link
-          to="/contact"
-          className="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold
-            bg-gradient-to-r from-[#D9381E] to-[#b02d18] text-white
-            shadow-[0_4px_12px_rgba(217,56,30,0.35)]
-            hover:shadow-[0_6px_20px_rgba(217,56,30,0.45)] hover:-translate-y-0.5
-            transition-all duration-200 flex-shrink-0"
-        >
-          🙏 தரிசனம்
-        </Link> */}
-
-        {/* ── Mobile Hamburger ── */}
-        <button
-          onClick={() => setMobileOpen((p) => !p)}
-          className="lg:hidden p-2 rounded-lg text-[#2C2C2C] hover:bg-[#FFF8E7] transition-colors duration-200"
-          aria-label={mobileOpen ? "மெனு மூடு" : "மெனு திற"}
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </button>
-      </div>
-
-      {/* ── Mobile Menu Panel ── */}
-      <div
+    <>
+      {/* ══════════════════════════════════════════════
+          Header — z-[60] so it sits above the overlay
+      ══════════════════════════════════════════════ */}
+      <header
         className={`
-          lg:hidden overflow-hidden transition-all duration-300 ease-in-out
-          ${mobileOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}
+          fixed top-0 inset-x-0 z-[60] w-full
+          transition-all duration-300
+          ${scrolled
+            ? "bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-[#D4AF37]/20"
+            : "bg-white border-b border-[#E5E5E5]/60"
+          }
         `}
       >
-        <div className="bg-white border-t border-[#D4AF37]/20 px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-          {/* Gold divider */}
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent mb-3" />
+        {/* Gold top accent bar */}
+        <div className="h-[3px] w-full bg-gradient-to-r from-[#B38600] via-[#D4AF37] to-[#FFCC33]" />
 
-          <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
-            {NAV.map((item) => (
-              <MobileNavItem
-                key={item.label}
-                item={item}
-                pathname={pathname}
-                onClose={() => setMobileOpen(false)}
+        <div
+          className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between transition-all duration-300 ${scrolled ? "py-2.5" : "py-3"}`}
+        >
+          {/* ── Logo ── */}
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group flex-shrink-0">
+            <div className="relative">
+              <img
+                src={logo}
+                alt="கோரக்கர் சித்தர் லோகோ"
+                className={`object-contain transition-all duration-300 ${scrolled ? "w-12 h-12" : "w-14 h-14"}`}
               />
-            ))}
+            </div>
+            <div className="leading-tight">
+              <div className="font-serif text-sm sm:text-base font-bold text-[#D9381E] tracking-wide">
+                கோரக்கர் சித்தர்
+              </div>
+              <div className="text-[10px] sm:text-[11px] text-[#B38600] font-medium tracking-widest uppercase">
+                ஜீவசமாதி பீடம்
+              </div>
+            </div>
+          </Link>
+
+          {/* ── Desktop Nav ── */}
+          <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
+            {NAV.map((item) =>
+              item.children ? (
+                <DesktopDropdown key={item.label} item={item} pathname={pathname} />
+              ) : (
+                <DesktopLink key={item.to} item={item} pathname={pathname} />
+              )
+            )}
           </nav>
 
-          {/* Mobile CTA */}
-          <div className="mt-4 pt-3 border-t border-[#D4AF37]/20">
-            {/* <Link
-              to="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold
-                bg-gradient-to-r from-[#D9381E] to-[#b02d18] text-white
-                shadow-[0_4px_12px_rgba(217,56,30,0.3)]
-                transition-all duration-200 active:scale-95"
-            >
-              🙏 தரிசனத்திற்கு தொடர்பு கொள்ளுங்கள்
-            </Link> */}
+          {/* ── Donate / CTA button (desktop) ── */}
+          {/* <Link
+            to="/contact"
+            className="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold
+              bg-gradient-to-r from-[#D9381E] to-[#b02d18] text-white
+              shadow-[0_4px_12px_rgba(217,56,30,0.35)]
+              hover:shadow-[0_6px_20px_rgba(217,56,30,0.45)] hover:-translate-y-0.5
+              transition-all duration-200 flex-shrink-0"
+          >
+            🙏 தரிசனம்
+          </Link> */}
+
+          {/* ── Mobile Hamburger ── */}
+          <button
+            onClick={() => setMobileOpen((p) => !p)}
+            className="lg:hidden p-2 rounded-lg text-[#2C2C2C] hover:bg-[#FFF8E7] transition-colors duration-200"
+            aria-label={mobileOpen ? "மெனு மூடு" : "மெனு திற"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+        </div>
+      </header>
+
+      {/* ══════════════════════════════════════════════
+          Spacer — compensates for the fixed header so
+          page content isn't hidden behind it
+      ══════════════════════════════════════════════ */}
+      <div className="h-[calc(3px+theme(spacing.16))] lg:h-[calc(3px+theme(spacing.20))]" aria-hidden="true" />
+
+      {/* ══════════════════════════════════════════════
+          Mobile Overlay — z-[50], rendered OUTSIDE the
+          header so it NEVER affects page layout
+      ══════════════════════════════════════════════ */}
+      <div
+        className="lg:hidden"
+        aria-hidden={!mobileOpen}
+      >
+        {/* Semi-transparent backdrop */}
+        <div
+          onClick={() => setMobileOpen(false)}
+          className={`
+            fixed inset-0 z-[50] bg-black/50 backdrop-blur-sm
+            transition-opacity duration-300
+            ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+          `}
+        />
+
+        {/* Drawer panel — slides down from under the header */}
+        <div
+          className={`
+            fixed inset-x-0 top-0 z-[55]
+            transition-transform duration-300 ease-in-out
+            ${mobileOpen ? "translate-y-0" : "-translate-y-full"}
+          `}
+          style={{ paddingTop: "calc(3px + 4rem)" }}
+        >
+          <div className="bg-white border-b border-[#D4AF37]/30 shadow-[0_8px_32px_rgba(0,0,0,0.15)] mx-0 rounded-b-2xl">
+            <div className="px-4 py-3">
+              {/* Gold divider */}
+              <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D4AF37]/40 to-transparent mb-3" />
+
+              <nav className="flex flex-col gap-1" aria-label="Mobile navigation">
+                {NAV.map((item) => (
+                  <MobileNavItem
+                    key={item.label}
+                    item={item}
+                    pathname={pathname}
+                    onClose={() => setMobileOpen(false)}
+                  />
+                ))}
+              </nav>
+
+              {/* Mobile CTA */}
+              <div className="mt-4 pt-3 border-t border-[#D4AF37]/20">
+                {/* <Link
+                  to="/contact"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-semibold
+                    bg-gradient-to-r from-[#D9381E] to-[#b02d18] text-white
+                    shadow-[0_4px_12px_rgba(217,56,30,0.3)]
+                    transition-all duration-200 active:scale-95"
+                >
+                  🙏 தரிசனத்திற்கு தொடர்பு கொள்ளுங்கள்
+                </Link> */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
