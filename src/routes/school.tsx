@@ -197,7 +197,7 @@ function SchoolPage() {
               "குறைந்த கல்வி கட்டணம்",
               "ஏழை எளிய மாணவர்களுக்கு கல்வி உதவித்தொகை வழங்குதல்",
               "மதிய உணவு திட்டம்",
-              "Extra curricular activities (YOGA,SILAMBAM,BHARATHAM,KARATHAI,CHESS)",
+              "Extra curricular activities (YOGA,SILAMBAM,BHARATHAM,KARATE,CHESS)",
               "பாதுகாப்பான கல்விச் சூழல்",
               "முழுமையான ஆளுமை வளர்ச்சி",
               "மாணவர்களின் எதிர்கால வெற்றியை நோக்கிய வழிகாட்டுதல்"
