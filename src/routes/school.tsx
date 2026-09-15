@@ -235,7 +235,6 @@ function SchoolPage() {
               onSubmit={handleSubmit}
               className="bg-white rounded-3xl p-8 md:p-12 border border-[#E5E5E5]/50 shadow-luxury relative overflow-hidden z-10"
             >
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-gold" />
               
               <div className="relative space-y-6">
                 

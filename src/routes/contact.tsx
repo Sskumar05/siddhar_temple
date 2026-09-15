@@ -35,24 +35,26 @@ function Contact() {
     setErrorMessage("");
 
     try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-
-      if (!supabaseUrl) {
-        throw new Error("Supabase URL is not configured. Please contact the administrator.");
-      }
-
-      const response = await fetch(`${supabaseUrl}/functions/v1/send-email`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`
-        },
-        body: JSON.stringify(formData)
+      // 1. Save to Firebase Firestore
+      const { collection, addDoc, serverTimestamp } = await import("firebase/firestore");
+      const { db } = await import("../lib/firebase");
+      
+      await addDoc(collection(db, "contact_submissions"), {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        createdAt: serverTimestamp()
       });
 
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || "Failed to send message");
+      // 2. Send Emails using Server Function (No Supabase)
+      const { sendContactEmail } = await import("../lib/api/contact.functions");
+      const emailResult = await sendContactEmail({ data: formData });
+      
+      if (emailResult && !emailResult.success) {
+        console.warn("Email could not be sent:", emailResult.error);
+        // We still show success to the user since the data was saved to Firestore
       }
 
       setStatus("success");
@@ -123,7 +125,6 @@ function Contact() {
               onSubmit={handleSubmit}
               className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-xl relative overflow-hidden z-10"
             >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-gold" />
               
               <div className="relative space-y-5">
                 <div className="mb-4">

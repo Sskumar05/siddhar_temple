@@ -189,13 +189,15 @@ function MobileNavItem({
   item,
   pathname,
   onClose,
+  isOpen,
+  onToggle,
 }: {
   item: NavItem;
   pathname: string;
   onClose: () => void;
+  isOpen: boolean;
+  onToggle: () => void;
 }) {
-  const [open, setOpen] = useState(false);
-
   if (!item.children) {
     const isActive =
       item.to === "/" ? pathname === "/" : pathname.startsWith(item.to);
@@ -222,7 +224,7 @@ function MobileNavItem({
   return (
     <div>
       <button
-        onClick={() => setOpen((p) => !p)}
+        onClick={onToggle}
         className={`
           w-full flex items-center justify-between px-4 py-3 text-sm font-medium rounded-lg
           transition-all duration-200
@@ -234,13 +236,13 @@ function MobileNavItem({
       >
         <span>{item.label}</span>
         <ChevronDown
-          className={`w-4 h-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
         />
       </button>
 
       {/* Accordion children */}
       <div
-        className={`overflow-hidden transition-all duration-300 ${open ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"}`}
       >
         <div className="ml-4 mt-1 flex flex-col gap-0.5 border-l-2 border-[#D4AF37]/40 pl-3">
           {item.children.map((child) => {
@@ -275,6 +277,7 @@ function MobileNavItem({
 ───────────────────────────────────────────────────────────── */
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const pathname = location.pathname;
@@ -291,6 +294,11 @@ export function Navbar() {
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
+
+  // Reset accordion state when mobile menu closes
+  useEffect(() => {
+    if (!mobileOpen) setOpenAccordion(null);
+  }, [mobileOpen]);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -433,6 +441,8 @@ export function Navbar() {
                     item={item}
                     pathname={pathname}
                     onClose={() => setMobileOpen(false)}
+                    isOpen={openAccordion === item.label}
+                    onToggle={() => setOpenAccordion(openAccordion === item.label ? null : item.label)}
                   />
                 ))}
               </nav>

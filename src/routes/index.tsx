@@ -26,31 +26,31 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative w-full h-[100svh] lg:h-screen min-h-[100svh] lg:min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20 pb-16 lg:pt-0 lg:pb-0">
+      <section className="relative w-full h-[85svh] min-h-[600px] max-h-[1200px] flex flex-col items-center justify-center overflow-hidden pt-24 pb-16 lg:pt-28 lg:pb-20">
         <img src="https://res.cloudinary.com/dhjupdyus/image/upload/v1781273842/Hero_Image_duuqjl.png" alt="கோவில் கோபுரம்" className="absolute inset-0 w-full h-full object-cover object-center opacity-90" />
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.45)]" />
 
-        <div className="relative z-10 mx-auto max-w-screen-sm lg:max-w-5xl px-4 w-full flex flex-col items-center justify-center text-center">
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="inline-flex items-center justify-center gap-2 px-4 py-1.5 text-xs tracking-widest uppercase text-[#D4AF37] mb-4 sm:mb-6 lg:mb-8">
+        <div className="relative z-10 mx-auto max-w-screen-md lg:max-w-5xl px-4 sm:px-6 w-full flex flex-col items-center justify-center text-center mt-8 sm:mt-[-20px]">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }} className="inline-flex items-center justify-center gap-2 px-4 py-1.5 text-[11px] sm:text-xs md:text-sm tracking-widest uppercase text-[#D4AF37] mb-4 sm:mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
             வடக்கு பொய்கைநல்லூர் · நாகப்பட்டினம்
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.1 }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif-tamil font-bold leading-tight text-white drop-shadow-xl flex flex-col items-center justify-center w-full mb-4 sm:mb-6 lg:mb-8 px-2 sm:px-0">
-            அருள்மிகு கோரக்கர் சித்தர்
-            <span className="italic font-light text-white/90 text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 sm:mt-4 block"> ஜீவசமாதி பீடம்</span>
+          <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.1 }} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif-tamil font-bold leading-[1.25] sm:leading-[1.15] text-white drop-shadow-xl flex flex-col items-center justify-center w-full mb-5 sm:mb-7">
+            <span className="block text-balance mx-auto">அருள்மிகு கோரக்கர் சித்தர்</span>
+            <span className="italic font-light text-white/90 text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-2 sm:mt-4 block">ஜீவசமாதி பீடம்</span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#F5F5F5] leading-relaxed drop-shadow-md mb-6 sm:mb-8 lg:mb-10 max-w-3xl mx-auto px-2 sm:px-0">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.3 }} className="text-sm sm:text-base md:text-lg lg:text-xl text-[#F5F5F5] leading-relaxed drop-shadow-md mb-8 sm:mb-10 max-w-2xl mx-auto px-2 sm:px-0 text-balance">
             பதினெண் சித்தர்களுள் ஒருவர் கோரக்கர் சித்தரின் புனித ஜீவசமாதி தலம். அருள், அமைதி, ஆன்மீகத்தின் பீடம்.
           </motion.p>
 
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.45 }} className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full px-4 sm:px-0">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.45 }} className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-5 w-full max-w-xs sm:max-w-none mx-auto">
             <Link to="/about-temple" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 sm:py-4 rounded-full bg-[#D9381E] text-white font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 w-full sm:w-auto">
               பீடம் பற்றி அறிய
               <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 sm:py-4 rounded-full bg-transparent border-3 border-[#D4AF37] text-[#D4AF37] font-medium hover:bg-[#D4AF37]/10 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 w-full sm:w-auto">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-3.5 sm:py-4 rounded-full bg-transparent border-[2px] border-[#D4AF37] text-[#D4AF37] font-medium hover:bg-[#D4AF37]/10 hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all duration-300 w-full sm:w-auto">
               தொடர்புக்கு
             </Link>
           </motion.div>
